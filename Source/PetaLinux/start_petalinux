@@ -1,0 +1,5 @@
+CROSS_COMILE="arm-xilinx-linux-gnueabi"
+export CROSS_COMPILE
+source /opt/pkg/petalinux-v2015.4-final/settings.sh
+source  /opt/Xilinx/Vivado/2015.4/settings64.sh
+
