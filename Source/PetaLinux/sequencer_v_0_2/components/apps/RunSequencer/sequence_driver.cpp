@@ -65,7 +65,7 @@ void temp_print()
 	printf("TEMP\n");
 }
 
-int poke(unsigned write_addr, long value)
+/*int poke(unsigned write_addr, long value)
 {
 	//int fd;
 	void *ptr;
@@ -143,7 +143,7 @@ int peek(unsigned write_addr, long value)
 
 
 	return 0;
-}
+}*/
 
 // ---------------------------------------------
 // DDR
@@ -405,6 +405,8 @@ void sequencer_check_match(volatile unsigned int* seq_ptr)
 	unsigned int result_bot_offset = XSEQUENCER_AXILITES_ADDR_FINAL_BOT_PTR_DATA / sizeof(unsigned int);
 	unsigned int result_final_bot = *(seq_ptr + result_bot_offset);
 	printf("Final Top: %d\n", result_final_bot);
+
+	fflush(stdout);
 	
 }
 

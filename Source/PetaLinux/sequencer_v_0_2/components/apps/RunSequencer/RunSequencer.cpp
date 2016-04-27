@@ -65,6 +65,11 @@ int main(int argc, char* argv[])
 
 	read_seq(sequence, i_table_index, input_file);
 
+	/*cout << "Original sequence (" << sequence->seq_length << ")" << endl;
+	for (unsigned int i = 0; i < sequence->seq_length; i++) {
+		cout << i << ": " << sequence->seq_ptr[i] << endl;
+	}*/
+
 	i_table_index[3] = sequence->seq_length - i_table_index[3];
 	i_table_index[2] = i_table_index[3] - i_table_index[2];
 	i_table_index[1] = i_table_index[2] - i_table_index[1];
@@ -98,7 +103,7 @@ int main(int argc, char* argv[])
 
 		rotations[rotation_ptr] = (char*)malloc(sequence->seq_length*sizeof(char));
 
-		for (unsigned int i = rotation_ptr; i > insert_index; i--){
+		for (unsigned int i = rotation_ptr; i > insert_index; i--) {
 			copy_seq(rotations[i - 1], rotations[i], sequence->seq_length);
 			suffix_table[i] = suffix_table[i - 1];
 		}
@@ -116,23 +121,24 @@ int main(int argc, char* argv[])
 	t_sequence->seq_length = sequence->seq_length;
 	t_sequence->seq_ptr = (char*)malloc(t_sequence->seq_length*sizeof(char));
 
-	for (unsigned int i = 0; i < t_sequence->seq_length; i++){
+	for (unsigned int i = 0; i < t_sequence->seq_length; i++) {
 		t_sequence->seq_ptr[i] = rotations[i][t_sequence->seq_length - 1];
 	}
 	//print out original sequence
 	cout << "Original sequence (" << sequence->seq_length << ")" << endl;
-	for (unsigned int i = 0; i < sequence->seq_length; i++){
-		cout << sequence->seq_ptr[i];
+	for (unsigned int i = 0; i < sequence->seq_length; i++) {
+		//cout << sequence->seq_ptr[i];
+		cout << i << ": " << sequence->seq_ptr[i] << endl;
 	}
 	cout << endl;
 	//print out transformed sequence
 	cout << "Transformed sequence" << endl;
-	for (unsigned int i = 0; i < t_sequence->seq_length; i++){
+	for (unsigned int i = 0; i < t_sequence->seq_length; i++) {
 		cout << t_sequence->seq_ptr[i];
 	}
 	cout << endl;
 	//free the memory space for keeping the rotations
-	for (unsigned int i = 0; i < sequence->seq_length; i++){
+	for (unsigned int i = 0; i < sequence->seq_length; i++) {
 		free(rotations[i]);
 	}
 	free(rotations);
@@ -150,11 +156,7 @@ int main(int argc, char* argv[])
 			i_table_file << checker;
 			val = val + (checker << (j*8));
 		}
-		//poke(offset_array[4], val);
-		//write_ddr_value(ddr_ptr, offset_array[4] + i, val);
 		write_bram_value(bramI_ptr, i, val);
-		//poke(offset_array[4], val);
-		//offset_array[4] = offset_array[4] + 4;
 		val = 0;
 	}
 	//i_table_file << endl;
@@ -317,6 +319,9 @@ int main(int argc, char* argv[])
 
 
 	// NEW - RUN SEQUENCER
+	fflush(stdout);
+	
+
 	if (argc < 3) {
 		printf("Enter a file name contatining the short reads as 2nd argument!\n");
 		return -1;
@@ -337,83 +342,95 @@ int main(int argc, char* argv[])
 	unsigned int short_reads_to_run = 0;
 	char** short_read_data;
 
+	// TEMP
+	//exit(0);
+
 	printf("Starting to read short reads\n");
 	read_short_reads(argv[2], &short_read_data, &short_reads_to_run);
 
-	for (unsigned int i = 0; i < short_reads_to_run; i++) {
+	/*for (unsigned int i = 0; i < short_reads_to_run; i++) {
 		printf("SR %d: %s\n", i, short_read_data[i]);
-	}
+		cout << "SR " << i << " " << sr_length << ", " << (*sr_array)[i] << endl;
+	}*/
+	printf("Done reading short reads\n");
+	fflush(stdout);
+
+	unsigned int cur_sr_num = 0;
+	
+	while (short_reads_to_run > 0) {
+		if (short_reads_to_run >= 1) {
+			sr_bram_ptr[0] = get_sr_bram_ptr(0);
+		
+			unsigned int sr_size = 0;
+			do {
+				//write_bram_value_char(sr_bram_ptr[0], sr_size, short_read_data[cur_sr_num+0][sr_size]);
+				sr_size++;
+			} while (short_read_data[cur_sr_num+0][sr_size] != 0);
+
+			// NOTE: need to write short reads backwards
+			for (unsigned int i = 0; i < sr_size; i++) {
+				unsigned int index = (sr_size - 1) - i;
+				write_bram_value_char(sr_bram_ptr[0], i, short_read_data[cur_sr_num+0][index]);
+			}
+
+			set_SR_Addr(sequencer_ptr[0], XPAR_AXI_BRAM_CTRL_SR_0_S_AXI_BASEADDR);
+			set_SR_length(sequencer_ptr[0], sr_size);
+		}
+		if (short_reads_to_run >= 2) {
+			sr_bram_ptr[1] = get_sr_bram_ptr(1);
+		
+			unsigned int sr_size = 0;
+			do {
+				//write_bram_value_char(sr_bram_ptr[1], sr_size, short_read_data[cur_sr_num+1][sr_size]);
+				sr_size++;
+			} while (short_read_data[cur_sr_num+1][sr_size] != 0);
+
+			// NOTE: need to write short reads backwards
+			for (unsigned int i = 0; i < sr_size; i++) {
+				unsigned int index = (sr_size - 1) - i;
+				write_bram_value_char(sr_bram_ptr[1], i, short_read_data[cur_sr_num+1][index]);
+			}
+
+			set_SR_Addr(sequencer_ptr[1], XPAR_AXI_BRAM_CTRL_SR_1_S_AXI_BASEADDR);
+			set_SR_length(sequencer_ptr[1], sr_size);
+		}
+		if (short_reads_to_run >= 3) {
+			sr_bram_ptr[2] = get_sr_bram_ptr(2);
+		
+			unsigned int sr_size = 0;
+			do {
+				//write_bram_value_char(sr_bram_ptr[2], sr_size, short_read_data[cur_sr_num+2][sr_size]);
+				sr_size++;
+			} while (short_read_data[cur_sr_num+2][sr_size] != 0);
+
+			// NOTE: need to write short reads backwards
+			for (unsigned int i = 0; i < sr_size; i++) {
+				unsigned int index = (sr_size - 1) - i;
+				write_bram_value_char(sr_bram_ptr[2], i, short_read_data[cur_sr_num+2][index]);
+			}
+
+			set_SR_Addr(sequencer_ptr[2], XPAR_AXI_BRAM_CTRL_SR_2_S_AXI_BASEADDR);
+			set_SR_length(sequencer_ptr[2], sr_size);
+		}
 
 	
-	if (short_reads_to_run >= 1) {
-		sr_bram_ptr[0] = get_sr_bram_ptr(0);
-		
-		int sr_size = 0;
-		do {
-			//write_bram_value_char(sr_bram_ptr[0], sr_size, short_read_data[0][sr_size]);
-			sr_size++;
-		} while (short_read_data[0][sr_size] != 0);
-
-		// NOTE: need to write short reads backwards
-		for (unsigned int i = 0; i < sr_size; i++) {
-			unsigned int index = (sr_size - 1) - i;
-			write_bram_value_char(sr_bram_ptr[0], i, short_read_data[0][index]);
+		unsigned int num_sequencers_running = short_reads_to_run;
+		if (num_sequencers_running > 3) {
+			num_sequencers_running = 3;
 		}
 
-		set_SR_Addr(sequencer_ptr[0], XPAR_AXI_BRAM_CTRL_SR_0_S_AXI_BASEADDR);
-		set_SR_length(sequencer_ptr[0], sr_size);
-	}
-	if (short_reads_to_run >= 2) {
-		sr_bram_ptr[1] = get_sr_bram_ptr(1);
-		
-		int sr_size = 0;
-		do {
-			//write_bram_value_char(sr_bram_ptr[1], sr_size, short_read_data[1][sr_size]);
-			sr_size++;
-		} while (short_read_data[1][sr_size] != 0);
-
-		// NOTE: need to write short reads backwards
-		for (unsigned int i = 0; i < sr_size; i++) {
-			unsigned int index = (sr_size - 1) - i;
-			write_bram_value_char(sr_bram_ptr[1], i, short_read_data[1][index]);
+		// Run all 3 sequencers in parallel
+		for (unsigned int i = 0; i < num_sequencers_running; i++) {
+			run_sequencer(sequencer_ptr[i]);
 		}
 
-		set_SR_Addr(sequencer_ptr[1], XPAR_AXI_BRAM_CTRL_SR_1_S_AXI_BASEADDR);
-		set_SR_length(sequencer_ptr[1], sr_size);
-	}
-	if (short_reads_to_run >= 3) {
-		sr_bram_ptr[2] = get_sr_bram_ptr(2);
-		
-		int sr_size = 0;
-		do {
-			//write_bram_value_char(sr_bram_ptr[2], sr_size, short_read_data[2][sr_size]);
-			sr_size++;
-		} while (short_read_data[2][sr_size] != 0);
-
-		// NOTE: need to write short reads backwards
-		for (unsigned int i = 0; i < sr_size; i++) {
-			unsigned int index = (sr_size - 1) - i;
-			write_bram_value_char(sr_bram_ptr[2], i, short_read_data[2][index]);
+		// poll until all 3 are done
+		for (unsigned int i = 0; i < num_sequencers_running; i++) {
+			sequencer_check_match(sequencer_ptr[i]);
 		}
 
-		set_SR_Addr(sequencer_ptr[2], XPAR_AXI_BRAM_CTRL_SR_2_S_AXI_BASEADDR);
-		set_SR_length(sequencer_ptr[2], sr_size);
-	}
-
-	
-	unsigned int num_sequencers_running = short_reads_to_run;
-	if (num_sequencers_running > 3) {
-		num_sequencers_running = 3;
-	}
-
-	// Run all 3 sequencers in parallel
-	for (unsigned int i = 0; i < num_sequencers_running; i++) {
-		run_sequencer(sequencer_ptr[i]);
-	}
-
-	// poll until all 3 are done
-	for (unsigned int i = 0; i < num_sequencers_running; i++) {
-		sequencer_check_match(sequencer_ptr[i]);
+		short_reads_to_run -= num_sequencers_running;
+		cur_sr_num += num_sequencers_running;
 	}
 
 
@@ -475,12 +492,19 @@ void read_short_reads(char* sr_filename, char*** sr_array, unsigned int *num_rea
 		
 		(*sr_array)[i] = (char*) malloc((sr_length+1) * sizeof(char));
 
-		for (int j = 0; j < sr_length; j++) {
-			input_file >> (*sr_array)[i][j];
+		if ((*sr_array)[i] == NULL) {
+			printf("Malloc failed when reading short read %d\nDoing all previous reads...\n", i);
+			*num_reads = i;
+			return;
 		}
-		(*sr_array)[i][sr_length] = '\0';
 
-		printf("SR %d: %d, %s\n", i, sr_length, (*sr_array)[i]);
+		for (unsigned int j = 0; j < sr_length; j++) {
+			input_file >> ((*sr_array)[i])[j];
+		}
+		((*sr_array)[i])[sr_length] = '\0';
+
+		//printf("SR %d: %d, %s\n", i, sr_length, (*sr_array)[i]);
+		cout << "SR " << i << " " << sr_length << ", " << (*sr_array)[i] << endl;
 	}
 
 	input_file.close();
