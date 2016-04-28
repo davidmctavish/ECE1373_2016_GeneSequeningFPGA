@@ -10,9 +10,16 @@
 
 
 void *sequencer_page[NUM_SEQUENCERS] = { NULL };
+unsigned int num_pages_seq[NUM_SEQUENCERS] = { 0 };
+
 void *sr_bram_page[NUM_SR_BRAMS] = { NULL };
+unsigned int num_pages_bram_sr[NUM_SR_BRAMS] = { 0 };
+
 void *itable_bram_page = NULL;
+unsigned int num_pages_bram_itable = 0;
+
 void *ddr_page = NULL;
+unsigned int num_pages_ddr = 0;
 
 int fd = -1;
 
@@ -33,25 +40,25 @@ void close_dev_mem()
 
 	for (int i = 0; i < NUM_SEQUENCERS; i++) {
 		if (sequencer_page[i] == NULL) {
-			munmap(sequencer_page[i], page_size);
+			munmap(sequencer_page[i], num_pages_seq[i]*page_size);
 			sequencer_page[i] = NULL;
 		}
 	}
 
 	for (int i = 0; i < NUM_SR_BRAMS; i++) {
 		if (sr_bram_page[i] == NULL) {
-			munmap(sr_bram_page[i], page_size);
+			munmap(sr_bram_page[i], num_pages_bram_sr[i]*page_size);
 			sr_bram_page[i] = NULL;
 		}
 	}
 
 	if (itable_bram_page != NULL) {
-		munmap(itable_bram_page, page_size);
+		munmap(itable_bram_page, num_pages_bram_itable*page_size);
 		itable_bram_page = NULL;
 	}
 
 	if (ddr_page != NULL) {
-		munmap(ddr_page, page_size);
+		munmap(ddr_page, num_pages_ddr*page_size);
 		ddr_page = NULL;
 	}
 
@@ -60,90 +67,6 @@ void close_dev_mem()
 }
 
 
-void temp_print()
-{
-	printf("TEMP\n");
-}
-
-/*int poke(unsigned write_addr, long value)
-{
-	//int fd;
-	void *ptr;
-	unsigned val;
-	unsigned addr, page_addr, page_offset;
-	unsigned page_size=sysconf(_SC_PAGESIZE);
-
-	//fd=open("/dev/mem",O_RDWR);
-
-	open_dev_mem();
-	if (fd < 1) {
-		printf("could not open /dev/mem %d\n", fd);
-		return -1;
-	}
-
-	addr=write_addr;
-	val=value;
-
-	page_addr=(addr & ~(page_size-1));
-	page_offset=addr-page_addr;
-	printf("addr: %x, val: %x \n", addr, val);
-
-	ptr=mmap(NULL,page_size,PROT_READ|PROT_WRITE,MAP_SHARED,fd,(addr & ~(page_size-1)));
-	if(*((int *) (&ptr))==-1) {
-		printf("*** Error in ptr read *** %d\n", *((int *)(&ptr)));
-		exit(-1);
-	}
-
-	*((volatile unsigned int *)(ptr+page_offset))=val;
-
-	
-	munmap(ptr, page_size);
-
-
-	return 0;
-}
-
-int peek(unsigned write_addr, long value)
-{
-	//int fd;
-	void *ptr;
-	unsigned val;
-	unsigned addr, page_addr, page_offset;
-	unsigned page_size=sysconf(_SC_PAGESIZE);
-
-	//fd=open("/dev/mem",O_RDWR);
-
-	open_dev_mem();
-	if (fd < 1) {
-		printf("could not open /dev/mem %d\n", fd);
-		return -1;
-	}
-
-	addr=write_addr;
-	val=value;
-
-	page_addr=(addr & ~(page_size-1));
-	page_offset=addr-page_addr;
-	printf("addr: %x, val: %x \n", addr, val);
-
-	ptr=mmap(NULL,page_size,PROT_READ|PROT_WRITE,MAP_SHARED,fd,(addr & ~(page_size-1)));
-	if(*((int *) (&ptr))==-1) {
-		printf("*** Error in ptr read *** %d\n", *((int *)(&ptr)));
-		exit(-1);
-	}
-
-	long read_val = *((volatile unsigned int *)(ptr+page_offset));
-
-	munmap(ptr, page_size);
-
-	if (read_val != value) {
-		printf("Peek failed. (%x, %d, %d)\n", write_addr, value, read_val);
-		return -1;
-	}
-
-
-	return 0;
-}*/
 
 // ---------------------------------------------
 // DDR
@@ -158,8 +81,11 @@ volatile unsigned int* get_ddr_ptr()
 	int page_addr = ( XPAR_MIG_7SERIES_0_BASEADDR & (~(page_size-1)) );
 	unsigned int page_offset = XPAR_MIG_7SERIES_0_BASEADDR - page_addr;
 
+	unsigned int address_size = XPAR_MIG_7SERIES_0_HIGHADDR - XPAR_MIG_7SERIES_0_BASEADDR;
+	num_pages_ddr = 1 + (page_offset + address_size) / page_size;
+
 	if (ddr_page == NULL) {
-		ddr_page = mmap(NULL, page_size, PROT_READ|PROT_WRITE, MAP_SHARED, fd, page_addr);
+		ddr_page = mmap(NULL, num_pages_ddr*page_size, PROT_READ|PROT_WRITE, MAP_SHARED, fd, page_addr);
 	}
 
 	volatile unsigned int* ddr_ptr = (volatile unsigned int *)(ddr_page + page_offset);
@@ -194,10 +120,13 @@ volatile unsigned int* get_itable_bram_ptr()
 	int page_addr = ( base_addr & (~(page_size-1)) );
 	unsigned int page_offset = base_addr - page_addr;
 
+	unsigned int address_size = XPAR_AXI_BRAM_CTRL_ITABLE_S_AXI_HIGHADDR - XPAR_AXI_BRAM_CTRL_ITABLE_S_AXI_BASEADDR;
+	num_pages_bram_itable = 1 + (page_offset + address_size) / page_size;
+
 	volatile unsigned int* bram_ptr = NULL;
 
 	if (itable_bram_page == NULL) {
-		itable_bram_page = mmap(NULL, page_size, PROT_READ|PROT_WRITE, MAP_SHARED, fd, page_addr);
+		itable_bram_page = mmap(NULL, num_pages_bram_itable*page_size, PROT_READ|PROT_WRITE, MAP_SHARED, fd, page_addr);
 	}
 	bram_ptr = (volatile unsigned int *)(itable_bram_page + page_offset);
 
@@ -217,20 +146,28 @@ volatile unsigned int* get_sr_bram_ptr(int id)
 	}
 
 	unsigned int base_addr = 0x00000000;
+	unsigned int high_addr = 0x00000000;
 	if (id == 0) {
 		base_addr = XPAR_AXI_BRAM_CTRL_SR_0_S_AXI_BASEADDR;
+		high_addr = XPAR_AXI_BRAM_CTRL_SR_0_S_AXI_HIGHADDR;
 	} else if (id == 1) {
 		base_addr = XPAR_AXI_BRAM_CTRL_SR_1_S_AXI_BASEADDR;
+		high_addr = XPAR_AXI_BRAM_CTRL_SR_1_S_AXI_HIGHADDR;
 	} else if (id == 2) {
 		base_addr = XPAR_AXI_BRAM_CTRL_SR_2_S_AXI_BASEADDR;
+		high_addr = XPAR_AXI_BRAM_CTRL_SR_2_S_AXI_HIGHADDR;
 	}
 
 	unsigned int page_size = sysconf(_SC_PAGESIZE);
 	int page_addr = ( base_addr & (~(page_size-1)) );
 	unsigned int page_offset = base_addr - page_addr;
 
+	unsigned int address_size = high_addr - base_addr;
+	num_pages_bram_sr[id] = 1 + (page_offset + address_size) / page_size;
+	 
+
 	if (sr_bram_page[id] == NULL) {
-		sr_bram_page[id] = mmap(NULL, page_size, PROT_READ|PROT_WRITE, MAP_SHARED, fd, page_addr);
+		sr_bram_page[id] = mmap(NULL, num_pages_bram_sr[id]*page_size, PROT_READ|PROT_WRITE, MAP_SHARED, fd, page_addr);
 	}
 
 	volatile unsigned int* bram_ptr = (volatile unsigned int *)(sr_bram_page[id] + page_offset);
@@ -295,20 +232,28 @@ volatile unsigned int* get_sequencer_ptr(unsigned int id)
 
 
 	unsigned int base_addr = 0x00000000;
+	unsigned int high_addr = 0x00000000;
 	if (id == 0) {
 		base_addr = XPAR_SEQUENCER_0_S_AXI_AXILITES_BASEADDR;
+		high_addr = XPAR_SEQUENCER_0_S_AXI_AXILITES_HIGHADDR;
 	} else if (id == 1) {
 		base_addr = XPAR_SEQUENCER_1_S_AXI_AXILITES_BASEADDR;
+		high_addr = XPAR_SEQUENCER_1_S_AXI_AXILITES_HIGHADDR;
 	} else if (id == 2) {
 		base_addr = XPAR_SEQUENCER_2_S_AXI_AXILITES_BASEADDR;
+		high_addr = XPAR_SEQUENCER_2_S_AXI_AXILITES_HIGHADDR;
 	}
 
 	unsigned int page_size = sysconf(_SC_PAGESIZE);
 	int page_addr = ( base_addr & (~(page_size-1)) );
 	unsigned int page_offset = base_addr - page_addr;
 
+	unsigned int address_size = high_addr - base_addr;
+	num_pages_seq[id] = 1 + (page_offset + address_size) / page_size;
+
+
 	if (sequencer_page[id] == NULL) {
-		sequencer_page[id] = mmap(NULL, page_size, PROT_READ|PROT_WRITE, MAP_SHARED, fd, page_addr);
+		sequencer_page[id] = mmap(NULL, num_pages_seq[id]*page_size, PROT_READ|PROT_WRITE, MAP_SHARED, fd, page_addr);
 	}
 
 	volatile unsigned int* sequencer_ptr = (volatile unsigned int *)(sequencer_page[id] + page_offset);
