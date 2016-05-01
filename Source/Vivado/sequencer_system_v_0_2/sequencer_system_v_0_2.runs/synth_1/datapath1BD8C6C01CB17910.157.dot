@@ -1,0 +1,14 @@
+digraph datapath1BD8C6C01CB17910 {
+graph [label="datapath1BD8C6C01CB17910", margin="0.1,0.1", size="100,100", ranksep=0.1, splines=true];
+node [style=filled, color="#ffee80", fontname=helveticanarrow];
+edge [color="#ff0000", fontsize=10, fontname=helveticanarrow];
+{ rank = source;datapath1BD8C6C01CB17910_cmd_last_word [label="cmd_last_word[4:0]", shape=invhouse, color="#e4f1b2"];
+datapath1BD8C6C01CB17910_current_word [label="current_word[4:0]", shape=invhouse, color="#e4f1b2"];
+}
+{ rank = sink;datapath1BD8C6C01CB17910_last_word3 [label="last_word3", shape=house, color="#e4f1b2"];
+}
+N_18754820 [label="N_18754820\n==:1\ngen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_READ.gen_non_fifo_r_upsizer.read_data_inst/last_word3\n Attributes ::\nAttrGroup: dfg, AttrName : [range], AttrVal:[ -1111111111:-1111111111 ]\nAttrGroup: dfg, AttrName : [name], AttrVal:[ gen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_READ.gen_non_fifo_r_upsizer.read_data_inst/last_word3 ]\n\n#0:1\n", color="#bbebff"];
+datapath1BD8C6C01CB17910_cmd_last_word -> N_18754820 [label="5", taillabel=<cmd_last_word>, headlabel=<B>, headlabel=<#0:31>];
+datapath1BD8C6C01CB17910_current_word -> N_18754820 [label="5", taillabel=<current_word>, headlabel=<A>, headlabel=<#0:31>];
+N_18754820 -> datapath1BD8C6C01CB17910_last_word3 [label="1", taillabel=<out[last_word3]>, headlabel=<last_word3>, headlabel=<#0:1>];
+}

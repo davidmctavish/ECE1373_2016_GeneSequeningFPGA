@@ -1,0 +1,24 @@
+digraph logic3BDB26904B880100 {
+graph [label="logic3BDB26904B880100", margin="0.1,0.1", size="100,100", ranksep=0.1, splines=true];
+node [style=filled, color="#ffee80", fontname=helveticanarrow];
+edge [color="#ff0000", fontsize=10, fontname=helveticanarrow];
+{ rank = source;logic3BDB26904B880100_s_ready_i [label="s_ready_i", shape=invhouse, color="#e4f1b2"];
+logic3BDB26904B880100_M_READY [label="M_READY", shape=invhouse, color="#e4f1b2"];
+logic3BDB26904B880100_m_valid_i [label="m_valid_i", shape=invhouse, color="#e4f1b2"];
+logic3BDB26904B880100_S_VALID [label="S_VALID", shape=invhouse, color="#e4f1b2"];
+}
+{ rank = sink;logic3BDB26904B880100_m_valid_i0 [label="m_valid_i0", shape=house, color="#e4f1b2"];
+}
+N_1835C230 [label="N_1835C230\n|:1\ngen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_READ.gen_non_fifo_r_upsizer.mi_register_slice_inst/r_pipe/m_valid_i0\n Attributes ::\nAttrGroup: dfg, AttrName : [range], AttrVal:[ -1111111111:-1111111111 ]\nAttrGroup: dfg, AttrName : [name], AttrVal:[ gen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_READ.gen_non_fifo_r_upsizer.mi_register_slice_inst/r_pipe/m_valid_i0 ]\n\n#0:1\n", color="#bbebff"];
+N_1835C1E0 [label="N_1835C1E0\n&:1\ngen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_READ.gen_non_fifo_r_upsizer.mi_register_slice_inst/r_pipe/m_valid_i1\n Attributes ::\nAttrGroup: dfg, AttrName : [range], AttrVal:[ -1111111111:-1111111111 ]\nAttrGroup: dfg, AttrName : [name], AttrVal:[ gen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_READ.gen_non_fifo_r_upsizer.mi_register_slice_inst/r_pipe/m_valid_i1 ]\n\n#0:1\n", color="#bbebff"];
+N_1835C190 [label="N_1835C190\n_~:1\ngen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_READ.gen_non_fifo_r_upsizer.mi_register_slice_inst/r_pipe/m_valid_i2\n Attributes ::\nAttrGroup: dfg, AttrName : [range], AttrVal:[ -1111111111:-1111111111 ]\nAttrGroup: dfg, AttrName : [name], AttrVal:[ gen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_READ.gen_non_fifo_r_upsizer.mi_register_slice_inst/r_pipe/m_valid_i2 ]\n\n#0:1\n", color="#bbebff"];
+N_1835C140 [label="N_1835C140\n_~:1\ngen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_READ.gen_non_fifo_r_upsizer.mi_register_slice_inst/r_pipe/m_valid_i2\n Attributes ::\nAttrGroup: dfg, AttrName : [range], AttrVal:[ -1111111111:-1111111111 ]\nAttrGroup: dfg, AttrName : [name], AttrVal:[ gen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_READ.gen_non_fifo_r_upsizer.mi_register_slice_inst/r_pipe/m_valid_i2 ]\n\n#0:1\n", color="#bbebff"];
+N_1835C1E0 -> N_1835C230 [label="1", taillabel=<out[m_valid_i1]>, headlabel=<B>, headlabel=<#0:1>];
+N_1835C190 -> N_1835C1E0 [label="1", taillabel=<out[m_valid_i2]>, headlabel=<B>, headlabel=<#0:1>];
+N_1835C140 -> N_1835C230 [label="1", taillabel=<out[m_valid_i2]>, headlabel=<P_1D53E990>, headlabel=<#0:1>];
+logic3BDB26904B880100_s_ready_i -> N_1835C140 [label="1", taillabel=<s_ready_i>, headlabel=<in>, headlabel=<#0:1>];
+logic3BDB26904B880100_M_READY -> N_1835C190 [label="1", taillabel=<M_READY>, headlabel=<in>, headlabel=<#0:1>];
+logic3BDB26904B880100_m_valid_i -> N_1835C1E0 [label="1", taillabel=<m_valid_i>, headlabel=<A>, headlabel=<#0:1>];
+logic3BDB26904B880100_S_VALID -> N_1835C230 [label="1", taillabel=<S_VALID>, headlabel=<A>, headlabel=<#0:1>];
+N_1835C230 -> logic3BDB26904B880100_m_valid_i0 [label="1", taillabel=<out[m_valid_i0]>, headlabel=<m_valid_i0>, headlabel=<#0:1>];
+}

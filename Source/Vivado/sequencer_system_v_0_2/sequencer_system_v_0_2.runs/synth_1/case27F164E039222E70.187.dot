@@ -1,0 +1,23 @@
+digraph case27F164E039222E70 {
+graph [label="case27F164E039222E70", margin="0.1,0.1", size="100,100", ranksep=0.1, splines=true];
+node [style=filled, color="#ffee80", fontname=helveticanarrow];
+edge [color="#ff0000", fontsize=10, fontname=helveticanarrow];
+{ rank = source;case27F164E039222E70_m_valid_i [label="m_valid_i", shape=invhouse, color="#e4f1b2"];
+case27F164E039222E70_s_ready_i1 [label="s_ready_i1", shape=invhouse, color="#e4f1b2"];
+case27F164E039222E70_M_READY [label="M_READY", shape=invhouse, color="#e4f1b2"];
+}
+{ rank = sink;case27F164E039222E70_s_ready_i0 [label="s_ready_i0", shape=house, color="#e4f1b2"];
+}
+{ rank = same;N_19192E60 [label="N_19192E60\nconstruct:2\nparallel\ngen_upsizer.gen_full_upsizer.axi_upsizer_inst/si_register_slice_inst/ar_pipe/s_ready_i1\nparallel\n Attributes ::\nAttrGroup: dfg, AttrName : [parallel], AttrVal:[ 0x1 ]\nAttrGroup: dfg, AttrName : [range], AttrVal:[ -1111111111:-1111111111 ]\nAttrGroup: dfg, AttrName : [name], AttrVal:[ gen_upsizer.gen_full_upsizer.axi_upsizer_inst/si_register_slice_inst/ar_pipe/s_ready_i1 ]\n\n#0:3\n", shape=diamond, color="#ffee80"];
+N_19192EB0 [label="N_19192EB0\nmerge:1\ngen_upsizer.gen_full_upsizer.axi_upsizer_inst/si_register_slice_inst/ar_pipe/s_ready_i0\n Attributes ::\nAttrGroup: dfg, AttrName : [range], AttrVal:[ -1111111111:-1111111111 ]\nAttrGroup: dfg, AttrName : [name], AttrVal:[ gen_upsizer.gen_full_upsizer.axi_upsizer_inst/si_register_slice_inst/ar_pipe/s_ready_i0 ]\n\n#0:1\n", shape=house, color="#ffee80"];
+}
+N_19192E60_P_1D8BD4B0 [label="1b1", color="#f1f1b2", shape=plaintext];
+N_19192E60_P_1D8BD4B0 -> N_19192E60 [label="1", headlabel=<1>, headlabel=<1>];
+N_19192E60_P_1D8BC940 [label="1bx", color="#f1f1b2", shape=plaintext];
+N_19192E60_P_1D8BC940 -> N_19192E60 [label="1", headlabel=<0>, headlabel=<0>];
+N_19192E60 -> N_19192EB0 [label="2", style=dashed, constraint=false, taillabel=<out>, headlabel=<sel>, headlabel=<#0:3>];
+case27F164E039222E70_m_valid_i -> N_19192E60 [label="1", taillabel=<m_valid_i>, headlabel=<in>, headlabel=<#0:1>];
+case27F164E039222E70_s_ready_i1 -> N_19192EB0 [label="1", taillabel=<s_ready_i1>, headlabel=<0>, headlabel=<#0:1>];
+case27F164E039222E70_M_READY -> N_19192EB0 [label="1", taillabel=<M_READY>, headlabel=<1>, headlabel=<#0:1>];
+N_19192EB0 -> case27F164E039222E70_s_ready_i0 [label="1", taillabel=<out>, headlabel=<s_ready_i0>, headlabel=<#0:1>];
+}

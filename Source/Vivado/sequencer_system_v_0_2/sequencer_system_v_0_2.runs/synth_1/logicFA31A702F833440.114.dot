@@ -1,0 +1,27 @@
+digraph logicFA31A702F833440 {
+graph [label="logicFA31A702F833440", margin="0.1,0.1", size="100,100", ranksep=0.1, splines=true];
+node [style=filled, color="#ffee80", fontname=helveticanarrow];
+edge [color="#ff0000", fontsize=10, fontname=helveticanarrow];
+{ rank = source;logicFA31A702F833440_USE_RTL_ADDR.addr_q_reg [label="USE_RTL_ADDR.addr_q_reg[4:0]", shape=invhouse, color="#e4f1b2"];
+logicFA31A702F833440_buffer_full_early1 [label="buffer_full_early1", shape=invhouse, color="#e4f1b2"];
+logicFA31A702F833440_buffer_Full_q [label="buffer_Full_q", shape=invhouse, color="#e4f1b2"];
+logicFA31A702F833440_valid_Write [label="valid_Write", shape=invhouse, color="#e4f1b2"];
+}
+{ rank = sink;logicFA31A702F833440_buffer_full_early [label="buffer_full_early", shape=house, color="#e4f1b2"];
+}
+N_18559B80 [label="N_18559B80\n|:1\ngen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_WRITE.write_addr_inst/GEN_CMD_QUEUE.cmd_queue/buffer_full_early\n Attributes ::\nAttrGroup: dfg, AttrName : [range], AttrVal:[ -1111111111:-1111111111 ]\nAttrGroup: dfg, AttrName : [name], AttrVal:[ gen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_WRITE.write_addr_inst/GEN_CMD_QUEUE.cmd_queue/buffer_full_early ]\n\n#0:1\n", color="#bbebff"];
+N_18559B30 [label="N_18559B30\n&:1\ngen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_WRITE.write_addr_inst/GEN_CMD_QUEUE.cmd_queue/buffer_full_early0\n Attributes ::\nAttrGroup: dfg, AttrName : [range], AttrVal:[ -1111111111:-1111111111 ]\nAttrGroup: dfg, AttrName : [name], AttrVal:[ gen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_WRITE.write_addr_inst/GEN_CMD_QUEUE.cmd_queue/buffer_full_early0 ]\n\n#0:1\n", color="#bbebff"];
+N_18559AE0 [label="N_18559AE0\n&:1\ngen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_WRITE.write_addr_inst/GEN_CMD_QUEUE.cmd_queue/buffer_full_early0\n Attributes ::\nAttrGroup: dfg, AttrName : [range], AttrVal:[ -1111111111:-1111111111 ]\nAttrGroup: dfg, AttrName : [name], AttrVal:[ gen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_WRITE.write_addr_inst/GEN_CMD_QUEUE.cmd_queue/buffer_full_early0 ]\n\n#0:1\n", color="#bbebff"];
+N_18559BD0 [label="N_18559BD0\n==:1\ngen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_WRITE.write_addr_inst/GEN_CMD_QUEUE.cmd_queue/buffer_full_early2\n Attributes ::\nAttrGroup: dfg, AttrName : [range], AttrVal:[ -1111111111:-1111111111 ]\nAttrGroup: dfg, AttrName : [name], AttrVal:[ gen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_WRITE.write_addr_inst/GEN_CMD_QUEUE.cmd_queue/buffer_full_early2 ]\n\n#0:1\n", color="#bbebff"];
+N_18559BD0_B [label="5b11110", color="#f1f1b2", shape=plaintext];
+N_18559BD0_B -> N_18559BD0 [label="5", headlabel=<B>];
+N_18559B30 -> N_18559B80 [label="1", taillabel=<out[buffer_full_early05_out]>, headlabel=<A>, headlabel=<#0:1>];
+N_18559AE0 -> N_18559B80 [label="1", taillabel=<out[buffer_full_early0]>, headlabel=<B>, headlabel=<#0:1>];
+N_18559BD0 -> N_18559B30 [label="1", taillabel=<out[buffer_full_early2]>, headlabel=<A>, headlabel=<#0:1>];
+logicFA31A702F833440_USE_RTL_ADDR.addr_q_reg -> N_18559BD0 [label="5", taillabel=<USE_RTL_ADDR.addr_q_reg>, headlabel=<A>, headlabel=<#0:31>];
+logicFA31A702F833440_buffer_full_early1 -> N_18559AE0 [label="1", taillabel=<buffer_full_early1>, headlabel=<B>, headlabel=<#0:1>];
+logicFA31A702F833440_buffer_full_early1 -> N_18559B30 [label="1", taillabel=<buffer_full_early1>, headlabel=<B>, headlabel=<#0:1>];
+logicFA31A702F833440_buffer_Full_q -> N_18559AE0 [label="1", taillabel=<buffer_Full_q>, headlabel=<A>, headlabel=<#0:1>];
+logicFA31A702F833440_valid_Write -> N_18559B30 [label="1", taillabel=<valid_Write>, headlabel=<P_1C19B710>, headlabel=<#0:1>];
+N_18559B80 -> logicFA31A702F833440_buffer_full_early [label="1", taillabel=<out[buffer_full_early]>, headlabel=<buffer_full_early>, headlabel=<#0:1>];
+}

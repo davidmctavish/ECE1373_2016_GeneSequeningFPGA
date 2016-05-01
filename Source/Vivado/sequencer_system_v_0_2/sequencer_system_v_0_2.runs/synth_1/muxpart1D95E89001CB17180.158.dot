@@ -1,0 +1,75 @@
+digraph muxpart1D95E89001CB17180 {
+graph [label="muxpart1D95E89001CB17180", margin="0.1,0.1", size="100,100", ranksep=0.1, splines=true];
+node [style=filled, color="#ffee80", fontname=helveticanarrow];
+edge [color="#ff0000", fontsize=10, fontname=helveticanarrow];
+{ rank = source;muxpart1D95E89001CB17180_data0 [label="data0[31:0]", shape=invhouse, color="#e4f1b2"];
+muxpart1D95E89001CB17180_data1 [label="data1[31:0]", shape=invhouse, color="#e4f1b2"];
+muxpart1D95E89001CB17180_data2 [label="data2[31:0]", shape=invhouse, color="#e4f1b2"];
+muxpart1D95E89001CB17180_data3 [label="data3[31:0]", shape=invhouse, color="#e4f1b2"];
+muxpart1D95E89001CB17180_data4 [label="data4[31:0]", shape=invhouse, color="#e4f1b2"];
+muxpart1D95E89001CB17180_data5 [label="data5[31:0]", shape=invhouse, color="#e4f1b2"];
+muxpart1D95E89001CB17180_data6 [label="data6[31:0]", shape=invhouse, color="#e4f1b2"];
+muxpart1D95E89001CB17180_data7 [label="data7[31:0]", shape=invhouse, color="#e4f1b2"];
+muxpart1D95E89001CB17180_sel0 [label="sel0[2:0]", shape=invhouse, color="#e4f1b2"];
+}
+{ rank = sink;muxpart1D95E89001CB17180_out0 [label="out0[31:0]", shape=house, color="#e4f1b2"];
+}
+N_187554A0 [label="case187554A0", color="#e6dcff", shape=house];
+muxpart1D95E89001CB17180_sel0 -> N_187554A0 [label="3", taillabel=<sel0>, headlabel=<sel0>, headlabel=<#0:7>];
+muxpart1D95E89001CB17180_data7 -> N_187554A0 [label="32", taillabel=<data7>, headlabel=<data7>, headlabel=<#32'b00000000000000000000000000000000:32'b11111111111111111111111111111111>];
+muxpart1D95E89001CB17180_data6 -> N_187554A0 [label="32", taillabel=<data6>, headlabel=<data6>, headlabel=<#32'b00000000000000000000000000000000:32'b11111111111111111111111111111111>];
+muxpart1D95E89001CB17180_data5 -> N_187554A0 [label="32", taillabel=<data5>, headlabel=<data5>, headlabel=<#32'b00000000000000000000000000000000:32'b11111111111111111111111111111111>];
+muxpart1D95E89001CB17180_data4 -> N_187554A0 [label="32", taillabel=<data4>, headlabel=<data4>, headlabel=<#32'b00000000000000000000000000000000:32'b11111111111111111111111111111111>];
+muxpart1D95E89001CB17180_data3 -> N_187554A0 [label="32", taillabel=<data3>, headlabel=<data3>, headlabel=<#32'b00000000000000000000000000000000:32'b11111111111111111111111111111111>];
+muxpart1D95E89001CB17180_data2 -> N_187554A0 [label="32", taillabel=<data2>, headlabel=<data2>, headlabel=<#32'b00000000000000000000000000000000:32'b11111111111111111111111111111111>];
+muxpart1D95E89001CB17180_data1 -> N_187554A0 [label="32", taillabel=<data1>, headlabel=<data1>, headlabel=<#32'b00000000000000000000000000000000:32'b11111111111111111111111111111111>];
+muxpart1D95E89001CB17180_data0 -> N_187554A0 [label="32", taillabel=<data0>, headlabel=<data0>, headlabel=<#32'b00000000000000000000000000000000:32'b11111111111111111111111111111111>];
+N_187554A0 -> muxpart1D95E89001CB17180_out0 [label="32", taillabel=<S_AXI_RDATA_I0[S_AXI_RDATA_I0]>, headlabel=<out0>, headlabel=<#32'b00000000000000000000000000000000:32'b00000000000000000000000000000000>];
+}
+digraph case187554A0 {
+graph [label="case187554A0", margin="0.1,0.1", size="100,100", ranksep=0.1, splines=true];
+node [style=filled, color="#ffee80", fontname=helveticanarrow];
+edge [color="#ff0000", fontsize=10, fontname=helveticanarrow];
+{ rank = source;case187554A0_sel0 [label="sel0[2:0]", shape=invhouse, color="#e4f1b2"];
+case187554A0_data7 [label="data7[31:0]", shape=invhouse, color="#e4f1b2"];
+case187554A0_data6 [label="data6[31:0]", shape=invhouse, color="#e4f1b2"];
+case187554A0_data5 [label="data5[31:0]", shape=invhouse, color="#e4f1b2"];
+case187554A0_data4 [label="data4[31:0]", shape=invhouse, color="#e4f1b2"];
+case187554A0_data3 [label="data3[31:0]", shape=invhouse, color="#e4f1b2"];
+case187554A0_data2 [label="data2[31:0]", shape=invhouse, color="#e4f1b2"];
+case187554A0_data1 [label="data1[31:0]", shape=invhouse, color="#e4f1b2"];
+case187554A0_data0 [label="data0[31:0]", shape=invhouse, color="#e4f1b2"];
+}
+{ rank = sink;case187554A0_S_AXI_RDATA_I0 [label="S_AXI_RDATA_I0[31:0]", shape=house, color="#e4f1b2"];
+}
+{ rank = same;N_18755360 [label="N_18755360\nconstruct:8\nparallel\ngen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_READ.gen_non_fifo_r_upsizer.read_data_inst/S_AXI_RDATA_I1\nparallel\n Attributes ::\nAttrGroup: dfg, AttrName : [parallel], AttrVal:[ 0xbdc5ca39bdc5ca01 ]\nAttrGroup: dfg, AttrName : [range], AttrVal:[ -1111111111:-1111111111 ]\nAttrGroup: dfg, AttrName : [name], AttrVal:[ gen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_READ.gen_non_fifo_r_upsizer.read_data_inst/S_AXI_RDATA_I1 ]\n\n#0:255\n", shape=diamond, color="#ffee80"];
+N_18755310 [label="N_18755310\nmerge:32\ngen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_READ.gen_non_fifo_r_upsizer.read_data_inst/S_AXI_RDATA_I0\n Attributes ::\nAttrGroup: dfg, AttrName : [range], AttrVal:[ -1111111111:-1111111111 ]\nAttrGroup: dfg, AttrName : [name], AttrVal:[ gen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_READ.gen_non_fifo_r_upsizer.read_data_inst/S_AXI_RDATA_I0 ]\n\n#32'b00000000000000000000000000000000:32'b11111111111111111111111111111111\n", shape=house, color="#ffee80"];
+}
+N_18755360_P_1D5276B0 [label="3b000", color="#f1f1b2", shape=plaintext];
+N_18755360_P_1D5276B0 -> N_18755360 [label="3", headlabel=<1>, headlabel=<1>];
+N_18755360_P_1D527710 [label="3b001", color="#f1f1b2", shape=plaintext];
+N_18755360_P_1D527710 -> N_18755360 [label="3", headlabel=<2>, headlabel=<2>];
+N_18755360_P_1D5272C0 [label="3b010", color="#f1f1b2", shape=plaintext];
+N_18755360_P_1D5272C0 -> N_18755360 [label="3", headlabel=<3>, headlabel=<3>];
+N_18755360_P_1D5277A0 [label="3b011", color="#f1f1b2", shape=plaintext];
+N_18755360_P_1D5277A0 -> N_18755360 [label="3", headlabel=<4>, headlabel=<4>];
+N_18755360_P_1D526060 [label="3b100", color="#f1f1b2", shape=plaintext];
+N_18755360_P_1D526060 -> N_18755360 [label="3", headlabel=<5>, headlabel=<5>];
+N_18755360_P_1D526120 [label="3b101", color="#f1f1b2", shape=plaintext];
+N_18755360_P_1D526120 -> N_18755360 [label="3", headlabel=<6>, headlabel=<6>];
+N_18755360_P_1D526150 [label="3b110", color="#f1f1b2", shape=plaintext];
+N_18755360_P_1D526150 -> N_18755360 [label="3", headlabel=<7>, headlabel=<7>];
+N_18755360_P_1D5260C0 [label="3b111", color="#f1f1b2", shape=plaintext];
+N_18755360_P_1D5260C0 -> N_18755360 [label="3", headlabel=<8>, headlabel=<8>];
+N_18755360 -> N_18755310 [label="8", style=dashed, constraint=false, taillabel=<out[S_AXI_RDATA_I1]>, headlabel=<sel>, headlabel=<#0:255>];
+case187554A0_sel0 -> N_18755360 [label="3", taillabel=<sel0>, headlabel=<in>, headlabel=<#0:7>];
+case187554A0_data7 -> N_18755310 [label="32", taillabel=<data7>, headlabel=<8>, headlabel=<#32'b00000000000000000000000000000000:32'b11111111111111111111111111111111>];
+case187554A0_data6 -> N_18755310 [label="32", taillabel=<data6>, headlabel=<7>, headlabel=<#32'b00000000000000000000000000000000:32'b11111111111111111111111111111111>];
+case187554A0_data5 -> N_18755310 [label="32", taillabel=<data5>, headlabel=<6>, headlabel=<#32'b00000000000000000000000000000000:32'b11111111111111111111111111111111>];
+case187554A0_data4 -> N_18755310 [label="32", taillabel=<data4>, headlabel=<5>, headlabel=<#32'b00000000000000000000000000000000:32'b11111111111111111111111111111111>];
+case187554A0_data3 -> N_18755310 [label="32", taillabel=<data3>, headlabel=<4>, headlabel=<#32'b00000000000000000000000000000000:32'b11111111111111111111111111111111>];
+case187554A0_data2 -> N_18755310 [label="32", taillabel=<data2>, headlabel=<3>, headlabel=<#32'b00000000000000000000000000000000:32'b11111111111111111111111111111111>];
+case187554A0_data1 -> N_18755310 [label="32", taillabel=<data1>, headlabel=<2>, headlabel=<#32'b00000000000000000000000000000000:32'b11111111111111111111111111111111>];
+case187554A0_data0 -> N_18755310 [label="32", taillabel=<data0>, headlabel=<1>, headlabel=<#32'b00000000000000000000000000000000:32'b11111111111111111111111111111111>];
+N_18755310 -> case187554A0_S_AXI_RDATA_I0 [label="32", taillabel=<out[S_AXI_RDATA_I0]>, headlabel=<S_AXI_RDATA_I0>, headlabel=<#32'b00000000000000000000000000000000:32'b11111111111111111111111111111111>];
+}

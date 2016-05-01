@@ -1,0 +1,12 @@
+digraph logic1CB185A01D95E310 {
+graph [label="logic1CB185A01D95E310", margin="0.1,0.1", size="100,100", ranksep=0.1, splines=true];
+node [style=filled, color="#ffee80", fontname=helveticanarrow];
+edge [color="#ff0000", fontsize=10, fontname=helveticanarrow];
+{ rank = source;logic1CB185A01D95E310_s_axi_aresetn [label="s_axi_aresetn", shape=invhouse, color="#e4f1b2"];
+}
+{ rank = sink;logic1CB185A01D95E310_ARESET0 [label="ARESET0", shape=house, color="#e4f1b2"];
+}
+N_19193310 [label="N_19193310\n_~:1\ngen_upsizer.gen_full_upsizer.axi_upsizer_inst/si_register_slice_inst/reset\n Attributes ::\nAttrGroup: dfg, AttrName : [range], AttrVal:[ -1111111111:-1111111111 ]\nAttrGroup: dfg, AttrName : [name], AttrVal:[ gen_upsizer.gen_full_upsizer.axi_upsizer_inst/si_register_slice_inst/reset ]\n\n#0:1\n", color="#bbebff"];
+logic1CB185A01D95E310_s_axi_aresetn -> N_19193310 [label="1", taillabel=<s_axi_aresetn>, headlabel=<in>, headlabel=<#0:1>];
+N_19193310 -> logic1CB185A01D95E310_ARESET0 [label="1", taillabel=<out[ARESET0]>, headlabel=<ARESET0>, headlabel=<#0:1>];
+}

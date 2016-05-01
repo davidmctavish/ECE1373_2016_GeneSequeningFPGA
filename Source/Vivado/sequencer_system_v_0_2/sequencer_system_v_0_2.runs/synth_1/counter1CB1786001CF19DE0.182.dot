@@ -1,0 +1,115 @@
+digraph counter1CB1786001CF19DE0 {
+graph [label="counter1CB1786001CF19DE0", margin="0.1,0.1", size="100,100", ranksep=0.1, splines=true];
+node [style=filled, color="#ffee80", fontname=helveticanarrow];
+edge [color="#ff0000", fontsize=10, fontname=helveticanarrow];
+{ rank = source;counter1CB1786001CF19DE0_clk [label="clk", shape=invhouse, color="#e4f1b2"];
+counter1CB1786001CF19DE0_sel [label="sel", shape=invhouse, color="#e4f1b2"];
+counter1CB1786001CF19DE0_clear [label="clear", shape=invhouse, color="#e4f1b2"];
+counter1CB1786001CF19DE0_clearval [label="clearval[4:0]", shape=invhouse, color="#e4f1b2"];
+counter1CB1786001CF19DE0_in [label="in[1:0]", shape=invhouse, color="#e4f1b2"];
+counter1CB1786001CF19DE0_addsub [label="addsub", shape=invhouse, color="#e4f1b2"];
+counter1CB1786001CF19DE0_IS_CLK_INVERTED [label="IS_CLK_INVERTED[0:0]", shape=invhouse, color="#e4f1b2"];
+}
+{ rank = sink;counter1CB1786001CF19DE0_out [label="out[4:0]", shape=house, color="#e4f1b2"];
+}
+N_191944E0 [label="addsub191944E0"];
+N_191955C0 [label="reg191955C0"];
+N_191944E0_B [label="2b01", color="#f1f1b2", shape=plaintext];
+N_191944E0_B -> N_191944E0 [label="2", headlabel=<B>];
+counter1CB1786001CF19DE0_addsub -> N_191944E0 [label="1", taillabel=<addsub>, headlabel=<in>, headlabel=<#0:1>];
+counter1CB1786001CF19DE0_clear -> N_191955C0 [label="1", taillabel=<clear>, headlabel=<clear>, headlabel=<#0:1>];
+counter1CB1786001CF19DE0_sel -> N_191955C0 [label="1", taillabel=<sel>, headlabel=<sel>, headlabel=<#0:1>];
+counter1CB1786001CF19DE0_clk -> N_191955C0 [label="1", taillabel=<clk>, headlabel=<clk>, headlabel=<#0:1>];
+N_191944E0 -> N_191955C0 [label="5", taillabel=<out[A0]>, headlabel=<A0>, headlabel=<#0:31>];
+N_191955C0 -> N_191944E0 [label="5", taillabel=<A[A]>, headlabel=<A>, headlabel=<#0:0>];
+N_191955C0 -> counter1CB1786001CF19DE0_out [label="5", taillabel=<A[A]>, headlabel=<out>, headlabel=<#0:0>];
+}
+digraph addsub191944E0 {
+graph [label="addsub191944E0", margin="0.1,0.1", size="100,100", ranksep=0.1, splines=true];
+node [style=filled, color="#ffee80", fontname=helveticanarrow];
+edge [color="#ff0000", fontsize=10, fontname=helveticanarrow];
+{ rank = source;addsub191944E0_A [label="A[4:0]", shape=invhouse, color="#e4f1b2"];
+addsub191944E0_B [label="B[1:0]", shape=invhouse, color="#e4f1b2"];
+addsub191944E0_in [label="in", shape=invhouse, color="#e4f1b2"];
+}
+{ rank = sink;addsub191944E0_out [label="out[4:0]", shape=house, color="#e4f1b2"];
+}
+N_19194670 [label="signinv19194670"];
+N_19195430 [label="datapath19195430", color="#e6dcff", shape=invtrapezium];
+N_19194670_in [label="2b01", color="#f1f1b2", shape=plaintext];
+N_19194670_in -> N_19194670 [label="2", headlabel=<in>];
+addsub191944E0_in -> N_19194670 [label="1", taillabel=<in>, headlabel=<sel>, headlabel=<#0:1>];
+addsub191944E0_A -> N_19195430 [label="5", taillabel=<A>, headlabel=<A>, headlabel=<#0:31>];
+N_19194670 -> N_19195430 [label="2", taillabel=<out>, headlabel=<p_0_in>, headlabel=<#0:3>];
+N_19195430 -> addsub191944E0_out [label="5", taillabel=<addr_q[addr_q]>, headlabel=<out>, headlabel=<#0:0>];
+}
+digraph signinv19194670 {
+graph [label="signinv19194670", margin="0.1,0.1", size="100,100", ranksep=0.1, splines=true];
+node [style=filled, color="#ffee80", fontname=helveticanarrow];
+edge [color="#ff0000", fontsize=10, fontname=helveticanarrow];
+{ rank = source;signinv19194670_in [label="in[1:0]", shape=invhouse, color="#e4f1b2"];
+signinv19194670_sel [label="sel", shape=invhouse, color="#e4f1b2"];
+}
+{ rank = sink;signinv19194670_out [label="out[1:0]", shape=house, color="#e4f1b2"];
+}
+N_19195070 [label="case19195070", color="#e6dcff", shape=house];
+signinv19194670_sel -> N_19195070 [label="1", taillabel=<sel>, headlabel=<sel>, headlabel=<#0:1>];
+N_19195070 -> signinv19194670_out [label="2", color="#00ff00", taillabel=<p_0_out[p_0_out]>, headlabel=<out>, headlabel=<#s0:s0 Clipped>];
+}
+digraph case19195070 {
+graph [label="case19195070", margin="0.1,0.1", size="100,100", ranksep=0.1, splines=true];
+node [style=filled, color="#ffee80", fontname=helveticanarrow];
+edge [color="#ff0000", fontsize=10, fontname=helveticanarrow];
+{ rank = source;case19195070_sel [label="sel", shape=invhouse, color="#e4f1b2"];
+}
+{ rank = sink;case19195070_p_0_out [label="p_0_out[1:0]", shape=house, color="#e4f1b2"];
+}
+{ rank = same;N_19195160 [label="N_19195160\nconstruct:2\nparallel\ngen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_READ.read_addr_inst/GEN_CMD_QUEUE.cmd_queue/addr_q0\nparallel\n Attributes ::\nAttrGroup: dfg, AttrName : [parallel], AttrVal:[ 0x1 ]\nAttrGroup: dfg, AttrName : [range], AttrVal:[ -1111111111:-1111111111 ]\nAttrGroup: dfg, AttrName : [name], AttrVal:[ gen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_READ.read_addr_inst/GEN_CMD_QUEUE.cmd_queue/addr_q0 ]\n\n#0:3\n", shape=diamond, color="#ffee80"];
+N_19195110 [label="N_19195110\nmerge:s2\ngen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_READ.read_addr_inst/p_0_out[1:0]\n Attributes ::\nAttrGroup: dfg, AttrName : [range], AttrVal:[ 1:0 ]\nAttrGroup: dfg, AttrName : [name], AttrVal:[ gen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_READ.read_addr_inst/p_0_out ]\n\n#s-2:s1\n", shape=house, color="#ffee80"];
+}
+N_19195110_P_1D606CF0 [label="2b01", color="#f1f1b2", shape=plaintext];
+N_19195110_P_1D606CF0 -> N_19195110 [label="2", headlabel=<1>, headlabel=<1>];
+N_19195110_P_1D606C60 [label="2sb11", color="#f1f1b2", shape=plaintext];
+N_19195110_P_1D606C60 -> N_19195110 [label="2", headlabel=<0>, color="#00ff00", headlabel=<0>];
+N_19195160_P_1D607050 [label="1b1", color="#f1f1b2", shape=plaintext];
+N_19195160_P_1D607050 -> N_19195160 [label="1", headlabel=<1>, headlabel=<1>];
+N_19195160_P_1D6070E0 [label="1bx", color="#f1f1b2", shape=plaintext];
+N_19195160_P_1D6070E0 -> N_19195160 [label="1", headlabel=<0>, headlabel=<0>];
+N_19195160 -> N_19195110 [label="2", style=dashed, constraint=false, taillabel=<out[addr_q0]>, headlabel=<sel>, headlabel=<#0:3 Clipped>];
+case19195070_sel -> N_19195160 [label="1", taillabel=<sel>, headlabel=<in>, headlabel=<#0:1>];
+N_19195110 -> case19195070_p_0_out [label="2", taillabel=<out[p_0_out]>, headlabel=<p_0_out>, headlabel=<#0:3 Clipped>];
+}
+digraph datapath19195430 {
+graph [label="datapath19195430", margin="0.1,0.1", size="100,100", ranksep=0.1, splines=true];
+node [style=filled, color="#ffee80", fontname=helveticanarrow];
+edge [color="#ff0000", fontsize=10, fontname=helveticanarrow];
+{ rank = source;datapath19195430_A [label="A[4:0]", shape=invhouse, color="#e4f1b2"];
+datapath19195430_p_0_in [label="p_0_in[1:0]", shape=invhouse, color="#e4f1b2"];
+}
+{ rank = sink;datapath19195430_addr_q [label="addr_q[4:0]", shape=house, color="#e4f1b2"];
+}
+N_19195480 [label="N_19195480\n+:5\ngen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_READ.read_addr_inst/A0\n Attributes ::\nAttrGroup: info, AttrName : [isResourceSharing], AttrVal:[ ]\nAttrGroup: dfg, AttrName : [range], AttrVal:[ -1111111111:-1111111111 ]\nAttrGroup: dfg, AttrName : [name], AttrVal:[ gen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_READ.read_addr_inst/A0 ]\n\n#0:31\nclipped\n Attr: isResourceSharing = ", color="#bbebff"];
+datapath19195430_A -> N_19195480 [label="5", taillabel=<A>, headlabel=<B>, headlabel=<#0:31>];
+datapath19195430_p_0_in -> N_19195480 [label="2", color="#00ff00", taillabel=<p_0_in>, headlabel=<A>, headlabel=<#s-2:s1 Clipped>];
+N_19195480 -> datapath19195430_addr_q [label="5", taillabel=<out[addr_q]>, headlabel=<addr_q>, headlabel=<#0:31>];
+}
+digraph reg191955C0 {
+graph [label="reg191955C0", margin="0.1,0.1", size="100,100", ranksep=0.1, splines=true];
+node [style=filled, color="#ffee80", fontname=helveticanarrow];
+edge [color="#ff0000", fontsize=10, fontname=helveticanarrow];
+{ rank = source;reg191955C0_clear [label="clear", shape=invhouse, color="#e4f1b2"];
+reg191955C0_sel [label="sel", shape=invhouse, color="#e4f1b2"];
+reg191955C0_clk [label="clk", shape=invhouse, color="#e4f1b2"];
+reg191955C0_A0 [label="A0[4:0]", shape=invhouse, color="#e4f1b2"];
+}
+{ rank = sink;reg191955C0_A [label="A[4:0]", shape=house, color="#e4f1b2"];
+}
+N_19195A20 [label="N_19195A20\nreg:5\ngen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_READ.read_addr_inst/GEN_CMD_QUEUE.cmd_queue/USE_RTL_ADDR.addr_q_reg[4:0]\n Attributes ::\nAttrGroup: dfg, AttrName : [registerConstant], AttrVal:[ 'bvvvv ]\nAttrGroup: dfg, AttrName : [range], AttrVal:[ 4:0 ]\nAttrGroup: dfg, AttrName : [name], AttrVal:[ gen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_READ.read_addr_inst/GEN_CMD_QUEUE.cmd_queue/USE_RTL_ADDR.addr_q_reg ]\n\n#0:31\n", shape=rect, color="#ffee80"];
+N_19195A20_P_1D609360 [label="5b00000", color="#f1f1b2", shape=plaintext];
+N_19195A20_P_1D609360 -> N_19195A20 [label="5", headlabel=<1>, headlabel=<1>];
+reg191955C0_clear -> N_19195A20 [label="1", color="#00ff00", taillabel=<clear>, headlabel=<0>, headlabel=<#s-1:s0 Clipped>];
+reg191955C0_sel -> N_19195A20 [label="1", color="#00ff00", taillabel=<sel>, headlabel=<sel>, headlabel=<#s-1:s0 Clipped>];
+reg191955C0_clk -> N_19195A20 [label="1", style=dashed, constraint=false, taillabel=<clk>, headlabel=<0>, headlabel=<#0:1>];
+reg191955C0_A0 -> N_19195A20 [label="5", taillabel=<A0>, headlabel=<in>, headlabel=<#0:31>];
+N_19195A20 -> reg191955C0_A [label="5", taillabel=<out[A]>, headlabel=<A>, headlabel=<#0:31>];
+}

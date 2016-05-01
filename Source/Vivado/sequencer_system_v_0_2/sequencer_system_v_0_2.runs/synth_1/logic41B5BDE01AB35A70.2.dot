@@ -1,0 +1,14 @@
+digraph logic41B5BDE01AB35A70 {
+graph [label="logic41B5BDE01AB35A70", margin="0.1,0.1", size="100,100", ranksep=0.1, splines=true];
+node [style=filled, color="#ffee80", fontname=helveticanarrow];
+edge [color="#ff0000", fontsize=10, fontname=helveticanarrow];
+{ rank = source;logic41B5BDE01AB35A70_p_13_in [label="p_13_in", shape=invhouse, color="#e4f1b2"];
+logic41B5BDE01AB35A70_p_0_in32_in [label="p_0_in32_in", shape=invhouse, color="#e4f1b2"];
+}
+{ rank = sink;logic41B5BDE01AB35A70_p_0_out [label="p_0_out", shape=house, color="#e4f1b2"];
+}
+N_175ECA80 [label="N_175ECA80\n&:1\ngen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_WRITE.gen_non_fifo_w_upsizer.write_data_inst/\n Attributes ::\nAttrGroup: dfg, AttrName : [name], AttrVal:[ gen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_WRITE.gen_non_fifo_w_upsizer.write_data_inst/ ]\n\n#0:1\n", color="#bbebff"];
+logic41B5BDE01AB35A70_p_13_in -> N_175ECA80 [label="1", taillabel=<p_13_in>, headlabel=<B>, headlabel=<#0:1>];
+logic41B5BDE01AB35A70_p_0_in32_in -> N_175ECA80 [label="1", taillabel=<p_0_in32_in>, headlabel=<A>, headlabel=<#0:1>];
+N_175ECA80 -> logic41B5BDE01AB35A70_p_0_out [label="1", taillabel=<out>, headlabel=<p_0_out>, headlabel=<#0:1>];
+}

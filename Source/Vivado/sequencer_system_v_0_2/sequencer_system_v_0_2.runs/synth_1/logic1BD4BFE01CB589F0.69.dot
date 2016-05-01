@@ -1,0 +1,12 @@
+digraph logic1BD4BFE01CB589F0 {
+graph [label="logic1BD4BFE01CB589F0", margin="0.1,0.1", size="100,100", ranksep=0.1, splines=true];
+node [style=filled, color="#ffee80", fontname=helveticanarrow];
+edge [color="#ff0000", fontsize=10, fontname=helveticanarrow];
+{ rank = source;logic1BD4BFE01CB589F0_cmd_modified [label="cmd_modified", shape=invhouse, color="#e4f1b2"];
+}
+{ rank = sink;logic1BD4BFE01CB589F0_word_completed0 [label="word_completed0", shape=house, color="#e4f1b2"];
+}
+N_18754C80 [label="N_18754C80\n_~:1\ngen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_WRITE.gen_non_fifo_w_upsizer.write_data_inst/word_completed0\n Attributes ::\nAttrGroup: dfg, AttrName : [range], AttrVal:[ -1111111111:-1111111111 ]\nAttrGroup: dfg, AttrName : [name], AttrVal:[ gen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_WRITE.gen_non_fifo_w_upsizer.write_data_inst/word_completed0 ]\n\n#0:1\n", color="#bbebff"];
+logic1BD4BFE01CB589F0_cmd_modified -> N_18754C80 [label="1", taillabel=<cmd_modified>, headlabel=<in>, headlabel=<#0:1>];
+N_18754C80 -> logic1BD4BFE01CB589F0_word_completed0 [label="1", taillabel=<out[word_completed0]>, headlabel=<word_completed0>, headlabel=<#0:1>];
+}

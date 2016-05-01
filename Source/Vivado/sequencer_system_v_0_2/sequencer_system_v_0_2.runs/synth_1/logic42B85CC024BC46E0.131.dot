@@ -1,0 +1,14 @@
+digraph logic42B85CC024BC46E0 {
+graph [label="logic42B85CC024BC46E0", margin="0.1,0.1", size="100,100", ranksep=0.1, splines=true];
+node [style=filled, color="#ffee80", fontname=helveticanarrow];
+edge [color="#ff0000", fontsize=10, fontname=helveticanarrow];
+{ rank = source;logic42B85CC024BC46E0_cmd_mask [label="cmd_mask[4:0]", shape=invhouse, color="#e4f1b2"];
+logic42B85CC024BC46E0_pre_next_word_i [label="pre_next_word_i[4:0]", shape=invhouse, color="#e4f1b2"];
+}
+{ rank = sink;logic42B85CC024BC46E0_pre_next_word [label="pre_next_word[4:0]", shape=house, color="#e4f1b2"];
+}
+N_186C8460 [label="N_186C8460\n&:5\ngen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_READ.gen_non_fifo_r_upsizer.read_data_inst/pre_next_word[4:0]\n Attributes ::\nAttrGroup: dfg, AttrName : [range], AttrVal:[ 4:0 ]\nAttrGroup: dfg, AttrName : [name], AttrVal:[ gen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_READ.gen_non_fifo_r_upsizer.read_data_inst/pre_next_word ]\n\n#0:31\n", color="#bbebff"];
+logic42B85CC024BC46E0_cmd_mask -> N_186C8460 [label="5", taillabel=<cmd_mask>, headlabel=<B>, headlabel=<#0:31>];
+logic42B85CC024BC46E0_pre_next_word_i -> N_186C8460 [label="5", taillabel=<pre_next_word_i>, headlabel=<A>, headlabel=<#0:31>];
+N_186C8460 -> logic42B85CC024BC46E0_pre_next_word [label="5", taillabel=<out[pre_next_word]>, headlabel=<pre_next_word>, headlabel=<#0:31>];
+}

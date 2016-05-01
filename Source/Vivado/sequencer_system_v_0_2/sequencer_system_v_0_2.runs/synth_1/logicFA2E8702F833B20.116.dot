@@ -1,0 +1,14 @@
+digraph logicFA2E8702F833B20 {
+graph [label="logicFA2E8702F833B20", margin="0.1,0.1", size="100,100", ranksep=0.1, splines=true];
+node [style=filled, color="#ffee80", fontname=helveticanarrow];
+edge [color="#ff0000", fontsize=10, fontname=helveticanarrow];
+{ rank = source;logicFA2E8702F833B20_buffer_full_early1 [label="buffer_full_early1", shape=invhouse, color="#e4f1b2"];
+logicFA2E8702F833B20_valid_Write [label="valid_Write", shape=invhouse, color="#e4f1b2"];
+}
+{ rank = sink;logicFA2E8702F833B20_addr_q13_out [label="addr_q13_out", shape=house, color="#e4f1b2"];
+}
+N_185594F0 [label="N_185594F0\n&:1\ngen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_WRITE.write_addr_inst/GEN_CMD_QUEUE.cmd_queue/addr_q1\n Attributes ::\nAttrGroup: dfg, AttrName : [range], AttrVal:[ -1111111111:-1111111111 ]\nAttrGroup: dfg, AttrName : [name], AttrVal:[ gen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_WRITE.write_addr_inst/GEN_CMD_QUEUE.cmd_queue/addr_q1 ]\n\n#0:1\n", color="#bbebff"];
+logicFA2E8702F833B20_buffer_full_early1 -> N_185594F0 [label="1", taillabel=<buffer_full_early1>, headlabel=<B>, headlabel=<#0:1>];
+logicFA2E8702F833B20_valid_Write -> N_185594F0 [label="1", taillabel=<valid_Write>, headlabel=<A>, headlabel=<#0:1>];
+N_185594F0 -> logicFA2E8702F833B20_addr_q13_out [label="1", taillabel=<out[addr_q13_out]>, headlabel=<addr_q13_out>, headlabel=<#0:1>];
+}

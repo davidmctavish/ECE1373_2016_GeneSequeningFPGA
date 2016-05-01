@@ -1,0 +1,26 @@
+digraph logic42B840A03DCA54F0 {
+graph [label="logic42B840A03DCA54F0", margin="0.1,0.1", size="100,100", ranksep=0.1, splines=true];
+node [style=filled, color="#ffee80", fontname=helveticanarrow];
+edge [color="#ff0000", fontsize=10, fontname=helveticanarrow];
+{ rank = source;logic42B840A03DCA54F0_last_word3 [label="last_word3", shape=invhouse, color="#e4f1b2"];
+logic42B840A03DCA54F0_use_wrap_buffer [label="use_wrap_buffer", shape=invhouse, color="#e4f1b2"];
+logic42B840A03DCA54F0_wrap_buffer_available [label="wrap_buffer_available", shape=invhouse, color="#e4f1b2"];
+logic42B840A03DCA54F0_last_beat [label="last_beat", shape=invhouse, color="#e4f1b2"];
+}
+{ rank = sink;logic42B840A03DCA54F0_S_AXI_RLAST_I [label="S_AXI_RLAST_I", shape=house, color="#e4f1b2"];
+}
+N_186CAAD0 [label="N_186CAAD0\n|:1\ngen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_READ.gen_non_fifo_r_upsizer.read_data_inst/last_word\n Attributes ::\nAttrGroup: dfg, AttrName : [range], AttrVal:[ -1111111111:-1111111111 ]\nAttrGroup: dfg, AttrName : [name], AttrVal:[ gen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_READ.gen_non_fifo_r_upsizer.read_data_inst/last_word ]\n\n#0:1\n", color="#bbebff"];
+N_186CAA80 [label="N_186CAA80\n&:1\ngen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_READ.gen_non_fifo_r_upsizer.read_data_inst/last_word0\n Attributes ::\nAttrGroup: dfg, AttrName : [range], AttrVal:[ -1111111111:-1111111111 ]\nAttrGroup: dfg, AttrName : [name], AttrVal:[ gen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_READ.gen_non_fifo_r_upsizer.read_data_inst/last_word0 ]\n\n#0:1\n", color="#bbebff"];
+N_186CAB70 [label="N_186CAB70\n_~:1\ngen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_READ.gen_non_fifo_r_upsizer.read_data_inst/last_word2\n Attributes ::\nAttrGroup: dfg, AttrName : [range], AttrVal:[ -1111111111:-1111111111 ]\nAttrGroup: dfg, AttrName : [name], AttrVal:[ gen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_READ.gen_non_fifo_r_upsizer.read_data_inst/last_word2 ]\n\n#0:1\n", color="#bbebff"];
+N_186CABC0 [label="N_186CABC0\n&:1\ngen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_READ.gen_non_fifo_r_upsizer.read_data_inst/last_word0\n Attributes ::\nAttrGroup: dfg, AttrName : [range], AttrVal:[ -1111111111:-1111111111 ]\nAttrGroup: dfg, AttrName : [name], AttrVal:[ gen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_READ.gen_non_fifo_r_upsizer.read_data_inst/last_word0 ]\n\n#0:1\n", color="#bbebff"];
+N_186CAA80 -> N_186CAAD0 [label="1", taillabel=<out[last_word014_out]>, headlabel=<A>, headlabel=<#0:1>];
+N_186CAB70 -> N_186CAA80 [label="1", taillabel=<out[last_word2]>, headlabel=<P_1D558250>, headlabel=<#0:1>];
+N_186CABC0 -> N_186CAAD0 [label="1", taillabel=<out[last_word0]>, headlabel=<B>, headlabel=<#0:1>];
+logic42B840A03DCA54F0_last_word3 -> N_186CABC0 [label="1", taillabel=<last_word3>, headlabel=<B>, headlabel=<#0:1>];
+logic42B840A03DCA54F0_last_word3 -> N_186CAA80 [label="1", taillabel=<last_word3>, headlabel=<P_1D5592D0>, headlabel=<#0:1>];
+logic42B840A03DCA54F0_last_word3 -> N_186CAA80 [label="1", taillabel=<last_word3>, headlabel=<B>, headlabel=<#0:1>];
+logic42B840A03DCA54F0_use_wrap_buffer -> N_186CABC0 [label="1", taillabel=<use_wrap_buffer>, headlabel=<A>, headlabel=<#0:1>];
+logic42B840A03DCA54F0_wrap_buffer_available -> N_186CAB70 [label="1", taillabel=<wrap_buffer_available>, headlabel=<in>, headlabel=<#0:1>];
+logic42B840A03DCA54F0_last_beat -> N_186CAA80 [label="1", taillabel=<last_beat>, headlabel=<A>, headlabel=<#0:1>];
+N_186CAAD0 -> logic42B840A03DCA54F0_S_AXI_RLAST_I [label="1", taillabel=<out[S_AXI_RLAST_I]>, headlabel=<S_AXI_RLAST_I>, headlabel=<#0:1>];
+}

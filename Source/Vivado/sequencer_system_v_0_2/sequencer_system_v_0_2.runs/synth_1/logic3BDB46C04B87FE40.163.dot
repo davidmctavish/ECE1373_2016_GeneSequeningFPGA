@@ -1,0 +1,20 @@
+digraph logic3BDB46C04B87FE40 {
+graph [label="logic3BDB46C04B87FE40", margin="0.1,0.1", size="100,100", ranksep=0.1, splines=true];
+node [style=filled, color="#ffee80", fontname=helveticanarrow];
+edge [color="#ff0000", fontsize=10, fontname=helveticanarrow];
+{ rank = source;logic3BDB46C04B87FE40_S_VALID [label="S_VALID", shape=invhouse, color="#e4f1b2"];
+logic3BDB46C04B87FE40_s_ready_i [label="s_ready_i", shape=invhouse, color="#e4f1b2"];
+logic3BDB46C04B87FE40_p_1_in [label="p_1_in", shape=invhouse, color="#e4f1b2"];
+}
+{ rank = sink;logic3BDB46C04B87FE40_s_ready_i0 [label="s_ready_i0", shape=house, color="#e4f1b2"];
+}
+N_183BEC10 [label="N_183BEC10\n|:1\ngen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_READ.gen_non_fifo_r_upsizer.mi_register_slice_inst/r_pipe/s_ready_i0\n Attributes ::\nAttrGroup: dfg, AttrName : [range], AttrVal:[ -1111111111:-1111111111 ]\nAttrGroup: dfg, AttrName : [name], AttrVal:[ gen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_READ.gen_non_fifo_r_upsizer.mi_register_slice_inst/r_pipe/s_ready_i0 ]\n\n#0:1\n", color="#bbebff"];
+N_183BECB0 [label="N_183BECB0\n&:1\ngen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_READ.gen_non_fifo_r_upsizer.mi_register_slice_inst/r_pipe/s_ready_i1\n Attributes ::\nAttrGroup: dfg, AttrName : [range], AttrVal:[ -1111111111:-1111111111 ]\nAttrGroup: dfg, AttrName : [name], AttrVal:[ gen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_READ.gen_non_fifo_r_upsizer.mi_register_slice_inst/r_pipe/s_ready_i1 ]\n\n#0:1\n", color="#bbebff"];
+N_1835C640 [label="N_1835C640\n_~:1\ngen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_READ.gen_non_fifo_r_upsizer.mi_register_slice_inst/r_pipe/s_ready_i2\n Attributes ::\nAttrGroup: dfg, AttrName : [range], AttrVal:[ -1111111111:-1111111111 ]\nAttrGroup: dfg, AttrName : [name], AttrVal:[ gen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_READ.gen_non_fifo_r_upsizer.mi_register_slice_inst/r_pipe/s_ready_i2 ]\n\n#0:1\n", color="#bbebff"];
+N_183BECB0 -> N_183BEC10 [label="1", taillabel=<out[s_ready_i1]>, headlabel=<B>, headlabel=<#0:1>];
+N_1835C640 -> N_183BECB0 [label="1", taillabel=<out[s_ready_i2]>, headlabel=<B>, headlabel=<#0:1>];
+logic3BDB46C04B87FE40_S_VALID -> N_1835C640 [label="1", taillabel=<S_VALID>, headlabel=<in>, headlabel=<#0:1>];
+logic3BDB46C04B87FE40_s_ready_i -> N_183BECB0 [label="1", taillabel=<s_ready_i>, headlabel=<A>, headlabel=<#0:1>];
+logic3BDB46C04B87FE40_p_1_in -> N_183BEC10 [label="1", taillabel=<p_1_in>, headlabel=<A>, headlabel=<#0:1>];
+N_183BEC10 -> logic3BDB46C04B87FE40_s_ready_i0 [label="1", taillabel=<out[s_ready_i0]>, headlabel=<s_ready_i0>, headlabel=<#0:1>];
+}

@@ -1,0 +1,23 @@
+digraph case25B61CF02F833A70 {
+graph [label="case25B61CF02F833A70", margin="0.1,0.1", size="100,100", ranksep=0.1, splines=true];
+node [style=filled, color="#ffee80", fontname=helveticanarrow];
+edge [color="#ff0000", fontsize=10, fontname=helveticanarrow];
+{ rank = source;case25B61CF02F833A70_addr_q13_out [label="addr_q13_out", shape=invhouse, color="#e4f1b2"];
+case25B61CF02F833A70_addr_q0 [label="addr_q0", shape=invhouse, color="#e4f1b2"];
+}
+{ rank = sink;case25B61CF02F833A70_addr_q [label="addr_q", shape=house, color="#e4f1b2"];
+}
+{ rank = same;N_18559130 [label="N_18559130\nconstruct:2\nparallel\ngen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_WRITE.write_addr_inst/GEN_CMD_QUEUE.cmd_queue/addr_q0\nparallel\n Attributes ::\nAttrGroup: dfg, AttrName : [parallel], AttrVal:[ 0x1 ]\nAttrGroup: dfg, AttrName : [range], AttrVal:[ -1111111111:-1111111111 ]\nAttrGroup: dfg, AttrName : [name], AttrVal:[ gen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_WRITE.write_addr_inst/GEN_CMD_QUEUE.cmd_queue/addr_q0 ]\n\n#0:3\n", shape=diamond, color="#ffee80"];
+N_185590E0 [label="N_185590E0\nmerge:1\ngen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_WRITE.write_addr_inst/GEN_CMD_QUEUE.cmd_queue/addr_q[4:0]\n Attributes ::\nAttrGroup: dfg, AttrName : [range], AttrVal:[ 4:0 ]\nAttrGroup: dfg, AttrName : [name], AttrVal:[ gen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_WRITE.write_addr_inst/GEN_CMD_QUEUE.cmd_queue/addr_q ]\n\n#0:1\n", shape=house, color="#ffee80"];
+}
+N_185590E0_P_1C19CF10 [label="2b01", color="#f1f1b2", shape=plaintext];
+N_185590E0_P_1C19CF10 -> N_185590E0 [label="2", headlabel=<1>, headlabel=<1>];
+N_18559130_P_1C19BDD0 [label="1b1", color="#f1f1b2", shape=plaintext];
+N_18559130_P_1C19BDD0 -> N_18559130 [label="1", headlabel=<1>, headlabel=<1>];
+N_18559130_P_1C19DB40 [label="1bx", color="#f1f1b2", shape=plaintext];
+N_18559130_P_1C19DB40 -> N_18559130 [label="1", headlabel=<0>, headlabel=<0>];
+N_18559130 -> N_185590E0 [label="2", style=dashed, constraint=false, taillabel=<out[addr_q0]>, headlabel=<sel>, headlabel=<#0:3>];
+case25B61CF02F833A70_addr_q13_out -> N_18559130 [label="1", taillabel=<addr_q13_out>, headlabel=<in>, headlabel=<#0:1>];
+case25B61CF02F833A70_addr_q0 -> N_185590E0 [label="1", color="#00ff00", taillabel=<addr_q0>, headlabel=<0>, headlabel=<#s-1:s0 Clipped>];
+N_185590E0 -> case25B61CF02F833A70_addr_q [label="1", taillabel=<out>, headlabel=<addr_q>, headlabel=<#0:1>];
+}

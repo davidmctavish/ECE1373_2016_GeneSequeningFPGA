@@ -1,0 +1,19 @@
+digraph logic1D3160F031313F40 {
+graph [label="logic1D3160F031313F40", margin="0.1,0.1", size="100,100", ranksep=0.1, splines=true];
+node [style=filled, color="#ffee80", fontname=helveticanarrow];
+edge [color="#ff0000", fontsize=10, fontname=helveticanarrow];
+{ rank = source;logic1D3160F031313F40_M_VALID_Q [label="M_VALID_Q", shape=invhouse, color="#e4f1b2"];
+logic1D3160F031313F40_M_READY [label="M_READY", shape=invhouse, color="#e4f1b2"];
+}
+{ rank = sink;logic1D3160F031313F40_M_READY_I [label="M_READY_I", shape=house, color="#e4f1b2"];
+}
+N_183BD9F0 [label="N_183BD9F0\n|:1\ngen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_READ.read_addr_inst/GEN_CMD_QUEUE.cmd_queue/M_READY_I\n Attributes ::\nAttrGroup: dfg, AttrName : [range], AttrVal:[ -1111111111:-1111111111 ]\nAttrGroup: dfg, AttrName : [name], AttrVal:[ gen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_READ.read_addr_inst/GEN_CMD_QUEUE.cmd_queue/M_READY_I ]\n\n#0:1\n", color="#bbebff"];
+N_183BD9A0 [label="N_183BD9A0\n&:1\ngen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_READ.read_addr_inst/GEN_CMD_QUEUE.cmd_queue/M_READY_I0\n Attributes ::\nAttrGroup: dfg, AttrName : [range], AttrVal:[ -1111111111:-1111111111 ]\nAttrGroup: dfg, AttrName : [name], AttrVal:[ gen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_READ.read_addr_inst/GEN_CMD_QUEUE.cmd_queue/M_READY_I0 ]\n\n#0:1\n", color="#bbebff"];
+N_183BD950 [label="N_183BD950\n_~:1\ngen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_READ.read_addr_inst/GEN_CMD_QUEUE.cmd_queue/M_READY_I0\n Attributes ::\nAttrGroup: dfg, AttrName : [name], AttrVal:[ gen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_READ.read_addr_inst/GEN_CMD_QUEUE.cmd_queue/M_READY_I0 ]\nAttrGroup: dfg, AttrName : [range], AttrVal:[ -1111111111:-1111111111 ]\n\n#0:1\n", color="#bbebff"];
+N_183BD950 -> N_183BD9F0 [label="1", taillabel=<out[M_READY_I0]>, headlabel=<B>, headlabel=<#0:1>];
+N_183BD9A0 -> N_183BD9F0 [label="1", taillabel=<out[M_READY_I00_in]>, headlabel=<A>, headlabel=<#0:1>];
+logic1D3160F031313F40_M_VALID_Q -> N_183BD9A0 [label="1", taillabel=<M_VALID_Q>, headlabel=<B>, headlabel=<#0:1>];
+logic1D3160F031313F40_M_VALID_Q -> N_183BD950 [label="1", taillabel=<M_VALID_Q>, headlabel=<in>, headlabel=<#0:1>];
+logic1D3160F031313F40_M_READY -> N_183BD9A0 [label="1", taillabel=<M_READY>, headlabel=<A>, headlabel=<#0:1>];
+N_183BD9F0 -> logic1D3160F031313F40_M_READY_I [label="1", taillabel=<out[M_READY_I]>, headlabel=<M_READY_I>, headlabel=<#0:1>];
+}

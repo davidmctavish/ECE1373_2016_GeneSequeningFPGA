@@ -1,0 +1,14 @@
+digraph logic1E411B8031313BD0 {
+graph [label="logic1E411B8031313BD0", margin="0.1,0.1", size="100,100", ranksep=0.1, splines=true];
+node [style=filled, color="#ffee80", fontname=helveticanarrow];
+edge [color="#ff0000", fontsize=10, fontname=helveticanarrow];
+{ rank = source;logic1E411B8031313BD0_addr_q [label="addr_q", shape=invhouse, color="#e4f1b2"];
+logic1E411B8031313BD0_data_Exists_I [label="data_Exists_I", shape=invhouse, color="#e4f1b2"];
+}
+{ rank = sink;logic1E411B8031313BD0_addr_q0_out [label="addr_q0_out", shape=house, color="#e4f1b2"];
+}
+N_183BE9E0 [label="N_183BE9E0\n&:1\ngen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_READ.read_addr_inst/GEN_CMD_QUEUE.cmd_queue/\n Attributes ::\nAttrGroup: dfg, AttrName : [name], AttrVal:[ gen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_READ.read_addr_inst/GEN_CMD_QUEUE.cmd_queue/ ]\n\n#0:1\n", color="#bbebff"];
+logic1E411B8031313BD0_addr_q -> N_183BE9E0 [label="1", color="#00ff00", taillabel=<addr_q>, headlabel=<B>, headlabel=<#s-1:s0 Clipped>];
+logic1E411B8031313BD0_data_Exists_I -> N_183BE9E0 [label="1", taillabel=<data_Exists_I>, headlabel=<A>, headlabel=<#0:1>];
+N_183BE9E0 -> logic1E411B8031313BD0_addr_q0_out [label="1", taillabel=<out[addr_q]>, headlabel=<addr_q0_out>, headlabel=<#0:1>];
+}

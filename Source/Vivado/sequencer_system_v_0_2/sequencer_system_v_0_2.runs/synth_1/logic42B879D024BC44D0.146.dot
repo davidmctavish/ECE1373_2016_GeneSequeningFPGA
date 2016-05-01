@@ -1,0 +1,14 @@
+digraph logic42B879D024BC44D0 {
+graph [label="logic42B879D024BC44D0", margin="0.1,0.1", size="100,100", ranksep=0.1, splines=true];
+node [style=filled, color="#ffee80", fontname=helveticanarrow];
+edge [color="#ff0000", fontsize=10, fontname=helveticanarrow];
+{ rank = source;logic42B879D024BC44D0_cmd_fix [label="cmd_fix", shape=invhouse, color="#e4f1b2"];
+logic42B879D024BC44D0_first_word [label="first_word", shape=invhouse, color="#e4f1b2"];
+}
+{ rank = sink;logic42B879D024BC44D0_sel_first_word [label="sel_first_word", shape=house, color="#e4f1b2"];
+}
+N_186CB480 [label="N_186CB480\n|:1\ngen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_READ.gen_non_fifo_r_upsizer.read_data_inst/sel_first_word\n Attributes ::\nAttrGroup: dfg, AttrName : [range], AttrVal:[ -1111111111:-1111111111 ]\nAttrGroup: dfg, AttrName : [name], AttrVal:[ gen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_READ.gen_non_fifo_r_upsizer.read_data_inst/sel_first_word ]\n\n#0:1\n", color="#bbebff"];
+logic42B879D024BC44D0_cmd_fix -> N_186CB480 [label="1", taillabel=<cmd_fix>, headlabel=<B>, headlabel=<#0:1>];
+logic42B879D024BC44D0_first_word -> N_186CB480 [label="1", taillabel=<first_word>, headlabel=<A>, headlabel=<#0:1>];
+N_186CB480 -> logic42B879D024BC44D0_sel_first_word [label="1", taillabel=<out[sel_first_word]>, headlabel=<sel_first_word>, headlabel=<#0:1>];
+}

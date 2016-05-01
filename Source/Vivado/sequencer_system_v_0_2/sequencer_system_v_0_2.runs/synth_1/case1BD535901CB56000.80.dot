@@ -1,0 +1,36 @@
+digraph case1BD535901CB56000 {
+graph [label="case1BD535901CB56000", margin="0.1,0.1", size="100,100", ranksep=0.1, splines=true];
+node [style=filled, color="#ffee80", fontname=helveticanarrow];
+edge [color="#ff0000", fontsize=10, fontname=helveticanarrow];
+{ rank = source;case1BD535901CB56000_p_949_out [label="p_949_out", shape=invhouse, color="#e4f1b2"];
+case1BD535901CB56000_WORD_LANE_0_.USE_ALWAYS_PACKER.BYTE_LANE_0_.USE_RTL_DATA.wdata_wrap_buffer_q_reg [label="WORD_LANE[0].USE_ALWAYS_PACKER.BYTE_LANE[0].USE_RTL_DATA.wdata_wrap_buffer_q_reg[7:0]", shape=invhouse, color="#e4f1b2"];
+case1BD535901CB56000_p_953_out [label="p_953_out", shape=invhouse, color="#e4f1b2"];
+case1BD535901CB56000_S_AXI_WDATA [label="S_AXI_WDATA[7:0]", shape=invhouse, color="#e4f1b2"];
+}
+{ rank = sink;case1BD535901CB56000_p_1_in [label="p_1_in[7:0]", shape=house, color="#e4f1b2"];
+}
+{ rank = same;N_187D0960 [label="N_187D0960\nconstruct:2\nparallel\ngen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_WRITE.gen_non_fifo_w_upsizer.write_data_inst/M_AXI_WDATA_I0\nparallel\n Attributes ::\nAttrGroup: dfg, AttrName : [parallel], AttrVal:[ 0x1 ]\nAttrGroup: dfg, AttrName : [range], AttrVal:[ -1111111111:-1111111111 ]\nAttrGroup: dfg, AttrName : [name], AttrVal:[ gen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_WRITE.gen_non_fifo_w_upsizer.write_data_inst/M_AXI_WDATA_I0 ]\n\n#0:3\n", shape=diamond, color="#ffee80"];
+N_187D0910 [label="N_187D0910\nmerge:8\ngen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_WRITE.gen_non_fifo_w_upsizer.write_data_inst/M_AXI_WDATA_I[255:0]\n Attributes ::\nAttrGroup: dfg, AttrName : [range], AttrVal:[ 255:0 ]\nAttrGroup: dfg, AttrName : [name], AttrVal:[ gen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_WRITE.gen_non_fifo_w_upsizer.write_data_inst/M_AXI_WDATA_I ]\n\n#0:255\n", shape=house, color="#ffee80"];
+}
+{ rank = same;N_187D0A00 [label="N_187D0A00\nconstruct:2\nparallel\ngen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_WRITE.gen_non_fifo_w_upsizer.write_data_inst/M_AXI_WDATA_I0\nparallel\n Attributes ::\nAttrGroup: dfg, AttrName : [parallel], AttrVal:[ 0x1 ]\nAttrGroup: dfg, AttrName : [range], AttrVal:[ -1111111111:-1111111111 ]\nAttrGroup: dfg, AttrName : [name], AttrVal:[ gen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_WRITE.gen_non_fifo_w_upsizer.write_data_inst/M_AXI_WDATA_I0 ]\n\n#0:3\n", shape=diamond, color="#ffee80"];
+N_187D09B0 [label="N_187D09B0\nmerge:8\ngen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_WRITE.gen_non_fifo_w_upsizer.write_data_inst/M_AXI_WDATA_I[255:0]\n Attributes ::\nAttrGroup: dfg, AttrName : [range], AttrVal:[ 255:0 ]\nAttrGroup: dfg, AttrName : [name], AttrVal:[ gen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_WRITE.gen_non_fifo_w_upsizer.write_data_inst/M_AXI_WDATA_I ]\n\n#0:255\n", shape=house, color="#ffee80"];
+}
+N_187D0960_P_1D7296F0 [label="1b1", color="#f1f1b2", shape=plaintext];
+N_187D0960_P_1D7296F0 -> N_187D0960 [label="1", headlabel=<1>, headlabel=<1>];
+N_187D0960_P_1D728460 [label="1bx", color="#f1f1b2", shape=plaintext];
+N_187D0960_P_1D728460 -> N_187D0960 [label="1", headlabel=<0>, headlabel=<0>];
+N_187D09B0_P_1D849140 [label="8b00000000", color="#f1f1b2", shape=plaintext];
+N_187D09B0_P_1D849140 -> N_187D09B0 [label="8", headlabel=<0>, headlabel=<0>];
+N_187D0A00_P_1D849320 [label="1b1", color="#f1f1b2", shape=plaintext];
+N_187D0A00_P_1D849320 -> N_187D0A00 [label="1", headlabel=<1>, headlabel=<1>];
+N_187D0A00_P_1D8493B0 [label="1bx", color="#f1f1b2", shape=plaintext];
+N_187D0A00_P_1D8493B0 -> N_187D0A00 [label="1", headlabel=<0>, headlabel=<0>];
+N_187D0960 -> N_187D0910 [label="2", style=dashed, constraint=false, taillabel=<out>, headlabel=<sel>, headlabel=<#0:3>];
+N_187D09B0 -> N_187D0910 [label="8", taillabel=<out>, headlabel=<0>, headlabel=<#0:255>];
+N_187D0A00 -> N_187D09B0 [label="2", style=dashed, constraint=false, taillabel=<out>, headlabel=<sel>, headlabel=<#0:3>];
+case1BD535901CB56000_p_949_out -> N_187D0A00 [label="1", taillabel=<p_949_out>, headlabel=<in>, headlabel=<#0:1>];
+case1BD535901CB56000_WORD_LANE_0_.USE_ALWAYS_PACKER.BYTE_LANE_0_.USE_RTL_DATA.wdata_wrap_buffer_q_reg -> N_187D09B0 [label="8", taillabel=<WORD_LANE[0].USE_ALWAYS_PACKER.BYTE_LANE[0].USE_RTL_DATA.wdata_wrap_buffer_q_reg>, headlabel=<1>, headlabel=<#0:255>];
+case1BD535901CB56000_p_953_out -> N_187D0960 [label="1", taillabel=<p_953_out>, headlabel=<in>, headlabel=<#0:1>];
+case1BD535901CB56000_S_AXI_WDATA -> N_187D0910 [label="8", taillabel=<S_AXI_WDATA>, headlabel=<1>, headlabel=<#0:255>];
+N_187D0910 -> case1BD535901CB56000_p_1_in [label="8", taillabel=<out[p_1_in]>, headlabel=<p_1_in>, headlabel=<#0:255>];
+}

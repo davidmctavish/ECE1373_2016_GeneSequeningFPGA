@@ -1,0 +1,33 @@
+digraph logic25B619302F833230 {
+graph [label="logic25B619302F833230", margin="0.1,0.1", size="100,100", ranksep=0.1, splines=true];
+node [style=filled, color="#ffee80", fontname=helveticanarrow];
+edge [color="#ff0000", fontsize=10, fontname=helveticanarrow];
+{ rank = source;logic25B619302F833230_buffer_Empty [label="buffer_Empty", shape=invhouse, color="#e4f1b2"];
+logic25B619302F833230_S_VALID [label="S_VALID", shape=invhouse, color="#e4f1b2"];
+logic25B619302F833230_data_Exists_I [label="data_Exists_I", shape=invhouse, color="#e4f1b2"];
+logic25B619302F833230_M_READY_I [label="M_READY_I", shape=invhouse, color="#e4f1b2"];
+}
+{ rank = sink;logic25B619302F833230_next_Data_Exists [label="next_Data_Exists", shape=house, color="#e4f1b2"];
+}
+N_18558BE0 [label="N_18558BE0\n|:1\ngen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_WRITE.write_addr_inst/GEN_CMD_QUEUE.cmd_queue/next_Data_Exists\n Attributes ::\nAttrGroup: dfg, AttrName : [range], AttrVal:[ -1111111111:-1111111111 ]\nAttrGroup: dfg, AttrName : [name], AttrVal:[ gen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_WRITE.write_addr_inst/GEN_CMD_QUEUE.cmd_queue/next_Data_Exists ]\n\n#0:1\n", color="#bbebff"];
+N_18558B90 [label="N_18558B90\n&:1\ngen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_WRITE.write_addr_inst/GEN_CMD_QUEUE.cmd_queue/next_Data_Exists1\n Attributes ::\nAttrGroup: dfg, AttrName : [range], AttrVal:[ -1111111111:-1111111111 ]\nAttrGroup: dfg, AttrName : [name], AttrVal:[ gen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_WRITE.write_addr_inst/GEN_CMD_QUEUE.cmd_queue/next_Data_Exists1 ]\n\n#0:1\n", color="#bbebff"];
+N_18558B40 [label="N_18558B40\n&:1\ngen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_WRITE.write_addr_inst/GEN_CMD_QUEUE.cmd_queue/next_Data_Exists0\n Attributes ::\nAttrGroup: dfg, AttrName : [range], AttrVal:[ -1111111111:-1111111111 ]\nAttrGroup: dfg, AttrName : [name], AttrVal:[ gen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_WRITE.write_addr_inst/GEN_CMD_QUEUE.cmd_queue/next_Data_Exists0 ]\n\n#0:1\n", color="#bbebff"];
+N_18558F50 [label="N_18558F50\n_~:1\ngen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_WRITE.write_addr_inst/GEN_CMD_QUEUE.cmd_queue/next_Data_Exists1\n Attributes ::\nAttrGroup: dfg, AttrName : [range], AttrVal:[ -1111111111:-1111111111 ]\nAttrGroup: dfg, AttrName : [name], AttrVal:[ gen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_WRITE.write_addr_inst/GEN_CMD_QUEUE.cmd_queue/next_Data_Exists1 ]\n\n#0:1\n", color="#bbebff"];
+N_18558F00 [label="N_18558F00\n&:1\ngen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_WRITE.write_addr_inst/GEN_CMD_QUEUE.cmd_queue/next_Data_Exists2\n Attributes ::\nAttrGroup: dfg, AttrName : [range], AttrVal:[ -1111111111:-1111111111 ]\nAttrGroup: dfg, AttrName : [name], AttrVal:[ gen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_WRITE.write_addr_inst/GEN_CMD_QUEUE.cmd_queue/next_Data_Exists2 ]\n\n#0:1\n", color="#bbebff"];
+N_18558EB0 [label="N_18558EB0\n&:1\ngen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_WRITE.write_addr_inst/GEN_CMD_QUEUE.cmd_queue/next_Data_Exists1\n Attributes ::\nAttrGroup: dfg, AttrName : [range], AttrVal:[ -1111111111:-1111111111 ]\nAttrGroup: dfg, AttrName : [name], AttrVal:[ gen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_WRITE.write_addr_inst/GEN_CMD_QUEUE.cmd_queue/next_Data_Exists1 ]\n\n#0:1\n", color="#bbebff"];
+N_18558E60 [label="N_18558E60\n_~:1\ngen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_WRITE.write_addr_inst/GEN_CMD_QUEUE.cmd_queue/addr_q1\n Attributes ::\nAttrGroup: dfg, AttrName : [name], AttrVal:[ gen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_WRITE.write_addr_inst/GEN_CMD_QUEUE.cmd_queue/addr_q1 ]\nAttrGroup: dfg, AttrName : [range], AttrVal:[ -1111111111:-1111111111 ]\n\n#0:1\n", color="#bbebff"];
+N_18558B90 -> N_18558BE0 [label="1", taillabel=<out[next_Data_Exists11_out]>, headlabel=<A>, headlabel=<#0:1>];
+N_18558E60 -> N_18558B90 [label="1", taillabel=<out[addr_q1]>, headlabel=<B>, headlabel=<#0:1>];
+N_18558B40 -> N_18558BE0 [label="1", taillabel=<out[next_Data_Exists0]>, headlabel=<B>, headlabel=<#0:1>];
+N_18558F50 -> N_18558B40 [label="1", taillabel=<out[next_Data_Exists1]>, headlabel=<B>, headlabel=<#0:1>];
+N_18558F00 -> N_18558F50 [label="1", taillabel=<out[next_Data_Exists2]>, headlabel=<in>, headlabel=<#0:1>];
+N_18558EB0 -> N_18558BE0 [label="1", taillabel=<out[next_Data_Exists10_out]>, headlabel=<P_1C19C160>, headlabel=<#0:1>];
+logic25B619302F833230_buffer_Empty -> N_18558E60 [label="1", taillabel=<buffer_Empty>, headlabel=<in>, headlabel=<#0:1>];
+logic25B619302F833230_buffer_Empty -> N_18558EB0 [label="1", taillabel=<buffer_Empty>, headlabel=<A>, headlabel=<#0:1>];
+logic25B619302F833230_S_VALID -> N_18558EB0 [label="1", taillabel=<S_VALID>, headlabel=<B>, headlabel=<#0:1>];
+logic25B619302F833230_data_Exists_I -> N_18558F00 [label="1", taillabel=<data_Exists_I>, headlabel=<B>, headlabel=<#0:1>];
+logic25B619302F833230_data_Exists_I -> N_18558B40 [label="1", taillabel=<data_Exists_I>, headlabel=<A>, headlabel=<#0:1>];
+logic25B619302F833230_data_Exists_I -> N_18558B90 [label="1", taillabel=<data_Exists_I>, headlabel=<A>, headlabel=<#0:1>];
+logic25B619302F833230_M_READY_I -> N_18558F00 [label="1", taillabel=<M_READY_I>, headlabel=<A>, headlabel=<#0:1>];
+N_18558BE0 -> logic25B619302F833230_next_Data_Exists [label="1", taillabel=<out[next_Data_Exists]>, headlabel=<next_Data_Exists>, headlabel=<#0:1>];
+}

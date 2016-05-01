@@ -1,0 +1,12 @@
+digraph logic1BD22EB01D8B2160 {
+graph [label="logic1BD22EB01D8B2160", margin="0.1,0.1", size="100,100", ranksep=0.1, splines=true];
+node [style=filled, color="#ffee80", fontname=helveticanarrow];
+edge [color="#ff0000", fontsize=10, fontname=helveticanarrow];
+{ rank = source;logic1BD22EB01D8B2160_buffer_Full_q [label="buffer_Full_q", shape=invhouse, color="#e4f1b2"];
+}
+{ rank = sink;logic1BD22EB01D8B2160_S_READY [label="S_READY", shape=house, color="#e4f1b2"];
+}
+N_C217D40 [label="N_C217D40\n_~:1\ngen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_WRITE.write_addr_inst/GEN_CMD_QUEUE.cmd_queue/S_READY\n Attributes ::\nAttrGroup: dfg, AttrName : [range], AttrVal:[ -1111111111:-1111111111 ]\nAttrGroup: dfg, AttrName : [name], AttrVal:[ gen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_WRITE.write_addr_inst/GEN_CMD_QUEUE.cmd_queue/S_READY ]\n\n#0:1\n", color="#bbebff"];
+logic1BD22EB01D8B2160_buffer_Full_q -> N_C217D40 [label="1", taillabel=<buffer_Full_q>, headlabel=<in>, headlabel=<#0:1>];
+N_C217D40 -> logic1BD22EB01D8B2160_S_READY [label="1", taillabel=<out[S_READY]>, headlabel=<S_READY>, headlabel=<#0:1>];
+}

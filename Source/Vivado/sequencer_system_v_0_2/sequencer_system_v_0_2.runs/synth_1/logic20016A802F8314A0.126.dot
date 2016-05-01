@@ -1,0 +1,16 @@
+digraph logic20016A802F8314A0 {
+graph [label="logic20016A802F8314A0", margin="0.1,0.1", size="100,100", ranksep=0.1, splines=true];
+node [style=filled, color="#ffee80", fontname=helveticanarrow];
+edge [color="#ff0000", fontsize=10, fontname=helveticanarrow];
+{ rank = source;logic20016A802F8314A0_cmd_push_block [label="cmd_push_block", shape=invhouse, color="#e4f1b2"];
+logic20016A802F8314A0_p_1_in [label="p_1_in", shape=invhouse, color="#e4f1b2"];
+}
+{ rank = sink;logic20016A802F8314A0_cmd_push [label="cmd_push", shape=house, color="#e4f1b2"];
+}
+N_C2177F0 [label="N_C2177F0\n&:1\ngen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_WRITE.write_addr_inst/cmd_push\n Attributes ::\nAttrGroup: dfg, AttrName : [range], AttrVal:[ -1111111111:-1111111111 ]\nAttrGroup: dfg, AttrName : [name], AttrVal:[ gen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_WRITE.write_addr_inst/cmd_push ]\n\n#0:1\n", color="#bbebff"];
+N_C2172F0 [label="N_C2172F0\n_~:1\ngen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_WRITE.write_addr_inst/cmd_push0\n Attributes ::\nAttrGroup: dfg, AttrName : [range], AttrVal:[ -1111111111:-1111111111 ]\nAttrGroup: dfg, AttrName : [name], AttrVal:[ gen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_WRITE.write_addr_inst/cmd_push0 ]\n\n#0:1\n", color="#bbebff"];
+N_C2172F0 -> N_C2177F0 [label="1", taillabel=<out[cmd_push0]>, headlabel=<B>, headlabel=<#0:1>];
+logic20016A802F8314A0_cmd_push_block -> N_C2172F0 [label="1", taillabel=<cmd_push_block>, headlabel=<in>, headlabel=<#0:1>];
+logic20016A802F8314A0_p_1_in -> N_C2177F0 [label="1", taillabel=<p_1_in>, headlabel=<A>, headlabel=<#0:1>];
+N_C2177F0 -> logic20016A802F8314A0_cmd_push [label="1", taillabel=<out[cmd_push]>, headlabel=<cmd_push>, headlabel=<#0:1>];
+}

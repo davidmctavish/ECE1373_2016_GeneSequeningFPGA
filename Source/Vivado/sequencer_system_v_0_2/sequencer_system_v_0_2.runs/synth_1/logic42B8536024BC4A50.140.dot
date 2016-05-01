@@ -1,0 +1,16 @@
+digraph logic42B8536024BC4A50 {
+graph [label="logic42B8536024BC4A50", margin="0.1,0.1", size="100,100", ranksep=0.1, splines=true];
+node [style=filled, color="#ffee80", fontname=helveticanarrow];
+edge [color="#ff0000", fontsize=10, fontname=helveticanarrow];
+{ rank = source;logic42B8536024BC4A50_p_13_in [label="p_13_in", shape=invhouse, color="#e4f1b2"];
+logic42B8536024BC4A50_p_15_in [label="p_15_in", shape=invhouse, color="#e4f1b2"];
+logic42B8536024BC4A50_last_beat [label="last_beat", shape=invhouse, color="#e4f1b2"];
+}
+{ rank = sink;logic42B8536024BC4A50_wrap_buffer_available0 [label="wrap_buffer_available0", shape=house, color="#e4f1b2"];
+}
+N_186CBCA0 [label="N_186CBCA0\n&:1\ngen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_READ.gen_non_fifo_r_upsizer.read_data_inst/wrap_buffer_available0\n Attributes ::\nAttrGroup: dfg, AttrName : [range], AttrVal:[ -1111111111:-1111111111 ]\nAttrGroup: dfg, AttrName : [name], AttrVal:[ gen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_READ.gen_non_fifo_r_upsizer.read_data_inst/wrap_buffer_available0 ]\n\n#0:1\n", color="#bbebff"];
+logic42B8536024BC4A50_p_13_in -> N_186CBCA0 [label="1", taillabel=<p_13_in>, headlabel=<P_1D63A150>, headlabel=<#0:1>];
+logic42B8536024BC4A50_p_15_in -> N_186CBCA0 [label="1", taillabel=<p_15_in>, headlabel=<B>, headlabel=<#0:1>];
+logic42B8536024BC4A50_last_beat -> N_186CBCA0 [label="1", taillabel=<last_beat>, headlabel=<A>, headlabel=<#0:1>];
+N_186CBCA0 -> logic42B8536024BC4A50_wrap_buffer_available0 [label="1", taillabel=<out[wrap_buffer_available0]>, headlabel=<wrap_buffer_available0>, headlabel=<#0:1>];
+}

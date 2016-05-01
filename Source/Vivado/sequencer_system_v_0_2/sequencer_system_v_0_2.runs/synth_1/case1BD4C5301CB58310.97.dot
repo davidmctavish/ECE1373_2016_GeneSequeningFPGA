@@ -1,0 +1,36 @@
+digraph case1BD4C5301CB58310 {
+graph [label="case1BD4C5301CB58310", margin="0.1,0.1", size="100,100", ranksep=0.1, splines=true];
+node [style=filled, color="#ffee80", fontname=helveticanarrow];
+edge [color="#ff0000", fontsize=10, fontname=helveticanarrow];
+{ rank = source;case1BD4C5301CB58310_p_441_out [label="p_441_out", shape=invhouse, color="#e4f1b2"];
+case1BD4C5301CB58310_WORD_LANE_4_.USE_ALWAYS_PACKER.BYTE_LANE_1_.USE_RTL_DATA.wdata_wrap_buffer_q_reg [label="WORD_LANE[4].USE_ALWAYS_PACKER.BYTE_LANE[1].USE_RTL_DATA.wdata_wrap_buffer_q_reg[7:0]", shape=invhouse, color="#e4f1b2"];
+case1BD4C5301CB58310_p_445_out [label="p_445_out", shape=invhouse, color="#e4f1b2"];
+case1BD4C5301CB58310_p_2_in [label="p_2_in[7:0]", shape=invhouse, color="#e4f1b2"];
+}
+{ rank = sink;case1BD4C5301CB58310_p_1_in [label="p_1_in[7:0]", shape=house, color="#e4f1b2"];
+}
+{ rank = same;N_19DBF180 [label="N_19DBF180\nconstruct:2\nparallel\ngen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_WRITE.gen_non_fifo_w_upsizer.write_data_inst/M_AXI_WDATA_I0\nparallel\n Attributes ::\nAttrGroup: dfg, AttrName : [parallel], AttrVal:[ 0xbdc5ca39bdc5ca01 ]\nAttrGroup: dfg, AttrName : [range], AttrVal:[ -1111111111:-1111111111 ]\nAttrGroup: dfg, AttrName : [name], AttrVal:[ gen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_WRITE.gen_non_fifo_w_upsizer.write_data_inst/M_AXI_WDATA_I0 ]\n\n#0:3\n", shape=diamond, color="#ffee80"];
+N_19DBF130 [label="N_19DBF130\nmerge:8\ngen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_WRITE.gen_non_fifo_w_upsizer.write_data_inst/M_AXI_WDATA_I[255:0]\n Attributes ::\nAttrGroup: dfg, AttrName : [range], AttrVal:[ 255:0 ]\nAttrGroup: dfg, AttrName : [name], AttrVal:[ gen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_WRITE.gen_non_fifo_w_upsizer.write_data_inst/M_AXI_WDATA_I ]\n\n#0:255\n", shape=house, color="#ffee80"];
+}
+{ rank = same;N_19DBEDC0 [label="N_19DBEDC0\nconstruct:2\nparallel\ngen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_WRITE.gen_non_fifo_w_upsizer.write_data_inst/M_AXI_WDATA_I0\nparallel\n Attributes ::\nAttrGroup: dfg, AttrName : [parallel], AttrVal:[ 0x1 ]\nAttrGroup: dfg, AttrName : [range], AttrVal:[ -1111111111:-1111111111 ]\nAttrGroup: dfg, AttrName : [name], AttrVal:[ gen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_WRITE.gen_non_fifo_w_upsizer.write_data_inst/M_AXI_WDATA_I0 ]\n\n#0:3\n", shape=diamond, color="#ffee80"];
+N_19DBED70 [label="N_19DBED70\nmerge:8\ngen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_WRITE.gen_non_fifo_w_upsizer.write_data_inst/M_AXI_WDATA_I[255:0]\n Attributes ::\nAttrGroup: dfg, AttrName : [range], AttrVal:[ 255:0 ]\nAttrGroup: dfg, AttrName : [name], AttrVal:[ gen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_WRITE.gen_non_fifo_w_upsizer.write_data_inst/M_AXI_WDATA_I ]\n\n#0:255\n", shape=house, color="#ffee80"];
+}
+N_19DBF180_P_1D5BD650 [label="1b1", color="#f1f1b2", shape=plaintext];
+N_19DBF180_P_1D5BD650 -> N_19DBF180 [label="1", headlabel=<1>, headlabel=<1>];
+N_19DBF180_P_1D5BD7D0 [label="1bx", color="#f1f1b2", shape=plaintext];
+N_19DBF180_P_1D5BD7D0 -> N_19DBF180 [label="1", headlabel=<0>, headlabel=<0>];
+N_19DBED70_P_1D5BD830 [label="8b00000000", color="#f1f1b2", shape=plaintext];
+N_19DBED70_P_1D5BD830 -> N_19DBED70 [label="8", headlabel=<0>, headlabel=<0>];
+N_19DBEDC0_P_1D5BD8F0 [label="1b1", color="#f1f1b2", shape=plaintext];
+N_19DBEDC0_P_1D5BD8F0 -> N_19DBEDC0 [label="1", headlabel=<1>, headlabel=<1>];
+N_19DBEDC0_P_1D5BF3F0 [label="1bx", color="#f1f1b2", shape=plaintext];
+N_19DBEDC0_P_1D5BF3F0 -> N_19DBEDC0 [label="1", headlabel=<0>, headlabel=<0>];
+N_19DBF180 -> N_19DBF130 [label="2", style=dashed, constraint=false, taillabel=<out>, headlabel=<sel>, headlabel=<#0:3>];
+N_19DBED70 -> N_19DBF130 [label="8", taillabel=<out>, headlabel=<0>, headlabel=<#0:255>];
+N_19DBEDC0 -> N_19DBED70 [label="2", style=dashed, constraint=false, taillabel=<out>, headlabel=<sel>, headlabel=<#0:3>];
+case1BD4C5301CB58310_p_441_out -> N_19DBEDC0 [label="1", taillabel=<p_441_out>, headlabel=<in>, headlabel=<#0:1>];
+case1BD4C5301CB58310_WORD_LANE_4_.USE_ALWAYS_PACKER.BYTE_LANE_1_.USE_RTL_DATA.wdata_wrap_buffer_q_reg -> N_19DBED70 [label="8", taillabel=<WORD_LANE[4].USE_ALWAYS_PACKER.BYTE_LANE[1].USE_RTL_DATA.wdata_wrap_buffer_q_reg>, headlabel=<1>, headlabel=<#0:255>];
+case1BD4C5301CB58310_p_445_out -> N_19DBF180 [label="1", taillabel=<p_445_out>, headlabel=<in>, headlabel=<#0:1>];
+case1BD4C5301CB58310_p_2_in -> N_19DBF130 [label="8", taillabel=<p_2_in>, headlabel=<1>, headlabel=<#0:255>];
+N_19DBF130 -> case1BD4C5301CB58310_p_1_in [label="8", taillabel=<out[p_1_in]>, headlabel=<p_1_in>, headlabel=<#0:255>];
+}

@@ -1,0 +1,14 @@
+digraph logicFA30DF02F833BD0 {
+graph [label="logicFA30DF02F833BD0", margin="0.1,0.1", size="100,100", ranksep=0.1, splines=true];
+node [style=filled, color="#ffee80", fontname=helveticanarrow];
+edge [color="#ff0000", fontsize=10, fontname=helveticanarrow];
+{ rank = source;logicFA30DF02F833BD0_S_READY [label="S_READY", shape=invhouse, color="#e4f1b2"];
+logicFA30DF02F833BD0_S_VALID [label="S_VALID", shape=invhouse, color="#e4f1b2"];
+}
+{ rank = sink;logicFA30DF02F833BD0_valid_Write [label="valid_Write", shape=house, color="#e4f1b2"];
+}
+N_18559810 [label="N_18559810\n&:1\ngen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_WRITE.write_addr_inst/GEN_CMD_QUEUE.cmd_queue/valid_Write\n Attributes ::\nAttrGroup: dfg, AttrName : [range], AttrVal:[ -1111111111:-1111111111 ]\nAttrGroup: dfg, AttrName : [name], AttrVal:[ gen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_WRITE.write_addr_inst/GEN_CMD_QUEUE.cmd_queue/valid_Write ]\n\n#0:1\n", color="#bbebff"];
+logicFA30DF02F833BD0_S_READY -> N_18559810 [label="1", taillabel=<S_READY>, headlabel=<B>, headlabel=<#0:1>];
+logicFA30DF02F833BD0_S_VALID -> N_18559810 [label="1", taillabel=<S_VALID>, headlabel=<A>, headlabel=<#0:1>];
+N_18559810 -> logicFA30DF02F833BD0_valid_Write [label="1", taillabel=<out[valid_Write]>, headlabel=<valid_Write>, headlabel=<#0:1>];
+}

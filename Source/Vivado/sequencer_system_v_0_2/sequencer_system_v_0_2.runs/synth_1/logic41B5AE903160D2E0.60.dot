@@ -1,0 +1,37 @@
+digraph logic41B5AE903160D2E0 {
+graph [label="logic41B5AE903160D2E0", margin="0.1,0.1", size="100,100", ranksep=0.1, splines=true];
+node [style=filled, color="#ffee80", fontname=helveticanarrow];
+edge [color="#ff0000", fontsize=10, fontname=helveticanarrow];
+{ rank = source;logic41B5AE903160D2E0_p_47_in [label="p_47_in", shape=invhouse, color="#e4f1b2"];
+logic41B5AE903160D2E0_p_13_in [label="p_13_in", shape=invhouse, color="#e4f1b2"];
+logic41B5AE903160D2E0_p_0_in [label="p_0_in", shape=invhouse, color="#e4f1b2"];
+logic41B5AE903160D2E0_p_57_out [label="p_57_out", shape=invhouse, color="#e4f1b2"];
+logic41B5AE903160D2E0_p_23_in [label="p_23_in", shape=invhouse, color="#e4f1b2"];
+logic41B5AE903160D2E0_p_5_in54_in [label="p_5_in54_in[0:0]", shape=invhouse, color="#e4f1b2"];
+}
+{ rank = sink;logic41B5AE903160D2E0_p_5_out [label="p_5_out", shape=house, color="#e4f1b2"];
+}
+N_18757D90 [label="N_18757D90\n|:1\ngen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_WRITE.gen_non_fifo_w_upsizer.write_data_inst/p_5_out\n Attributes ::\nAttrGroup: dfg, AttrName : [range], AttrVal:[ -1111111111:-1111111111 ]\nAttrGroup: dfg, AttrName : [name], AttrVal:[ gen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_WRITE.gen_non_fifo_w_upsizer.write_data_inst/p_5_out ]\n\n#0:1\n", color="#bbebff"];
+N_18757F70 [label="N_18757F70\n&:1\ngen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_WRITE.gen_non_fifo_w_upsizer.write_data_inst/p_55_out\n Attributes ::\nAttrGroup: dfg, AttrName : [name], AttrVal:[ gen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_WRITE.gen_non_fifo_w_upsizer.write_data_inst/p_55_out ]\nAttrGroup: dfg, AttrName : [range], AttrVal:[ -1111111111:-1111111111 ]\n\n#0:1\n", color="#bbebff"];
+N_18757F20 [label="N_18757F20\n_~:1\ngen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_WRITE.gen_non_fifo_w_upsizer.write_data_inst/p_53_in\n Attributes ::\nAttrGroup: dfg, AttrName : [range], AttrVal:[ -1111111111:-1111111111 ]\nAttrGroup: dfg, AttrName : [name], AttrVal:[ gen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_WRITE.gen_non_fifo_w_upsizer.write_data_inst/p_53_in ]\n\n#0:1\n", color="#bbebff"];
+N_18757A20 [label="N_18757A20\n&:1\ngen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_WRITE.gen_non_fifo_w_upsizer.write_data_inst/p_51_out\n Attributes ::\nAttrGroup: dfg, AttrName : [name], AttrVal:[ gen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_WRITE.gen_non_fifo_w_upsizer.write_data_inst/p_51_out ]\nAttrGroup: dfg, AttrName : [range], AttrVal:[ -1111111111:-1111111111 ]\n\n#0:1\n", color="#bbebff"];
+N_18757A70 [label="N_18757A70\n&:1\ngen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_WRITE.gen_non_fifo_w_upsizer.write_data_inst/p_48_out\n Attributes ::\nAttrGroup: dfg, AttrName : [name], AttrVal:[ gen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_WRITE.gen_non_fifo_w_upsizer.write_data_inst/p_48_out ]\nAttrGroup: dfg, AttrName : [range], AttrVal:[ -1111111111:-1111111111 ]\n\n#0:1\n", color="#bbebff"];
+N_18757AC0 [label="N_18757AC0\n&:1\ngen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_WRITE.gen_non_fifo_w_upsizer.write_data_inst/p_46_out\n Attributes ::\nAttrGroup: dfg, AttrName : [name], AttrVal:[ gen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_WRITE.gen_non_fifo_w_upsizer.write_data_inst/p_46_out ]\nAttrGroup: dfg, AttrName : [range], AttrVal:[ -1111111111:-1111111111 ]\n\n#0:1\n", color="#bbebff"];
+N_18757890 [label="N_18757890\n_~:1\ngen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_WRITE.gen_non_fifo_w_upsizer.write_data_inst/p_45_in\n Attributes ::\nAttrGroup: dfg, AttrName : [range], AttrVal:[ -1111111111:-1111111111 ]\nAttrGroup: dfg, AttrName : [name], AttrVal:[ gen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_WRITE.gen_non_fifo_w_upsizer.write_data_inst/p_45_in ]\n\n#0:1\n", color="#bbebff"];
+N_18757F70 -> N_18757D90 [label="1", taillabel=<out[p_55_out]>, headlabel=<A>, headlabel=<#0:1>];
+N_18757F20 -> N_18757F70 [label="1", taillabel=<out[p_53_in]>, headlabel=<B>, headlabel=<#0:1>];
+N_18757A20 -> N_18757D90 [label="1", taillabel=<out[p_51_out]>, headlabel=<B>, headlabel=<#0:1>];
+N_18757AC0 -> N_18757A20 [label="1", taillabel=<out[p_52_in]>, headlabel=<B>, headlabel=<#0:1>];
+N_18757A70 -> N_18757D90 [label="1", taillabel=<out[p_48_out]>, headlabel=<P_1D3668D0>, headlabel=<#0:1>];
+N_18757AC0 -> N_18757F70 [label="1", taillabel=<out[p_52_in]>, headlabel=<P_1D8DDD20>, headlabel=<#0:1>];
+N_18757890 -> N_18757AC0 [label="1", taillabel=<out[p_45_in]>, headlabel=<A>, headlabel=<#0:1>];
+logic41B5AE903160D2E0_p_47_in -> N_18757A70 [label="1", taillabel=<p_47_in>, headlabel=<B>, headlabel=<#0:1>];
+logic41B5AE903160D2E0_p_47_in -> N_18757890 [label="1", taillabel=<p_47_in>, headlabel=<in>, headlabel=<#0:1>];
+logic41B5AE903160D2E0_p_13_in -> N_18757AC0 [label="1", taillabel=<p_13_in>, headlabel=<B>, headlabel=<#0:1>];
+logic41B5AE903160D2E0_p_0_in -> N_18757A70 [label="1", taillabel=<p_0_in>, headlabel=<A>, headlabel=<#0:1>];
+logic41B5AE903160D2E0_p_57_out -> N_18757F20 [label="1", taillabel=<p_57_out>, headlabel=<in>, headlabel=<#0:1>];
+logic41B5AE903160D2E0_p_57_out -> N_18757A20 [label="1", taillabel=<p_57_out>, headlabel=<A>, headlabel=<#0:1>];
+logic41B5AE903160D2E0_p_23_in -> N_18757F70 [label="1", taillabel=<p_23_in>, headlabel=<P_1D8DDD50>, headlabel=<#0:1>];
+logic41B5AE903160D2E0_p_5_in54_in -> N_18757F70 [label="1", taillabel=<p_5_in54_in>, headlabel=<A>, headlabel=<#0:1>];
+N_18757D90 -> logic41B5AE903160D2E0_p_5_out [label="1", taillabel=<out[p_5_out]>, headlabel=<p_5_out>, headlabel=<#0:1>];
+}

@@ -1,0 +1,12 @@
+digraph logic1BD1E2301D8B20B0 {
+graph [label="logic1BD1E2301D8B20B0", margin="0.1,0.1", size="100,100", ranksep=0.1, splines=true];
+node [style=filled, color="#ffee80", fontname=helveticanarrow];
+edge [color="#ff0000", fontsize=10, fontname=helveticanarrow];
+{ rank = source;logic1BD1E2301D8B20B0_GEN_CMD_QUEUE.cmd_queuedivM_READY_I [label="GEN_CMD_QUEUE.cmd_queue/M_READY_I", shape=invhouse, color="#e4f1b2"];
+}
+{ rank = sink;logic1BD1E2301D8B20B0_buffer_full_early1 [label="buffer_full_early1", shape=house, color="#e4f1b2"];
+}
+N_C217C50 [label="N_C217C50\n_~:1\ngen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_WRITE.write_addr_inst/GEN_CMD_QUEUE.cmd_queue/buffer_full_early1\n Attributes ::\nAttrGroup: dfg, AttrName : [range], AttrVal:[ -1111111111:-1111111111 ]\nAttrGroup: dfg, AttrName : [name], AttrVal:[ gen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_WRITE.write_addr_inst/GEN_CMD_QUEUE.cmd_queue/buffer_full_early1 ]\n\n#0:1\n", color="#bbebff"];
+logic1BD1E2301D8B20B0_GEN_CMD_QUEUE.cmd_queuedivM_READY_I -> N_C217C50 [label="1", taillabel=<GEN_CMD_QUEUE.cmd_queue/M_READY_I>, headlabel=<in>, headlabel=<#0:1>];
+N_C217C50 -> logic1BD1E2301D8B20B0_buffer_full_early1 [label="1", taillabel=<out[buffer_full_early1]>, headlabel=<buffer_full_early1>, headlabel=<#0:1>];
+}

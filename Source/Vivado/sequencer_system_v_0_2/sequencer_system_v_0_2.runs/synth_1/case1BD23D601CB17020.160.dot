@@ -1,0 +1,23 @@
+digraph case1BD23D601CB17020 {
+graph [label="case1BD23D601CB17020", margin="0.1,0.1", size="100,100", ranksep=0.1, splines=true];
+node [style=filled, color="#ffee80", fontname=helveticanarrow];
+edge [color="#ff0000", fontsize=10, fontname=helveticanarrow];
+{ rank = source;case1BD23D601CB17020_use_wrap_buffer [label="use_wrap_buffer", shape=invhouse, color="#e4f1b2"];
+case1BD23D601CB17020_S_AXI_RDATA_I0 [label="S_AXI_RDATA_I0[31:0]", shape=invhouse, color="#e4f1b2"];
+case1BD23D601CB17020_S_AXI_RDATA_I00_in [label="S_AXI_RDATA_I00_in[31:0]", shape=invhouse, color="#e4f1b2"];
+}
+{ rank = sink;case1BD23D601CB17020_S_AXI_RDATA_I [label="S_AXI_RDATA_I[31:0]", shape=house, color="#e4f1b2"];
+}
+{ rank = same;N_183BFF20 [label="N_183BFF20\nconstruct:2\nparallel\ngen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_READ.gen_non_fifo_r_upsizer.read_data_inst/S_AXI_RDATA_I0\nparallel\n Attributes ::\nAttrGroup: dfg, AttrName : [parallel], AttrVal:[ 0x1 ]\nAttrGroup: dfg, AttrName : [range], AttrVal:[ -1111111111:-1111111111 ]\nAttrGroup: dfg, AttrName : [name], AttrVal:[ gen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_READ.gen_non_fifo_r_upsizer.read_data_inst/S_AXI_RDATA_I0 ]\n\n#0:3\n", shape=diamond, color="#ffee80"];
+N_183BFF70 [label="N_183BFF70\nmerge:32\ngen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_READ.gen_non_fifo_r_upsizer.read_data_inst/S_AXI_RDATA_I[31:0]\n Attributes ::\nAttrGroup: dfg, AttrName : [range], AttrVal:[ 31:0 ]\nAttrGroup: dfg, AttrName : [name], AttrVal:[ gen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_READ.gen_non_fifo_r_upsizer.read_data_inst/S_AXI_RDATA_I ]\n\n#32'b00000000000000000000000000000000:32'b11111111111111111111111111111111\n", shape=house, color="#ffee80"];
+}
+N_183BFF20_P_1D53FEC0 [label="1b1", color="#f1f1b2", shape=plaintext];
+N_183BFF20_P_1D53FEC0 -> N_183BFF20 [label="1", headlabel=<1>, headlabel=<1>];
+N_183BFF20_P_1D53FE60 [label="1bx", color="#f1f1b2", shape=plaintext];
+N_183BFF20_P_1D53FE60 -> N_183BFF20 [label="1", headlabel=<0>, headlabel=<0>];
+N_183BFF20 -> N_183BFF70 [label="2", style=dashed, constraint=false, taillabel=<out[S_AXI_RDATA_I0]>, headlabel=<sel>, headlabel=<#0:3>];
+case1BD23D601CB17020_use_wrap_buffer -> N_183BFF20 [label="1", taillabel=<use_wrap_buffer>, headlabel=<in>, headlabel=<#0:1>];
+case1BD23D601CB17020_S_AXI_RDATA_I0 -> N_183BFF70 [label="32", taillabel=<S_AXI_RDATA_I0>, headlabel=<0>, headlabel=<#32'b00000000000000000000000000000000:32'b11111111111111111111111111111111>];
+case1BD23D601CB17020_S_AXI_RDATA_I00_in -> N_183BFF70 [label="32", taillabel=<S_AXI_RDATA_I00_in>, headlabel=<1>, headlabel=<#32'b00000000000000000000000000000000:32'b11111111111111111111111111111111>];
+N_183BFF70 -> case1BD23D601CB17020_S_AXI_RDATA_I [label="32", taillabel=<out[S_AXI_RDATA_I]>, headlabel=<S_AXI_RDATA_I>, headlabel=<#32'b00000000000000000000000000000000:32'b11111111111111111111111111111111>];
+}

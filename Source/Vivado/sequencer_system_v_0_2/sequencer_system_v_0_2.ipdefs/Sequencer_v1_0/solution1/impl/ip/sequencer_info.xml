@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project>
+  <core name="" type="" target="">
+    <kernel name="sequencer" language="c" vlnv="xilinx.com:hls:sequencer:1.0" attributes="" hash="" preferredWorkGroupSizeMultiple="0" workGroupSize="1" debug="false">
+      <port name="M_AXI_CTABLE_A" mode="master" range="0xFFFFFFFF" dataWidth="32" portType="addressable" base="0x00000000"/>
+      <port name="M_AXI_CTABLE_C" mode="master" range="0xFFFFFFFF" dataWidth="32" portType="addressable" base="0x00000000"/>
+      <port name="M_AXI_CTABLE_G" mode="master" range="0xFFFFFFFF" dataWidth="32" portType="addressable" base="0x00000000"/>
+      <port name="M_AXI_CTABLE_T" mode="master" range="0xFFFFFFFF" dataWidth="32" portType="addressable" base="0x00000000"/>
+      <port name="M_AXI_ITABLE" mode="master" range="0xFFFFFFFF" dataWidth="32" portType="addressable" base="0x00000000"/>
+      <port name="M_AXI_SR_MEM" mode="master" range="0xFFFFFFFF" dataWidth="8" portType="addressable" base="0x00000000"/>
+      <port name="S_AXI_AXILITES" mode="slave" range="0x1000" dataWidth="32" portType="addressable" base="0x00000000"/>
+      <arg name="C_table_A" addressQualifier="1" id="0" port="M_AXI_CTABLE_A" size="0x4" offset="0x10" hostOffset="0x0" hostSize="0x4" type="int*"/>
+      <arg name="C_table_C" addressQualifier="1" id="1" port="M_AXI_CTABLE_C" size="0x4" offset="0x18" hostOffset="0x0" hostSize="0x4" type="int*"/>
+      <arg name="C_table_G" addressQualifier="1" id="2" port="M_AXI_CTABLE_G" size="0x4" offset="0x20" hostOffset="0x0" hostSize="0x4" type="int*"/>
+      <arg name="C_table_T" addressQualifier="1" id="3" port="M_AXI_CTABLE_T" size="0x4" offset="0x28" hostOffset="0x0" hostSize="0x4" type="int*"/>
+      <arg name="I_table" addressQualifier="0" id="4" port="M_AXI_ITABLE" size="0x4" offset="0x30" hostOffset="0x0" hostSize="0x4" type="int[]"/>
+      <arg name="SR_length" addressQualifier="0" id="5" port="S_AXI_AXILITES" size="0x4" offset="0x38" hostOffset="0x0" hostSize="0x4" type="int"/>
+      <arg name="ref_length" addressQualifier="0" id="6" port="S_AXI_AXILITES" size="0x4" offset="0x40" hostOffset="0x0" hostSize="0x4" type="int"/>
+      <arg name="SR" addressQualifier="1" id="7" port="M_AXI_SR_MEM" size="0x4" offset="0x48" hostOffset="0x0" hostSize="0x4" type="char*"/>
+      <arg name="done" addressQualifier="1" id="8" port="S_AXI_AXILITES" size="0x4" offset="0x50" hostOffset="0x0" hostSize="0x4" type="int*"/>
+      <arg name="matched" addressQualifier="1" id="9" port="S_AXI_AXILITES" size="0x4" offset="0x58" hostOffset="0x0" hostSize="0x4" type="int*"/>
+      <arg name="final_top_ptr" addressQualifier="1" id="10" port="S_AXI_AXILITES" size="0x4" offset="0x60" hostOffset="0x0" hostSize="0x4" type="int*"/>
+      <arg name="final_bot_ptr" addressQualifier="1" id="11" port="S_AXI_AXILITES" size="0x4" offset="0x68" hostOffset="0x0" hostSize="0x4" type="int*"/>
+      <compileWorkGroupSize x="1" y="1" z="1"/>
+    </kernel>
+  </core>
+</project>

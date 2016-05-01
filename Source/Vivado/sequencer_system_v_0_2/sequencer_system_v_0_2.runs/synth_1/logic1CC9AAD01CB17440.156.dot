@@ -1,0 +1,14 @@
+digraph logic1CC9AAD01CB17440 {
+graph [label="logic1CC9AAD01CB17440", margin="0.1,0.1", size="100,100", ranksep=0.1, splines=true];
+node [style=filled, color="#ffee80", fontname=helveticanarrow];
+edge [color="#ff0000", fontsize=10, fontname=helveticanarrow];
+{ rank = source;logic1CC9AAD01CB17440_length_counter [label="length_counter[7:0]", shape=invhouse, color="#e4f1b2"];
+}
+{ rank = sink;logic1CC9AAD01CB17440_last_beat [label="last_beat", shape=house, color="#e4f1b2"];
+}
+N_187546E0 [label="N_187546E0\n==:1\ngen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_READ.gen_non_fifo_r_upsizer.read_data_inst/last_beat\n Attributes ::\nAttrGroup: dfg, AttrName : [range], AttrVal:[ -1111111111:-1111111111 ]\nAttrGroup: dfg, AttrName : [name], AttrVal:[ gen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_READ.gen_non_fifo_r_upsizer.read_data_inst/last_beat ]\n\n#0:1\n", color="#bbebff"];
+N_187546E0_B [label="8b00000000", color="#f1f1b2", shape=plaintext];
+N_187546E0_B -> N_187546E0 [label="8", headlabel=<B>];
+logic1CC9AAD01CB17440_length_counter -> N_187546E0 [label="8", taillabel=<length_counter>, headlabel=<A>, headlabel=<#0:255>];
+N_187546E0 -> logic1CC9AAD01CB17440_last_beat [label="1", taillabel=<out[last_beat]>, headlabel=<last_beat>, headlabel=<#0:1>];
+}

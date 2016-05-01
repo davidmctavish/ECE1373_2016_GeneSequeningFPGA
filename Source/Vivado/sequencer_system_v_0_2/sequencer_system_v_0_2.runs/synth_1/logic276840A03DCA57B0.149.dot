@@ -1,0 +1,16 @@
+digraph logic276840A03DCA57B0 {
+graph [label="logic276840A03DCA57B0", margin="0.1,0.1", size="100,100", ranksep=0.1, splines=true];
+node [style=filled, color="#ffee80", fontname=helveticanarrow];
+edge [color="#ff0000", fontsize=10, fontname=helveticanarrow];
+{ rank = source;logic276840A03DCA57B0_S_AXI_RLAST_I [label="S_AXI_RLAST_I", shape=invhouse, color="#e4f1b2"];
+logic276840A03DCA57B0_p_15_in [label="p_15_in", shape=invhouse, color="#e4f1b2"];
+logic276840A03DCA57B0_cmd_valid [label="cmd_valid", shape=invhouse, color="#e4f1b2"];
+}
+{ rank = sink;logic276840A03DCA57B0_cmd_ready_i [label="cmd_ready_i", shape=house, color="#e4f1b2"];
+}
+N_186CA6C0 [label="N_186CA6C0\n&:1\ngen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_READ.gen_non_fifo_r_upsizer.read_data_inst/cmd_ready_i\n Attributes ::\nAttrGroup: dfg, AttrName : [range], AttrVal:[ -1111111111:-1111111111 ]\nAttrGroup: dfg, AttrName : [name], AttrVal:[ gen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_READ.gen_non_fifo_r_upsizer.read_data_inst/cmd_ready_i ]\n\n#0:1\n", color="#bbebff"];
+logic276840A03DCA57B0_S_AXI_RLAST_I -> N_186CA6C0 [label="1", taillabel=<S_AXI_RLAST_I>, headlabel=<P_1D558550>, headlabel=<#0:1>];
+logic276840A03DCA57B0_p_15_in -> N_186CA6C0 [label="1", taillabel=<p_15_in>, headlabel=<B>, headlabel=<#0:1>];
+logic276840A03DCA57B0_cmd_valid -> N_186CA6C0 [label="1", taillabel=<cmd_valid>, headlabel=<A>, headlabel=<#0:1>];
+N_186CA6C0 -> logic276840A03DCA57B0_cmd_ready_i [label="1", taillabel=<out[cmd_ready_i]>, headlabel=<cmd_ready_i>, headlabel=<#0:1>];
+}

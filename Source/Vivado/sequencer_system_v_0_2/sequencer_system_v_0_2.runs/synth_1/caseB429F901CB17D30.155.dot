@@ -1,0 +1,23 @@
+digraph caseB429F901CB17D30 {
+graph [label="caseB429F901CB17D30", margin="0.1,0.1", size="100,100", ranksep=0.1, splines=true];
+node [style=filled, color="#ffee80", fontname=helveticanarrow];
+edge [color="#ff0000", fontsize=10, fontname=helveticanarrow];
+{ rank = source;caseB429F901CB17D30_first_mi_word_q [label="first_mi_word_q", shape=invhouse, color="#e4f1b2"];
+caseB429F901CB17D30_USE_RTL_LENGTH.length_counter_q_reg [label="USE_RTL_LENGTH.length_counter_q_reg[7:0]", shape=invhouse, color="#e4f1b2"];
+caseB429F901CB17D30_cmd_length [label="cmd_length[7:0]", shape=invhouse, color="#e4f1b2"];
+}
+{ rank = sink;caseB429F901CB17D30_length_counter [label="length_counter[7:0]", shape=house, color="#e4f1b2"];
+}
+{ rank = same;N_186C8050 [label="N_186C8050\nconstruct:2\nparallel\ngen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_READ.gen_non_fifo_r_upsizer.read_data_inst/length_counter0\nparallel\n Attributes ::\nAttrGroup: dfg, AttrName : [parallel], AttrVal:[ 0x1 ]\nAttrGroup: dfg, AttrName : [range], AttrVal:[ -1111111111:-1111111111 ]\nAttrGroup: dfg, AttrName : [name], AttrVal:[ gen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_READ.gen_non_fifo_r_upsizer.read_data_inst/length_counter0 ]\n\n#0:3\n", shape=diamond, color="#ffee80"];
+N_186C80A0 [label="N_186C80A0\nmerge:8\ngen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_READ.gen_non_fifo_r_upsizer.read_data_inst/length_counter[7:0]\n Attributes ::\nAttrGroup: dfg, AttrName : [range], AttrVal:[ 7:0 ]\nAttrGroup: dfg, AttrName : [name], AttrVal:[ gen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_READ.gen_non_fifo_r_upsizer.read_data_inst/length_counter ]\n\n#0:255\n", shape=house, color="#ffee80"];
+}
+N_186C8050_P_1D529F90 [label="1b1", color="#f1f1b2", shape=plaintext];
+N_186C8050_P_1D529F90 -> N_186C8050 [label="1", headlabel=<1>, headlabel=<1>];
+N_186C8050_P_1D526D50 [label="1bx", color="#f1f1b2", shape=plaintext];
+N_186C8050_P_1D526D50 -> N_186C8050 [label="1", headlabel=<0>, headlabel=<0>];
+N_186C8050 -> N_186C80A0 [label="2", style=dashed, constraint=false, taillabel=<out[length_counter0]>, headlabel=<sel>, headlabel=<#0:3>];
+caseB429F901CB17D30_first_mi_word_q -> N_186C8050 [label="1", taillabel=<first_mi_word_q>, headlabel=<in>, headlabel=<#0:1>];
+caseB429F901CB17D30_USE_RTL_LENGTH.length_counter_q_reg -> N_186C80A0 [label="8", taillabel=<USE_RTL_LENGTH.length_counter_q_reg>, headlabel=<0>, headlabel=<#0:255>];
+caseB429F901CB17D30_cmd_length -> N_186C80A0 [label="8", taillabel=<cmd_length>, headlabel=<1>, headlabel=<#0:255>];
+N_186C80A0 -> caseB429F901CB17D30_length_counter [label="8", taillabel=<out[length_counter]>, headlabel=<length_counter>, headlabel=<#0:255>];
+}

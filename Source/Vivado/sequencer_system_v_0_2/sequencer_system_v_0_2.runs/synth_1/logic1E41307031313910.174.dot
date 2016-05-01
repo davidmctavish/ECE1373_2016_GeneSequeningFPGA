@@ -1,0 +1,18 @@
+digraph logic1E41307031313910 {
+graph [label="logic1E41307031313910", margin="0.1,0.1", size="100,100", ranksep=0.1, splines=true];
+node [style=filled, color="#ffee80", fontname=helveticanarrow];
+edge [color="#ff0000", fontsize=10, fontname=helveticanarrow];
+{ rank = source;logic1E41307031313910_M_VALID_Q [label="M_VALID_Q", shape=invhouse, color="#e4f1b2"];
+logic1E41307031313910_data_Exists_I [label="data_Exists_I", shape=invhouse, color="#e4f1b2"];
+}
+{ rank = sink;logic1E41307031313910_EMPTY [label="EMPTY", shape=house, color="#e4f1b2"];
+}
+N_1841BE80 [label="N_1841BE80\n&:1\ngen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_READ.read_addr_inst/GEN_CMD_QUEUE.cmd_queue/EMPTY\n Attributes ::\nAttrGroup: dfg, AttrName : [range], AttrVal:[ -1111111111:-1111111111 ]\nAttrGroup: dfg, AttrName : [name], AttrVal:[ gen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_READ.read_addr_inst/GEN_CMD_QUEUE.cmd_queue/EMPTY ]\n\n#0:1\n", color="#bbebff"];
+N_1841BE30 [label="N_1841BE30\n_~:1\ngen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_READ.read_addr_inst/GEN_CMD_QUEUE.cmd_queue/EMPTY0\n Attributes ::\nAttrGroup: dfg, AttrName : [range], AttrVal:[ -1111111111:-1111111111 ]\nAttrGroup: dfg, AttrName : [name], AttrVal:[ gen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_READ.read_addr_inst/GEN_CMD_QUEUE.cmd_queue/EMPTY0 ]\n\n#0:1\n", color="#bbebff"];
+N_183BC0A0 [label="N_183BC0A0\n_~:1\ngen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_READ.read_addr_inst/GEN_CMD_QUEUE.cmd_queue/M_READY_I0\n Attributes ::\nAttrGroup: dfg, AttrName : [range], AttrVal:[ -1111111111:-1111111111 ]\nAttrGroup: dfg, AttrName : [name], AttrVal:[ gen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_READ.read_addr_inst/GEN_CMD_QUEUE.cmd_queue/M_READY_I0 ]\n\n#0:1\n", color="#bbebff"];
+N_1841BE30 -> N_1841BE80 [label="1", taillabel=<out[EMPTY0]>, headlabel=<A>, headlabel=<#0:1>];
+N_183BC0A0 -> N_1841BE80 [label="1", taillabel=<out[M_READY_I0]>, headlabel=<B>, headlabel=<#0:1>];
+logic1E41307031313910_M_VALID_Q -> N_183BC0A0 [label="1", taillabel=<M_VALID_Q>, headlabel=<in>, headlabel=<#0:1>];
+logic1E41307031313910_data_Exists_I -> N_1841BE30 [label="1", taillabel=<data_Exists_I>, headlabel=<in>, headlabel=<#0:1>];
+N_1841BE80 -> logic1E41307031313910_EMPTY [label="1", taillabel=<out[EMPTY]>, headlabel=<EMPTY>, headlabel=<#0:1>];
+}

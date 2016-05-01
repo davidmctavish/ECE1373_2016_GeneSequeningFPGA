@@ -1,0 +1,12 @@
+digraph logic1CB181901CB17180 {
+graph [label="logic1CB181901CB17180", margin="0.1,0.1", size="100,100", ranksep=0.1, splines=true];
+node [style=filled, color="#ffee80", fontname=helveticanarrow];
+edge [color="#ff0000", fontsize=10, fontname=helveticanarrow];
+{ rank = source;logic1CB181901CB17180_s_axi_arvalid [label="s_axi_arvalid", shape=invhouse, color="#e4f1b2"];
+}
+{ rank = sink;logic1CB181901CB17180_s_ready_i1 [label="s_ready_i1", shape=house, color="#e4f1b2"];
+}
+N_19193E50 [label="N_19193E50\n_~:1\ngen_upsizer.gen_full_upsizer.axi_upsizer_inst/si_register_slice_inst/ar_pipe/s_ready_i1\n Attributes ::\nAttrGroup: dfg, AttrName : [range], AttrVal:[ -1111111111:-1111111111 ]\nAttrGroup: dfg, AttrName : [name], AttrVal:[ gen_upsizer.gen_full_upsizer.axi_upsizer_inst/si_register_slice_inst/ar_pipe/s_ready_i1 ]\n\n#0:1\n", color="#bbebff"];
+logic1CB181901CB17180_s_axi_arvalid -> N_19193E50 [label="1", taillabel=<s_axi_arvalid>, headlabel=<in>, headlabel=<#0:1>];
+N_19193E50 -> logic1CB181901CB17180_s_ready_i1 [label="1", taillabel=<out[s_ready_i1]>, headlabel=<s_ready_i1>, headlabel=<#0:1>];
+}

@@ -1,0 +1,18 @@
+digraph logic2767977031311290 {
+graph [label="logic2767977031311290", margin="0.1,0.1", size="100,100", ranksep=0.1, splines=true];
+node [style=filled, color="#ffee80", fontname=helveticanarrow];
+edge [color="#ff0000", fontsize=10, fontname=helveticanarrow];
+{ rank = source;logic2767977031311290_s_ready [label="s_ready", shape=invhouse, color="#e4f1b2"];
+logic2767977031311290_cmd_push_block [label="cmd_push_block", shape=invhouse, color="#e4f1b2"];
+}
+{ rank = sink;logic2767977031311290_allow_new_cmd [label="allow_new_cmd", shape=house, color="#e4f1b2"];
+}
+N_1909EDC0 [label="N_1909EDC0\n|:1\ngen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_READ.read_addr_inst/allow_new_cmd\n Attributes ::\nAttrGroup: dfg, AttrName : [range], AttrVal:[ -1111111111:-1111111111 ]\nAttrGroup: dfg, AttrName : [name], AttrVal:[ gen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_READ.read_addr_inst/allow_new_cmd ]\n\n#0:1\n", color="#bbebff"];
+N_1909ED70 [label="N_1909ED70\n_~:1\ngen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_READ.read_addr_inst/allow_new_cmd0\n Attributes ::\nAttrGroup: dfg, AttrName : [range], AttrVal:[ -1111111111:-1111111111 ]\nAttrGroup: dfg, AttrName : [name], AttrVal:[ gen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_READ.read_addr_inst/allow_new_cmd0 ]\n\n#0:1\n", color="#bbebff"];
+N_1909ED20 [label="N_1909ED20\n_~:1\ngen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_READ.read_addr_inst/cmd_full\n Attributes ::\nAttrGroup: dfg, AttrName : [range], AttrVal:[ -1111111111:-1111111111 ]\nAttrGroup: dfg, AttrName : [name], AttrVal:[ gen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_READ.read_addr_inst/cmd_full ]\n\n#0:1\n", color="#bbebff"];
+N_1909ED70 -> N_1909EDC0 [label="1", taillabel=<out[allow_new_cmd0]>, headlabel=<A>, headlabel=<#0:1>];
+N_1909ED20 -> N_1909ED70 [label="1", taillabel=<out[cmd_full]>, headlabel=<in>, headlabel=<#0:1>];
+logic2767977031311290_s_ready -> N_1909ED20 [label="1", taillabel=<s_ready>, headlabel=<in>, headlabel=<#0:1>];
+logic2767977031311290_cmd_push_block -> N_1909EDC0 [label="1", taillabel=<cmd_push_block>, headlabel=<B>, headlabel=<#0:1>];
+N_1909EDC0 -> logic2767977031311290_allow_new_cmd [label="1", taillabel=<out[allow_new_cmd]>, headlabel=<allow_new_cmd>, headlabel=<#0:1>];
+}

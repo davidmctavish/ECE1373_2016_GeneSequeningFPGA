@@ -1,0 +1,23 @@
+digraph case42B86F3024BC4BB0 {
+graph [label="case42B86F3024BC4BB0", margin="0.1,0.1", size="100,100", ranksep=0.1, splines=true];
+node [style=filled, color="#ffee80", fontname=helveticanarrow];
+edge [color="#ff0000", fontsize=10, fontname=helveticanarrow];
+{ rank = source;case42B86F3024BC4BB0_use_wrap_buffer0 [label="use_wrap_buffer0", shape=invhouse, color="#e4f1b2"];
+case42B86F3024BC4BB0_cmd_ready_i [label="cmd_ready_i", shape=invhouse, color="#e4f1b2"];
+}
+{ rank = sink;case42B86F3024BC4BB0_use_wrap_buffer [label="use_wrap_buffer", shape=house, color="#e4f1b2"];
+}
+{ rank = same;N_186CBBB0 [label="N_186CBBB0\nconstruct:2\nparallel\ngen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_READ.gen_non_fifo_r_upsizer.read_data_inst/use_wrap_buffer0\nparallel\n Attributes ::\nAttrGroup: dfg, AttrName : [parallel], AttrVal:[ 0xbdc5ca39bdc5ca01 ]\nAttrGroup: dfg, AttrName : [range], AttrVal:[ -1111111111:-1111111111 ]\nAttrGroup: dfg, AttrName : [name], AttrVal:[ gen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_READ.gen_non_fifo_r_upsizer.read_data_inst/use_wrap_buffer0 ]\n\n#0:3\n", shape=diamond, color="#ffee80"];
+N_186CBB60 [label="N_186CBB60\nmerge:1\ngen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_READ.gen_non_fifo_r_upsizer.read_data_inst/use_wrap_buffer\n Attributes ::\nAttrGroup: dfg, AttrName : [range], AttrVal:[ -1111111111:-1111111111 ]\nAttrGroup: dfg, AttrName : [name], AttrVal:[ gen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_READ.gen_non_fifo_r_upsizer.read_data_inst/use_wrap_buffer ]\n\n#0:1\n", shape=house, color="#ffee80"];
+}
+N_186CBB60_P_1D63DB70 [label="1b1", color="#f1f1b2", shape=plaintext];
+N_186CBB60_P_1D63DB70 -> N_186CBB60 [label="1", headlabel=<1>, headlabel=<1>];
+N_186CBBB0_P_1D63D5D0 [label="1b1", color="#f1f1b2", shape=plaintext];
+N_186CBBB0_P_1D63D5D0 -> N_186CBBB0 [label="1", headlabel=<1>, headlabel=<1>];
+N_186CBBB0_P_1D63D660 [label="1bx", color="#f1f1b2", shape=plaintext];
+N_186CBBB0_P_1D63D660 -> N_186CBBB0 [label="1", headlabel=<0>, headlabel=<0>];
+N_186CBBB0 -> N_186CBB60 [label="2", style=dashed, constraint=false, taillabel=<out>, headlabel=<sel>, headlabel=<#0:3>];
+case42B86F3024BC4BB0_use_wrap_buffer0 -> N_186CBBB0 [label="1", taillabel=<use_wrap_buffer0>, headlabel=<in>, headlabel=<#0:1>];
+case42B86F3024BC4BB0_cmd_ready_i -> N_186CBB60 [label="1", taillabel=<cmd_ready_i>, headlabel=<0>, headlabel=<#0:1>];
+N_186CBB60 -> case42B86F3024BC4BB0_use_wrap_buffer [label="1", taillabel=<out>, headlabel=<use_wrap_buffer>, headlabel=<#0:1>];
+}

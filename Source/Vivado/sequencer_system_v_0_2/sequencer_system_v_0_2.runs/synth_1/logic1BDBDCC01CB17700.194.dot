@@ -1,0 +1,12 @@
+digraph logic1BDBDCC01CB17700 {
+graph [label="logic1BDBDCC01CB17700", margin="0.1,0.1", size="100,100", ranksep=0.1, splines=true];
+node [style=filled, color="#ffee80", fontname=helveticanarrow];
+edge [color="#ff0000", fontsize=10, fontname=helveticanarrow];
+{ rank = source;logic1BDBDCC01CB17700_m_valid_i [label="m_valid_i", shape=invhouse, color="#e4f1b2"];
+}
+{ rank = sink;logic1BDBDCC01CB17700_p_0_in [label="p_0_in", shape=house, color="#e4f1b2"];
+}
+N_19194170 [label="N_19194170\n_~:1\ngen_upsizer.gen_full_upsizer.axi_upsizer_inst/si_register_slice_inst/ar_pipe/\n Attributes ::\nAttrGroup: dfg, AttrName : [name], AttrVal:[ gen_upsizer.gen_full_upsizer.axi_upsizer_inst/si_register_slice_inst/ar_pipe/ ]\n\n#0:1\n", color="#bbebff"];
+logic1BDBDCC01CB17700_m_valid_i -> N_19194170 [label="1", taillabel=<m_valid_i>, headlabel=<in>, headlabel=<#0:1>];
+N_19194170 -> logic1BDBDCC01CB17700_p_0_in [label="1", taillabel=<out[p_0_in]>, headlabel=<p_0_in>, headlabel=<#0:1>];
+}

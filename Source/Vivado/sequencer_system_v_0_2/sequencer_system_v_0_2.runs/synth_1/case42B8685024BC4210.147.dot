@@ -1,0 +1,23 @@
+digraph case42B8685024BC4210 {
+graph [label="case42B8685024BC4210", margin="0.1,0.1", size="100,100", ranksep=0.1, splines=true];
+node [style=filled, color="#ffee80", fontname=helveticanarrow];
+edge [color="#ff0000", fontsize=10, fontname=helveticanarrow];
+{ rank = source;case42B8685024BC4210_sel_first_word [label="sel_first_word", shape=invhouse, color="#e4f1b2"];
+case42B8685024BC4210_current_word_1 [label="current_word_1[4:0]", shape=invhouse, color="#e4f1b2"];
+case42B8685024BC4210_cmd_first_word [label="cmd_first_word[4:0]", shape=invhouse, color="#e4f1b2"];
+}
+{ rank = sink;case42B8685024BC4210_current_word [label="current_word[4:0]", shape=house, color="#e4f1b2"];
+}
+{ rank = same;N_186CB340 [label="N_186CB340\nconstruct:2\nparallel\ngen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_READ.gen_non_fifo_r_upsizer.read_data_inst/next_word_i0\nparallel\n Attributes ::\nAttrGroup: dfg, AttrName : [parallel], AttrVal:[ 0x1 ]\nAttrGroup: dfg, AttrName : [range], AttrVal:[ -1111111111:-1111111111 ]\nAttrGroup: dfg, AttrName : [name], AttrVal:[ gen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_READ.gen_non_fifo_r_upsizer.read_data_inst/next_word_i0 ]\n\n#0:3\n", shape=diamond, color="#ffee80"];
+N_186CB390 [label="N_186CB390\nmerge:5\ngen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_READ.gen_non_fifo_r_upsizer.read_data_inst/current_word[4:0]\n Attributes ::\nAttrGroup: dfg, AttrName : [range], AttrVal:[ 4:0 ]\nAttrGroup: dfg, AttrName : [name], AttrVal:[ gen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_READ.gen_non_fifo_r_upsizer.read_data_inst/current_word ]\n\n#0:31\n", shape=house, color="#ffee80"];
+}
+N_186CB340_P_1D559B10 [label="1b1", color="#f1f1b2", shape=plaintext];
+N_186CB340_P_1D559B10 -> N_186CB340 [label="1", headlabel=<1>, headlabel=<1>];
+N_186CB340_P_1D559A80 [label="1bx", color="#f1f1b2", shape=plaintext];
+N_186CB340_P_1D559A80 -> N_186CB340 [label="1", headlabel=<0>, headlabel=<0>];
+N_186CB340 -> N_186CB390 [label="2", style=dashed, constraint=false, taillabel=<out[next_word_i0]>, headlabel=<sel>, headlabel=<#0:3>];
+case42B8685024BC4210_sel_first_word -> N_186CB340 [label="1", taillabel=<sel_first_word>, headlabel=<in>, headlabel=<#0:1>];
+case42B8685024BC4210_current_word_1 -> N_186CB390 [label="5", taillabel=<current_word_1>, headlabel=<0>, headlabel=<#0:31>];
+case42B8685024BC4210_cmd_first_word -> N_186CB390 [label="5", taillabel=<cmd_first_word>, headlabel=<1>, headlabel=<#0:31>];
+N_186CB390 -> case42B8685024BC4210_current_word [label="5", taillabel=<out[current_word]>, headlabel=<current_word>, headlabel=<#0:31>];
+}

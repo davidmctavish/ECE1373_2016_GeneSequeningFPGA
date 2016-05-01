@@ -1,0 +1,20 @@
+digraph logic1D318DF0415EE000 {
+graph [label="logic1D318DF0415EE000", margin="0.1,0.1", size="100,100", ranksep=0.1, splines=true];
+node [style=filled, color="#ffee80", fontname=helveticanarrow];
+edge [color="#ff0000", fontsize=10, fontname=helveticanarrow];
+{ rank = source;logic1D318DF0415EE000_buffer_Empty [label="buffer_Empty", shape=invhouse, color="#e4f1b2"];
+logic1D318DF0415EE000_valid_Write [label="valid_Write", shape=invhouse, color="#e4f1b2"];
+logic1D318DF0415EE000_M_READY_I [label="M_READY_I", shape=invhouse, color="#e4f1b2"];
+}
+{ rank = sink;logic1D318DF0415EE000_addr_q0 [label="addr_q0", shape=house, color="#e4f1b2"];
+}
+N_183BE580 [label="N_183BE580\n&:1\ngen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_READ.read_addr_inst/GEN_CMD_QUEUE.cmd_queue/addr_q0\n Attributes ::\nAttrGroup: dfg, AttrName : [range], AttrVal:[ -1111111111:-1111111111 ]\nAttrGroup: dfg, AttrName : [name], AttrVal:[ gen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_READ.read_addr_inst/GEN_CMD_QUEUE.cmd_queue/addr_q0 ]\n\n#0:1\n", color="#bbebff"];
+N_183BE530 [label="N_183BE530\n_~:1\ngen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_READ.read_addr_inst/GEN_CMD_QUEUE.cmd_queue/addr_q2\n Attributes ::\nAttrGroup: dfg, AttrName : [range], AttrVal:[ -1111111111:-1111111111 ]\nAttrGroup: dfg, AttrName : [name], AttrVal:[ gen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_READ.read_addr_inst/GEN_CMD_QUEUE.cmd_queue/addr_q2 ]\n\n#0:1\n", color="#bbebff"];
+N_183BE4E0 [label="N_183BE4E0\n_~:1\ngen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_READ.read_addr_inst/GEN_CMD_QUEUE.cmd_queue/addr_q1\n Attributes ::\nAttrGroup: dfg, AttrName : [range], AttrVal:[ -1111111111:-1111111111 ]\nAttrGroup: dfg, AttrName : [name], AttrVal:[ gen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_READ.read_addr_inst/GEN_CMD_QUEUE.cmd_queue/addr_q1 ]\n\n#0:1\n", color="#bbebff"];
+N_183BE530 -> N_183BE580 [label="1", taillabel=<out[addr_q2]>, headlabel=<A>, headlabel=<#0:1>];
+N_183BE4E0 -> N_183BE580 [label="1", taillabel=<out[addr_q1]>, headlabel=<B>, headlabel=<#0:1>];
+logic1D318DF0415EE000_buffer_Empty -> N_183BE4E0 [label="1", taillabel=<buffer_Empty>, headlabel=<in>, headlabel=<#0:1>];
+logic1D318DF0415EE000_valid_Write -> N_183BE530 [label="1", taillabel=<valid_Write>, headlabel=<in>, headlabel=<#0:1>];
+logic1D318DF0415EE000_M_READY_I -> N_183BE580 [label="1", taillabel=<M_READY_I>, headlabel=<P_1C208A60>, headlabel=<#0:1>];
+N_183BE580 -> logic1D318DF0415EE000_addr_q0 [label="1", taillabel=<out[addr_q0]>, headlabel=<addr_q0>, headlabel=<#0:1>];
+}

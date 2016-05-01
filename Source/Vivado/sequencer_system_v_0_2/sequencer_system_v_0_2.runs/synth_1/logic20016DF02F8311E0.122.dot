@@ -1,0 +1,14 @@
+digraph logic20016DF02F8311E0 {
+graph [label="logic20016DF02F8311E0", margin="0.1,0.1", size="100,100", ranksep=0.1, splines=true];
+node [style=filled, color="#ffee80", fontname=helveticanarrow];
+edge [color="#ff0000", fontsize=10, fontname=helveticanarrow];
+{ rank = source;logic20016DF02F8311E0_S_AXI_AVALID [label="S_AXI_AVALID", shape=invhouse, color="#e4f1b2"];
+logic20016DF02F8311E0_allow_new_cmd [label="allow_new_cmd", shape=invhouse, color="#e4f1b2"];
+}
+{ rank = sink;logic20016DF02F8311E0_p_1_in [label="p_1_in", shape=house, color="#e4f1b2"];
+}
+N_2514190 [label="N_2514190\n&:1\ngen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_WRITE.write_addr_inst/M_AXI_AVALID_I\n Attributes ::\nAttrGroup: dfg, AttrName : [range], AttrVal:[ -1111111111:-1111111111 ]\nAttrGroup: dfg, AttrName : [name], AttrVal:[ gen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_WRITE.write_addr_inst/M_AXI_AVALID_I ]\n\n#0:1\n", color="#bbebff"];
+logic20016DF02F8311E0_S_AXI_AVALID -> N_2514190 [label="1", taillabel=<S_AXI_AVALID>, headlabel=<B>, headlabel=<#0:1>];
+logic20016DF02F8311E0_allow_new_cmd -> N_2514190 [label="1", taillabel=<allow_new_cmd>, headlabel=<A>, headlabel=<#0:1>];
+N_2514190 -> logic20016DF02F8311E0_p_1_in [label="1", taillabel=<out[p_1_in]>, headlabel=<p_1_in>, headlabel=<#0:1>];
+}

@@ -1,0 +1,14 @@
+digraph logic1BD5B2201CB56F20 {
+graph [label="logic1BD5B2201CB56F20", margin="0.1,0.1", size="100,100", ranksep=0.1, splines=true];
+node [style=filled, color="#ffee80", fontname=helveticanarrow];
+edge [color="#ff0000", fontsize=10, fontname=helveticanarrow];
+{ rank = source;logic1BD5B2201CB56F20_current_word_adjusted [label="current_word_adjusted[2:0]", shape=invhouse, color="#e4f1b2"];
+}
+{ rank = sink;logic1BD5B2201CB56F20_current_word_idx_3 [label="current_word_idx_3[0:0]", shape=house, color="#e4f1b2"];
+}
+N_18754230 [label="N_18754230\n==:1\ngen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_WRITE.gen_non_fifo_w_upsizer.write_data_inst/current_word_idx_3[0:0]\n Attributes ::\nAttrGroup: dfg, AttrName : [range], AttrVal:[ 0:0 ]\nAttrGroup: dfg, AttrName : [name], AttrVal:[ gen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_WRITE.gen_non_fifo_w_upsizer.write_data_inst/current_word_idx_3 ]\n\n#0:1\n", color="#bbebff"];
+N_18754230_B [label="3b011", color="#f1f1b2", shape=plaintext];
+N_18754230_B -> N_18754230 [label="3", headlabel=<B>];
+logic1BD5B2201CB56F20_current_word_adjusted -> N_18754230 [label="3", taillabel=<current_word_adjusted>, headlabel=<A>, headlabel=<#0:7>];
+N_18754230 -> logic1BD5B2201CB56F20_current_word_idx_3 [label="1", taillabel=<out[current_word_idx_3]>, headlabel=<current_word_idx_3>, headlabel=<#0:1>];
+}

@@ -1,0 +1,23 @@
+digraph case42B8748024BC49A0 {
+graph [label="case42B8748024BC49A0", margin="0.1,0.1", size="100,100", ranksep=0.1, splines=true];
+node [style=filled, color="#ffee80", fontname=helveticanarrow];
+edge [color="#ff0000", fontsize=10, fontname=helveticanarrow];
+{ rank = source;case42B8748024BC49A0_wrap_buffer_available08_out [label="wrap_buffer_available08_out", shape=invhouse, color="#e4f1b2"];
+case42B8748024BC49A0_wrap_buffer_available0 [label="wrap_buffer_available0", shape=invhouse, color="#e4f1b2"];
+}
+{ rank = sink;case42B8748024BC49A0_wrap_buffer_available [label="wrap_buffer_available", shape=house, color="#e4f1b2"];
+}
+{ rank = same;N_186CBE30 [label="N_186CBE30\nconstruct:2\nparallel\ngen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_READ.gen_non_fifo_r_upsizer.read_data_inst/wrap_buffer_available0\nparallel\n Attributes ::\nAttrGroup: dfg, AttrName : [parallel], AttrVal:[ 0x1 ]\nAttrGroup: dfg, AttrName : [range], AttrVal:[ -1111111111:-1111111111 ]\nAttrGroup: dfg, AttrName : [name], AttrVal:[ gen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_READ.gen_non_fifo_r_upsizer.read_data_inst/wrap_buffer_available0 ]\n\n#0:3\n", shape=diamond, color="#ffee80"];
+N_186CBE80 [label="N_186CBE80\nmerge:1\ngen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_READ.gen_non_fifo_r_upsizer.read_data_inst/wrap_buffer_available\n Attributes ::\nAttrGroup: dfg, AttrName : [range], AttrVal:[ -1111111111:-1111111111 ]\nAttrGroup: dfg, AttrName : [name], AttrVal:[ gen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_READ.gen_non_fifo_r_upsizer.read_data_inst/wrap_buffer_available ]\n\n#0:1\n", shape=house, color="#ffee80"];
+}
+N_186CBE80_P_1D63C190 [label="1b1", color="#f1f1b2", shape=plaintext];
+N_186CBE80_P_1D63C190 -> N_186CBE80 [label="1", headlabel=<1>, headlabel=<1>];
+N_186CBE30_P_1D63ADB0 [label="1b1", color="#f1f1b2", shape=plaintext];
+N_186CBE30_P_1D63ADB0 -> N_186CBE30 [label="1", headlabel=<1>, headlabel=<1>];
+N_186CBE30_P_1D63AED0 [label="1bx", color="#f1f1b2", shape=plaintext];
+N_186CBE30_P_1D63AED0 -> N_186CBE30 [label="1", headlabel=<0>, headlabel=<0>];
+N_186CBE30 -> N_186CBE80 [label="2", style=dashed, constraint=false, taillabel=<out>, headlabel=<sel>, headlabel=<#0:3>];
+case42B8748024BC49A0_wrap_buffer_available08_out -> N_186CBE30 [label="1", taillabel=<wrap_buffer_available08_out>, headlabel=<in>, headlabel=<#0:1>];
+case42B8748024BC49A0_wrap_buffer_available0 -> N_186CBE80 [label="1", taillabel=<wrap_buffer_available0>, headlabel=<0>, headlabel=<#0:1>];
+N_186CBE80 -> case42B8748024BC49A0_wrap_buffer_available [label="1", taillabel=<out>, headlabel=<wrap_buffer_available>, headlabel=<#0:1>];
+}

@@ -1,0 +1,85 @@
+digraph counter1D95E89001D95E680 {
+graph [label="counter1D95E89001D95E680", margin="0.1,0.1", size="100,100", ranksep=0.1, splines=true];
+node [style=filled, color="#ffee80", fontname=helveticanarrow];
+edge [color="#ff0000", fontsize=10, fontname=helveticanarrow];
+{ rank = source;counter1D95E89001D95E680_clk [label="clk", shape=invhouse, color="#e4f1b2"];
+counter1D95E89001D95E680_sel [label="sel", shape=invhouse, color="#e4f1b2"];
+counter1D95E89001D95E680_clear [label="clear", shape=invhouse, color="#e4f1b2"];
+counter1D95E89001D95E680_clearval [label="clearval[7:0]", shape=invhouse, color="#e4f1b2"];
+counter1D95E89001D95E680_in [label="in[7:0]", shape=invhouse, color="#e4f1b2"];
+counter1D95E89001D95E680_data [label="data[7:0]", shape=invhouse, color="#e4f1b2"];
+counter1D95E89001D95E680_load [label="load", shape=invhouse, color="#e4f1b2"];
+counter1D95E89001D95E680_IS_CLK_INVERTED [label="IS_CLK_INVERTED[0:0]", shape=invhouse, color="#e4f1b2"];
+}
+{ rank = sink;counter1D95E89001D95E680_out [label="out[7:0]", shape=house, color="#e4f1b2"];
+}
+N_186C8D70 [label="datapath186C8D70", color="#e6dcff", shape=invtrapezium];
+N_186C8F00 [label="case186C8F00", color="#e6dcff", shape=house];
+N_186C9590 [label="reg186C9590"];
+counter1D95E89001D95E680_load -> N_186C8F00 [label="1", taillabel=<load>, headlabel=<load>, headlabel=<#0:1>];
+counter1D95E89001D95E680_data -> N_186C8F00 [label="8", taillabel=<data>, headlabel=<data>, headlabel=<#0:255>];
+N_186C8F00 -> N_186C8D70 [label="8", taillabel=<length_counter[length_counter]>, headlabel=<length_counter>, headlabel=<#0:0>];
+counter1D95E89001D95E680_clear -> N_186C9590 [label="1", taillabel=<clear>, headlabel=<clear>, headlabel=<#0:1>];
+counter1D95E89001D95E680_sel -> N_186C9590 [label="1", taillabel=<sel>, headlabel=<sel>, headlabel=<#0:1>];
+counter1D95E89001D95E680_clk -> N_186C9590 [label="1", taillabel=<clk>, headlabel=<clk>, headlabel=<#0:1>];
+N_186C8D70 -> N_186C9590 [label="8", taillabel=<next_length_counter[next_length_counter]>, headlabel=<next_length_counter>, headlabel=<#0:0>];
+N_186C9590 -> N_186C8F00 [label="8", taillabel=<length_counter_q[length_counter_q]>, headlabel=<length_counter_q>, headlabel=<#0:0>];
+N_186C9590 -> counter1D95E89001D95E680_out [label="8", taillabel=<length_counter_q[length_counter_q]>, headlabel=<out>, headlabel=<#0:0>];
+}
+digraph datapath186C8D70 {
+graph [label="datapath186C8D70", margin="0.1,0.1", size="100,100", ranksep=0.1, splines=true];
+node [style=filled, color="#ffee80", fontname=helveticanarrow];
+edge [color="#ff0000", fontsize=10, fontname=helveticanarrow];
+{ rank = source;datapath186C8D70_length_counter [label="length_counter[7:0]", shape=invhouse, color="#e4f1b2"];
+}
+{ rank = sink;datapath186C8D70_next_length_counter [label="next_length_counter[7:0]", shape=house, color="#e4f1b2"];
+}
+N_186C8E10 [label="N_186C8E10\n+:8\ngen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_READ.gen_non_fifo_r_upsizer.read_data_inst/next_length_counter\n Attributes ::\nAttrGroup: dfg, AttrName : [range], AttrVal:[ -1111111111:-1111111111 ]\nAttrGroup: dfg, AttrName : [name], AttrVal:[ gen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_READ.gen_non_fifo_r_upsizer.read_data_inst/next_length_counter ]\n\n#0:255\nclipped", color="#bbebff"];
+N_186C8E10_B [label="8sb11111111", color="#f1f1b2", shape=plaintext];
+N_186C8E10_B -> N_186C8E10 [label="8", color="#00ff00", headlabel=<B>];
+datapath186C8D70_length_counter -> N_186C8E10 [label="8", taillabel=<length_counter>, headlabel=<A>, headlabel=<#0:255>];
+N_186C8E10 -> datapath186C8D70_next_length_counter [label="8", taillabel=<out[next_length_counter]>, headlabel=<next_length_counter>, headlabel=<#0:255>];
+}
+digraph case186C8F00 {
+graph [label="case186C8F00", margin="0.1,0.1", size="100,100", ranksep=0.1, splines=true];
+node [style=filled, color="#ffee80", fontname=helveticanarrow];
+edge [color="#ff0000", fontsize=10, fontname=helveticanarrow];
+{ rank = source;case186C8F00_load [label="load", shape=invhouse, color="#e4f1b2"];
+case186C8F00_length_counter_q [label="length_counter_q[7:0]", shape=invhouse, color="#e4f1b2"];
+case186C8F00_data [label="data[7:0]", shape=invhouse, color="#e4f1b2"];
+}
+{ rank = sink;case186C8F00_length_counter [label="length_counter[7:0]", shape=house, color="#e4f1b2"];
+}
+{ rank = same;N_186C95E0 [label="N_186C95E0\nconstruct:2\nparallel\ngen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_READ.gen_non_fifo_r_upsizer.read_data_inst/length_counter0\nparallel\n Attributes ::\nAttrGroup: dfg, AttrName : [parallel], AttrVal:[ 0x1 ]\nAttrGroup: dfg, AttrName : [range], AttrVal:[ -1111111111:-1111111111 ]\nAttrGroup: dfg, AttrName : [name], AttrVal:[ gen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_READ.gen_non_fifo_r_upsizer.read_data_inst/length_counter0 ]\n\n#0:3\n", shape=diamond, color="#ffee80"];
+N_186C9630 [label="N_186C9630\nmerge:8\ngen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_READ.gen_non_fifo_r_upsizer.read_data_inst/length_counter[7:0]\n Attributes ::\nAttrGroup: dfg, AttrName : [range], AttrVal:[ 7:0 ]\nAttrGroup: dfg, AttrName : [name], AttrVal:[ gen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_READ.gen_non_fifo_r_upsizer.read_data_inst/length_counter ]\n\n#0:255\n", shape=house, color="#ffee80"];
+}
+N_186C95E0_P_1D556420 [label="1b1", color="#f1f1b2", shape=plaintext];
+N_186C95E0_P_1D556420 -> N_186C95E0 [label="1", headlabel=<1>, headlabel=<1>];
+N_186C95E0_P_1D556600 [label="1bx", color="#f1f1b2", shape=plaintext];
+N_186C95E0_P_1D556600 -> N_186C95E0 [label="1", headlabel=<0>, headlabel=<0>];
+N_186C95E0 -> N_186C9630 [label="2", style=dashed, constraint=false, taillabel=<out[length_counter0]>, headlabel=<sel>, headlabel=<#0:3>];
+case186C8F00_load -> N_186C95E0 [label="1", taillabel=<load>, headlabel=<in>, headlabel=<#0:1>];
+case186C8F00_length_counter_q -> N_186C9630 [label="8", taillabel=<length_counter_q>, headlabel=<0>, headlabel=<#0:255>];
+case186C8F00_data -> N_186C9630 [label="8", taillabel=<data>, headlabel=<1>, headlabel=<#0:255>];
+N_186C9630 -> case186C8F00_length_counter [label="8", taillabel=<out[length_counter]>, headlabel=<length_counter>, headlabel=<#0:255>];
+}
+digraph reg186C9590 {
+graph [label="reg186C9590", margin="0.1,0.1", size="100,100", ranksep=0.1, splines=true];
+node [style=filled, color="#ffee80", fontname=helveticanarrow];
+edge [color="#ff0000", fontsize=10, fontname=helveticanarrow];
+{ rank = source;reg186C9590_clear [label="clear", shape=invhouse, color="#e4f1b2"];
+reg186C9590_sel [label="sel", shape=invhouse, color="#e4f1b2"];
+reg186C9590_clk [label="clk", shape=invhouse, color="#e4f1b2"];
+reg186C9590_next_length_counter [label="next_length_counter[7:0]", shape=invhouse, color="#e4f1b2"];
+}
+{ rank = sink;reg186C9590_length_counter_q [label="length_counter_q[7:0]", shape=house, color="#e4f1b2"];
+}
+N_186C9680 [label="N_186C9680\nreg:8\ngen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_READ.gen_non_fifo_r_upsizer.read_data_inst/USE_RTL_LENGTH.length_counter_q_reg[7:0]\n Attributes ::\nAttrGroup: dfg, AttrName : [registerConstant], AttrVal:[ 'bvvvvvvv ]\nAttrGroup: dfg, AttrName : [range], AttrVal:[ 7:0 ]\nAttrGroup: dfg, AttrName : [name], AttrVal:[ gen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_READ.gen_non_fifo_r_upsizer.read_data_inst/USE_RTL_LENGTH.length_counter_q_reg ]\n\n#0:255\n", shape=rect, color="#ffee80"];
+N_186C9680_P_1D556DB0 [label="8b00000000", color="#f1f1b2", shape=plaintext];
+N_186C9680_P_1D556DB0 -> N_186C9680 [label="8", headlabel=<1>, headlabel=<1>];
+reg186C9590_clear -> N_186C9680 [label="1", color="#00ff00", taillabel=<clear>, headlabel=<0>, headlabel=<#s-1:s0 Clipped>];
+reg186C9590_sel -> N_186C9680 [label="1", color="#00ff00", taillabel=<sel>, headlabel=<sel>, headlabel=<#s-1:s0 Clipped>];
+reg186C9590_clk -> N_186C9680 [label="1", style=dashed, constraint=false, taillabel=<clk>, headlabel=<0>, headlabel=<#0:1>];
+reg186C9590_next_length_counter -> N_186C9680 [label="8", taillabel=<next_length_counter>, headlabel=<in>, headlabel=<#0:255>];
+N_186C9680 -> reg186C9590_length_counter_q [label="8", taillabel=<out[length_counter_q]>, headlabel=<length_counter_q>, headlabel=<#0:255>];
+}

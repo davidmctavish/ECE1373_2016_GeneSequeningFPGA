@@ -1,0 +1,14 @@
+digraph logic42B876B03DCA5650 {
+graph [label="logic42B876B03DCA5650", margin="0.1,0.1", size="100,100", ranksep=0.1, splines=true];
+node [style=filled, color="#ffee80", fontname=helveticanarrow];
+edge [color="#ff0000", fontsize=10, fontname=helveticanarrow];
+{ rank = source;logic42B876B03DCA5650_use_wrap_buffer [label="use_wrap_buffer", shape=invhouse, color="#e4f1b2"];
+logic42B876B03DCA5650_M_AXI_RVALID_I [label="M_AXI_RVALID_I", shape=invhouse, color="#e4f1b2"];
+}
+{ rank = sink;logic42B876B03DCA5650_S_AXI_RVALID_I [label="S_AXI_RVALID_I", shape=house, color="#e4f1b2"];
+}
+N_186CB840 [label="N_186CB840\n|:1\ngen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_READ.gen_non_fifo_r_upsizer.read_data_inst/S_AXI_RVALID_I\n Attributes ::\nAttrGroup: dfg, AttrName : [range], AttrVal:[ -1111111111:-1111111111 ]\nAttrGroup: dfg, AttrName : [name], AttrVal:[ gen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_READ.gen_non_fifo_r_upsizer.read_data_inst/S_AXI_RVALID_I ]\n\n#0:1\n", color="#bbebff"];
+logic42B876B03DCA5650_use_wrap_buffer -> N_186CB840 [label="1", taillabel=<use_wrap_buffer>, headlabel=<B>, headlabel=<#0:1>];
+logic42B876B03DCA5650_M_AXI_RVALID_I -> N_186CB840 [label="1", taillabel=<M_AXI_RVALID_I>, headlabel=<A>, headlabel=<#0:1>];
+N_186CB840 -> logic42B876B03DCA5650_S_AXI_RVALID_I [label="1", taillabel=<out[S_AXI_RVALID_I]>, headlabel=<S_AXI_RVALID_I>, headlabel=<#0:1>];
+}

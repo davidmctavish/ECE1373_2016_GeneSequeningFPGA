@@ -1,0 +1,14 @@
+digraph logic42B873903DCA5F40 {
+graph [label="logic42B873903DCA5F40", margin="0.1,0.1", size="100,100", ranksep=0.1, splines=true];
+node [style=filled, color="#ffee80", fontname=helveticanarrow];
+edge [color="#ff0000", fontsize=10, fontname=helveticanarrow];
+{ rank = source;logic42B873903DCA5F40_cmd_offset [label="cmd_offset[4:0]", shape=invhouse, color="#e4f1b2"];
+logic42B873903DCA5F40_current_word [label="current_word[4:0]", shape=invhouse, color="#e4f1b2"];
+}
+{ rank = sink;logic42B873903DCA5F40_current_word_adjusted [label="current_word_adjusted[4:0]", shape=house, color="#e4f1b2"];
+}
+N_186CA490 [label="N_186CA490\n|:5\ngen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_READ.gen_non_fifo_r_upsizer.read_data_inst/current_word_adjusted[4:0]\n Attributes ::\nAttrGroup: dfg, AttrName : [range], AttrVal:[ 4:0 ]\nAttrGroup: dfg, AttrName : [name], AttrVal:[ gen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_READ.gen_non_fifo_r_upsizer.read_data_inst/current_word_adjusted ]\n\n#0:31\n", color="#bbebff"];
+logic42B873903DCA5F40_cmd_offset -> N_186CA490 [label="5", taillabel=<cmd_offset>, headlabel=<B>, headlabel=<#0:31>];
+logic42B873903DCA5F40_current_word -> N_186CA490 [label="5", taillabel=<current_word>, headlabel=<A>, headlabel=<#0:31>];
+N_186CA490 -> logic42B873903DCA5F40_current_word_adjusted [label="5", taillabel=<out[current_word_adjusted]>, headlabel=<current_word_adjusted>, headlabel=<#0:31>];
+}

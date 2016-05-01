@@ -1,0 +1,42 @@
+digraph logic42B870703DCA5DE0 {
+graph [label="logic42B870703DCA5DE0", margin="0.1,0.1", size="100,100", ranksep=0.1, splines=true];
+node [style=filled, color="#ffee80", fontname=helveticanarrow];
+edge [color="#ff0000", fontsize=10, fontname=helveticanarrow];
+{ rank = source;logic42B870703DCA5DE0_cmd_fix [label="cmd_fix", shape=invhouse, color="#e4f1b2"];
+logic42B870703DCA5DE0_next_word [label="next_word[4:0]", shape=invhouse, color="#e4f1b2"];
+logic42B870703DCA5DE0_cmd_complete_wrap [label="cmd_complete_wrap", shape=invhouse, color="#e4f1b2"];
+logic42B870703DCA5DE0_S_AXI_RLAST_I [label="S_AXI_RLAST_I", shape=invhouse, color="#e4f1b2"];
+logic42B870703DCA5DE0_word_completed3 [label="word_completed3", shape=invhouse, color="#e4f1b2"];
+logic42B870703DCA5DE0_cmd_modified [label="cmd_modified", shape=invhouse, color="#e4f1b2"];
+logic42B870703DCA5DE0_cmd_valid [label="cmd_valid", shape=invhouse, color="#e4f1b2"];
+}
+{ rank = sink;logic42B870703DCA5DE0_p_13_in [label="p_13_in", shape=house, color="#e4f1b2"];
+}
+N_186C93B0 [label="N_186C93B0\n&:1\ngen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_READ.gen_non_fifo_r_upsizer.read_data_inst/word_completed\n Attributes ::\nAttrGroup: dfg, AttrName : [range], AttrVal:[ -1111111111:-1111111111 ]\nAttrGroup: dfg, AttrName : [name], AttrVal:[ gen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_READ.gen_non_fifo_r_upsizer.read_data_inst/word_completed ]\n\n#0:1\n", color="#bbebff"];
+N_186C9130 [label="N_186C9130\n|:1\ngen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_READ.gen_non_fifo_r_upsizer.read_data_inst/word_completed0\n Attributes ::\nAttrGroup: dfg, AttrName : [range], AttrVal:[ -1111111111:-1111111111 ]\nAttrGroup: dfg, AttrName : [name], AttrVal:[ gen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_READ.gen_non_fifo_r_upsizer.read_data_inst/word_completed0 ]\n\n#0:1\n", color="#bbebff"];
+N_186C91D0 [label="N_186C91D0\n_~:1\ngen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_READ.gen_non_fifo_r_upsizer.read_data_inst/word_completed1\n Attributes ::\nAttrGroup: dfg, AttrName : [range], AttrVal:[ -1111111111:-1111111111 ]\nAttrGroup: dfg, AttrName : [name], AttrVal:[ gen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_READ.gen_non_fifo_r_upsizer.read_data_inst/word_completed1 ]\n\n#0:1\n", color="#bbebff"];
+N_186C9180 [label="N_186C9180\n&:1\ngen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_READ.gen_non_fifo_r_upsizer.read_data_inst/word_completed2\n Attributes ::\nAttrGroup: dfg, AttrName : [range], AttrVal:[ -1111111111:-1111111111 ]\nAttrGroup: dfg, AttrName : [name], AttrVal:[ gen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_READ.gen_non_fifo_r_upsizer.read_data_inst/word_completed2 ]\n\n#0:1\n", color="#bbebff"];
+N_186C9D10 [label="N_186C9D10\n&:1\ngen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_READ.gen_non_fifo_r_upsizer.read_data_inst/word_completed3\n Attributes ::\nAttrGroup: dfg, AttrName : [range], AttrVal:[ -1111111111:-1111111111 ]\nAttrGroup: dfg, AttrName : [name], AttrVal:[ gen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_READ.gen_non_fifo_r_upsizer.read_data_inst/word_completed3 ]\n\n#0:1\n", color="#bbebff"];
+N_186C9D60 [label="N_186C9D60\n_~:1\ngen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_READ.gen_non_fifo_r_upsizer.read_data_inst/word_completed5\n Attributes ::\nAttrGroup: dfg, AttrName : [range], AttrVal:[ -1111111111:-1111111111 ]\nAttrGroup: dfg, AttrName : [name], AttrVal:[ gen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_READ.gen_non_fifo_r_upsizer.read_data_inst/word_completed5 ]\n\n#0:1\n", color="#bbebff"];
+N_186C92C0 [label="N_186C92C0\n==:1\ngen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_READ.gen_non_fifo_r_upsizer.read_data_inst/word_completed4\n Attributes ::\nAttrGroup: dfg, AttrName : [range], AttrVal:[ -1111111111:-1111111111 ]\nAttrGroup: dfg, AttrName : [name], AttrVal:[ gen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_READ.gen_non_fifo_r_upsizer.read_data_inst/word_completed4 ]\n\n#0:1\n", color="#bbebff"];
+N_186C9310 [label="N_186C9310\n_~:1\ngen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_READ.gen_non_fifo_r_upsizer.read_data_inst/word_completed5\n Attributes ::\nAttrGroup: dfg, AttrName : [range], AttrVal:[ -1111111111:-1111111111 ]\nAttrGroup: dfg, AttrName : [name], AttrVal:[ gen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_READ.gen_non_fifo_r_upsizer.read_data_inst/word_completed5 ]\n\n#0:1\n", color="#bbebff"];
+N_186C92C0_B [label="5b00000", color="#f1f1b2", shape=plaintext];
+N_186C92C0_B -> N_186C92C0 [label="5", headlabel=<B>];
+N_186C9130 -> N_186C93B0 [label="1", taillabel=<out[word_completed0]>, headlabel=<B>, headlabel=<#0:1>];
+N_186C91D0 -> N_186C9130 [label="1", taillabel=<out[word_completed1]>, headlabel=<B>, headlabel=<#0:1>];
+N_186C9180 -> N_186C9130 [label="1", taillabel=<out[word_completed2]>, headlabel=<P_6CE25E0>, headlabel=<#0:1>];
+N_186C9D10 -> N_186C9130 [label="1", taillabel=<out[word_completed312_out]>, headlabel=<P_6CE2520>, headlabel=<#0:1>];
+N_186C9D60 -> N_186C9D10 [label="1", taillabel=<out[word_completed511_in]>, headlabel=<P_1C4B7950>, headlabel=<#0:1>];
+N_186C9310 -> N_186C9D10 [label="1", taillabel=<out[word_completed5]>, headlabel=<A>, headlabel=<#0:1>];
+N_186C92C0 -> N_186C9D10 [label="1", taillabel=<out[word_completed4]>, headlabel=<B>, headlabel=<#0:1>];
+N_186C9310 -> N_186C9180 [label="1", taillabel=<out[word_completed5]>, headlabel=<A>, headlabel=<#0:1>];
+logic42B870703DCA5DE0_cmd_fix -> N_186C9130 [label="1", taillabel=<cmd_fix>, headlabel=<A>, headlabel=<#0:1>];
+logic42B870703DCA5DE0_cmd_fix -> N_186C9310 [label="1", taillabel=<cmd_fix>, headlabel=<in>, headlabel=<#0:1>];
+logic42B870703DCA5DE0_next_word -> N_186C92C0 [label="5", taillabel=<next_word>, headlabel=<A>, headlabel=<#0:31>];
+logic42B870703DCA5DE0_cmd_complete_wrap -> N_186C9D60 [label="1", taillabel=<cmd_complete_wrap>, headlabel=<in>, headlabel=<#0:1>];
+logic42B870703DCA5DE0_S_AXI_RLAST_I -> N_186C9180 [label="1", taillabel=<S_AXI_RLAST_I>, headlabel=<P_1C4B7B90>, headlabel=<#0:1>];
+logic42B870703DCA5DE0_word_completed3 -> N_186C9180 [label="1", taillabel=<word_completed3>, headlabel=<B>, headlabel=<#0:1>];
+logic42B870703DCA5DE0_cmd_modified -> N_186C91D0 [label="1", taillabel=<cmd_modified>, headlabel=<in>, headlabel=<#0:1>];
+logic42B870703DCA5DE0_cmd_valid -> N_186C93B0 [label="1", taillabel=<cmd_valid>, headlabel=<A>, headlabel=<#0:1>];
+N_186C93B0 -> logic42B870703DCA5DE0_p_13_in [label="1", taillabel=<out[p_13_in]>, headlabel=<p_13_in>, headlabel=<#0:1>];
+}
