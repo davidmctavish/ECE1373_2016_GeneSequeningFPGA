@@ -1,0 +1,40 @@
+================================================================
+  Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC
+  Version 2015.4
+  Build 1412921 on Wed Nov 18 09:58:55 AM 2015
+  Copyright (C) 2015 Xilinx Inc. All rights reserved.
+================================================================
+@I [HLS-10] Running '/opt/Xilinx/Vivado_HLS/2015.4/bin/unwrapped/lnx64.o/vivado_hls'
+            for user 'david' on host 'david-VirtualBox' (Linux_x86_64 version 4.2.0-35-generic) on Sun May 01 19:41:14 EDT 2016
+            in directory '/home/david/GitHub/ECE1373_2016_GeneSequeningFPGA/Source/HLS/Sequencer_v1/Sequencer_v1/solution1'
+@I [HLS-10] Opening project '/home/david/GitHub/ECE1373_2016_GeneSequeningFPGA/Source/HLS/Sequencer_v1/Sequencer_v1/solution1/Sequencer_v1'.
+@I [HLS-10] Adding design file '../../sequencer.cpp' to the project
+@I [HLS-10] Adding test bench file '../../test.cpp' to the project
+@I [HLS-10] Adding test bench file '../../i_table.dat' to the project
+@I [HLS-10] Adding test bench file '../../c_table_t.dat' to the project
+@I [HLS-10] Adding test bench file '../../c_table_g.dat' to the project
+@I [HLS-10] Adding test bench file '../../c_table_c.dat' to the project
+@I [HLS-10] Adding test bench file '../../c_table_a.dat' to the project
+@I [HLS-10] Opening solution '/home/david/GitHub/ECE1373_2016_GeneSequeningFPGA/Source/HLS/Sequencer_v1/Sequencer_v1/solution1/Sequencer_v1/solution1'.
+@I [SYN-201] Setting up clock 'default' with a period of 10ns.
+@I [HLS-10] Setting target device to 'xc7z100ffg900-2'
+[2Kvivado_hls> [12C[2Kvivado_hls> v[13C[2Kvivado_hls> vi[14C[2Kvivado_hls> viv[15C
+No match found.
+[2Kvivado_hls> viv[15C[2Kvivado_hls> vi[14C[2Kvivado_hls> v[13C[2Kvivado_hls> [12C[2Kvivado_hls> [12C[2Kvivado_hls> [12C[2Kvivado_hls> [12C[2Kvivado_hls> [12C[2Kvivado_hls> [12C[2Kvivado_hls> [12C[2Kvivado_hls> [12C[2Kvivado_hls> [12C[2Kvivado_hls> [12C[2Kvivado_hls> [12C[2Kvivado_hls> [12C[2Kvivado_hls> [12C[2Kvivado_hls> [12C[2Kvivado_hls> [12C[2Kvivado_hls> [12C[2Kvivado_hls> [12C[2Kvivado_hls> [12C[2Kvivado_hls> [12C[2Kvivado_hls> [12C[2Kvivado_hls> [12C[2Kvivado_hls> [12C[2Kvivado_hls> l[13C[2Kvivado_hls> ls[14C
+directives.tcl
+script.tcl
+Sequencer_v1
+solution1.aps
+solution1.directive
+vivado_hls.log
+[2Kvivado_hls> [12C[2Kvivado_hls> g[13C[2Kvivado_hls> gv[14C[2Kvivado_hls> gvi[15C[2Kvivado_hls> gvim[16C[2Kvivado_hls> gvim [17C[2Kvivado_hls> gvim v[18C[2Kvivado_hls> gvim vi[19C[2Kvivado_hls> gvim vivado_[24C[2Kvivado_hls> gvim vivado_h[25C[2Kvivado_hls> gvim vivado_hls.log[31C
+[2Kvivado_hls> [12C[2Kvivado_hls> ;[13C[2Kvivado_hls> ;s[14C
+invalid command name "s"
+[2Kvivado_hls> [12C[2Kvivado_hls> l[13C[2Kvivado_hls> ls[14C
+directives.tcl
+script.tcl
+Sequencer_v1
+solution1.aps
+solution1.directive
+vivado_hls.log
+[2Kvivado_hls> [12C[2Kvivado_hls> e[13C[2Kvivado_hls> ex[14C[2Kvivado_hls> exi[15C[2Kvivado_hls> exit[16C

@@ -1,0 +1,28 @@
+!SESSION 2016-03-23 19:27:09.164 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.8.0_45
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_CA
+Framework arguments:  -showlocation -perspective com.autoesl.autopilot.ui.platform.perspective -application com.autoesl.autopilot.ui.platform.application
+Command-line arguments:  -showlocation -clean -data /home/david/.vivado_hls/2015.4/.autopilot_workspace0 -perspective com.autoesl.autopilot.ui.platform.perspective -application com.autoesl.autopilot.ui.platform.application
+
+!ENTRY org.eclipse.emf.ecore 2 0 2016-03-23 19:27:28.189
+!MESSAGE Both 'com.autoesl.autopilot.ui.models' and 'com.autoesl.autopilot.ui.models' register a package for 'com.autoesl.autopilot.solution'
+
+!ENTRY org.eclipse.ui 4 4 2016-03-23 19:27:42.039
+!MESSAGE Bad extension specification
+
+!ENTRY org.eclipse.linuxtools.cdt.libhover.devhelp 4 0 2016-03-23 19:27:42.044
+!MESSAGE startup class must implement org.eclipse.ui.IStartup
+
+!ENTRY org.eclipse.ui 2 2 2016-03-23 19:27:49.807
+!MESSAGE Invalid preference category path: com.autoesl.autopilot.ui.startup.preferences.AutoPilotRootPreferencePage (bundle: com.autoesl.autopilot.ui.cdfg.diagram, page: com.autoesl.autopilot.ui.cdfg.diagram.general)
+
+!ENTRY org.eclipse.ui 2 2 2016-03-23 19:27:49.810
+!MESSAGE Invalid preference category path: org.eclipse.mylyn.preferencePages.Mylyn (bundle: org.eclipse.mylyn.context.ui, page: org.eclipse.mylyn.context.ui.preferences)
+
+!ENTRY org.eclipse.cdt.core 1 0 2016-03-23 19:30:58.733
+!MESSAGE Indexed 'Stupid2' (2 sources, 86 headers) in 14.3 sec: 8,264 declarations; 13,313 references; 23 unresolved inclusions; 661 syntax errors; 452 unresolved names (2.1%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2016-03-23 19:31:34.309
+!MESSAGE Indexed 'Stupid2' (2 sources, 86 headers) in 11.4 sec: 8,264 declarations; 13,313 references; 23 unresolved inclusions; 661 syntax errors; 452 unresolved names (2.1%)

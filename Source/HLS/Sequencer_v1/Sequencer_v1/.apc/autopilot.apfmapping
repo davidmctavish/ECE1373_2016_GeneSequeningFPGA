@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="sequencer.cpp" path="/home/david/GitHub/ECE1373_2016_GeneSequeningFPGA/Source/HLS/Sequencer_v1/sequencer.cpp"/>
+  </source>
+  <testbench>
+    <originFiles name="test.cpp" path="/home/david/GitHub/ECE1373_2016_GeneSequeningFPGA/Source/HLS/Sequencer_v1/test.cpp"/>
+    <originFiles name="i_table.dat" path="/home/david/GitHub/ECE1373_2016_GeneSequeningFPGA/Source/HLS/Sequencer_v1/i_table.dat"/>
+    <originFiles name="c_table_t.dat" path="/home/david/GitHub/ECE1373_2016_GeneSequeningFPGA/Source/HLS/Sequencer_v1/c_table_t.dat"/>
+    <originFiles name="c_table_g.dat" path="/home/david/GitHub/ECE1373_2016_GeneSequeningFPGA/Source/HLS/Sequencer_v1/c_table_g.dat"/>
+    <originFiles name="c_table_c.dat" path="/home/david/GitHub/ECE1373_2016_GeneSequeningFPGA/Source/HLS/Sequencer_v1/c_table_c.dat"/>
+    <originFiles name="c_table_a.dat" path="/home/david/GitHub/ECE1373_2016_GeneSequeningFPGA/Source/HLS/Sequencer_v1/c_table_a.dat"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>

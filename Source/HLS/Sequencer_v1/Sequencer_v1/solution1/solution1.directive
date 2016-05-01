@@ -1,0 +1,101 @@
+<AutoPilot:ProjectResources xmlns:AutoPilot="com.autoesl.autopilot.ui.directiveView">
+    <sourceFile name="">
+        <directive functionName="sequencer" label="" functionLabel="">
+            <pragma name="INTERFACE">
+                <option name="s_axilite" value="" positionalBoolean="mode"/>
+                <option name="port" value="return" positionalBoolean="4"/>
+            </pragma>
+        </directive>
+        <directive functionName="sequencer" label="" functionLabel="">
+            <pragma name="INTERFACE">
+                <option name="m_axi" value="" positionalBoolean="mode"/>
+                <option name="depth" value="1024"/>
+                <option name="port" value="C_table_A" positionalBoolean="4"/>
+                <option name="offset" value="slave"/>
+                <option name="bundle" value="ctable_a"/>
+            </pragma>
+        </directive>
+        <directive functionName="sequencer" label="" functionLabel="">
+            <pragma name="INTERFACE">
+                <option name="m_axi" value="" positionalBoolean="mode"/>
+                <option name="depth" value="1024"/>
+                <option name="port" value="C_table_C" positionalBoolean="4"/>
+                <option name="offset" value="slave"/>
+                <option name="bundle" value="ctable_c"/>
+            </pragma>
+        </directive>
+        <directive functionName="sequencer" label="" functionLabel="">
+            <pragma name="INTERFACE">
+                <option name="m_axi" value="" positionalBoolean="mode"/>
+                <option name="depth" value="1024"/>
+                <option name="port" value="C_table_G" positionalBoolean="4"/>
+                <option name="offset" value="slave"/>
+                <option name="bundle" value="ctable_g"/>
+            </pragma>
+        </directive>
+        <directive functionName="sequencer" label="" functionLabel="">
+            <pragma name="INTERFACE">
+                <option name="m_axi" value="" positionalBoolean="mode"/>
+                <option name="depth" value="1024"/>
+                <option name="port" value="C_table_T" positionalBoolean="4"/>
+                <option name="offset" value="slave"/>
+                <option name="bundle" value="ctable_t"/>
+            </pragma>
+        </directive>
+        <directive functionName="sequencer" label="" functionLabel="">
+            <pragma name="INTERFACE">
+                <option name="m_axi" value="" positionalBoolean="mode"/>
+                <option name="depth" value="4"/>
+                <option name="port" value="I_table" positionalBoolean="4"/>
+                <option name="offset" value="slave"/>
+                <option name="bundle" value="itable"/>
+            </pragma>
+        </directive>
+        <directive functionName="sequencer" label="" functionLabel="">
+            <pragma name="INTERFACE">
+                <option name="s_axilite" value="" positionalBoolean="mode"/>
+                <option name="port" value="SR_length" positionalBoolean="4"/>
+            </pragma>
+        </directive>
+        <directive functionName="sequencer" label="" functionLabel="">
+            <pragma name="INTERFACE">
+                <option name="s_axilite" value="" positionalBoolean="mode"/>
+                <option name="port" value="ref_length" positionalBoolean="4"/>
+            </pragma>
+        </directive>
+        <directive functionName="sequencer" label="" functionLabel="">
+            <pragma name="INTERFACE">
+                <option name="s_axilite" value="" positionalBoolean="mode"/>
+                <option name="port" value="matched" positionalBoolean="4"/>
+            </pragma>
+        </directive>
+        <directive functionName="sequencer" label="" functionLabel="">
+            <pragma name="INTERFACE">
+                <option name="s_axilite" value="" positionalBoolean="mode"/>
+                <option name="port" value="done" positionalBoolean="4"/>
+            </pragma>
+        </directive>
+        <directive functionName="sequencer" label="" functionLabel="">
+            <pragma name="INTERFACE">
+                <option name="m_axi" value="" positionalBoolean="mode"/>
+                <option name="depth" value="1024"/>
+                <option name="port" value="SR" positionalBoolean="4"/>
+                <option name="offset" value="slave"/>
+                <option name="bundle" value="sr_mem"/>
+            </pragma>
+        </directive>
+        <directive functionName="sequencer" label="" functionLabel="">
+            <pragma name="INTERFACE">
+                <option name="s_axilite" value="" positionalBoolean="mode"/>
+                <option name="port" value="final_top_ptr" positionalBoolean="4"/>
+            </pragma>
+        </directive>
+        <directive functionName="sequencer" label="" functionLabel="">
+            <pragma name="INTERFACE">
+                <option name="s_axilite" value="" positionalBoolean="mode"/>
+                <option name="port" value="final_bot_ptr" positionalBoolean="4"/>
+            </pragma>
+        </directive>
+    </sourceFile>
+</AutoPilot:ProjectResources>
+

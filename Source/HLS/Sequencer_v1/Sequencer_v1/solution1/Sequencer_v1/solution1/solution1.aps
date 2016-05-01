@@ -1,0 +1,19 @@
+<AutoPilot:solution xmlns:AutoPilot="com.autoesl.autopilot.solution">
+    <name>
+        <value string="solution1"/>
+    </name>
+    <project>
+        <value string="Sequencer_v1"/>
+    </project>
+    <targetInfo>
+        <TargetInfo value="xc7z100:ffg900:-2"/>
+    </targetInfo>
+    <libraryList>
+        <library value="xilinx/zynq/zynq" name="DefaultPlatform"/>
+        <library value="xilinx/zynq/zynq_fpv6" name="DefaultPlatform"/>
+    </libraryList>
+    <clockList>
+        <clock name="default" default="false" period="10"/>
+    </clockList>
+</AutoPilot:solution>
+

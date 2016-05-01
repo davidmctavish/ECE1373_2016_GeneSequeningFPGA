@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="com.autoesl.autopilot.project" name="Sequencer_v1" top="sequencer">
+  <files>
+    <file name="../../test.cpp" sc="0" tb="1" cflags=" "/>
+    <file name="../../i_table.dat" sc="0" tb="1" cflags=" "/>
+    <file name="../../c_table_t.dat" sc="0" tb="1" cflags=" "/>
+    <file name="../../c_table_g.dat" sc="0" tb="1" cflags=" "/>
+    <file name="../../c_table_c.dat" sc="0" tb="1" cflags=" "/>
+    <file name="../../c_table_a.dat" sc="0" tb="1" cflags=" "/>
+    <file name="sequencer.cpp" sc="0" tb="false" cflags=""/>
+  </files>
+  <solutions>
+    <solution name="solution1" status="active"/>
+  </solutions>
+  <includePaths/>
+  <libraryPaths/>
+  <Simulation>
+    <SimFlow name="csim" csimMode="0" lastCsimMode="0"/>
+  </Simulation>
+</project>
