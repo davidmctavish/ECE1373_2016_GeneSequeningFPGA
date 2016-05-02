@@ -21,25 +21,39 @@ The following Xilinx software is required to be installed on a Linux computer to
 - Vivado HLS
 - Petalinux tools (version 2015.4)
 
-###	Booting the System
-- Find the files  BOOT.bin and image.ub. They should be located in the folder "PrebuiltBootfiles". Copy both of the these files onto a micro-SD card.
-- Copy onto your USB drive text files for your reference sequence and short reads
-- Insert the micro-SD card into the slot on the Mini-ITX board. Set the switches to boot from the SD card and start up TeraTerm. (See the document Zynq_Mini-ITX_PetaLinux_2015_2.pdf for how to set the switches and how to configure the connection to TeraTerm. )
+###	Booting the Existing System
+- Find the files  BOOT.bin and image.ub. They are located in the folder "PrebuiltBootfiles". Copy both of the these files into the root directory of a micro-SD card.
+- Copy onto your USB drive text files for your reference sequence and short reads. You can use some of our example files for reference.
+- Insert the micro-SD card into the slot on the Mini-ITX board. Set the switches to boot from the SD card, connect the board to your host PC, and start up TeraTerm. (See the document Doc/TutorialDocs/Zynq_Mini-ITX_PetaLinux_2015_2.pdf for how to set the switches and how to configure the connection to TeraTerm. )
 - Turn the power to the board on. You should see various start-up messages on your TeraTerm console.
 - When prompted, enter the username and password. By default, both are "root".
 
 ###	Running the Sofware
 - Plug in you USB drive and mount it to access your reference and short read files.
-- Change directory to where you mounted the USB have put your reference and short read files.
-- Run the command "RunSequencer <sequence_file.txt> <short_read_file.txt>". The match results for the short reads will be printed to the screen in the same order they were written into the text file. 
+- Change directory to where you mounted the USB that you put your reference and short read files in.
+- Run the command "RunSequencer <sequence_file.txt> <short_read_file.txt>". The match results for the short reads will be printed to the screen in the same order they were written into the short read text file. 
 
 
 
 ##	Repository Structure
-Stuff
+- Docs: contains a copy of our report and final presentation
+	- Docs/TutorialDocs/: contains 4 copies of tutorials on the Mini-ITX board and Petalinux. If you wish to rebuild the system from source (or create your own project from scratch), reading these tutorials is recommended
+- PrebuiltBootfiles: contains the BOOT.BIN and image.ub files needed to boot the most recent version of our system on a micro-SD card. Also contains example files for reference sequences and short read files, which can be copied onto a USB drive for use in the system.
+- Source:
+	- Source/HLS: Contains the source and project files for the HLS sequencer.
+	- Source/PetaLinux: Contains the source files for the Petalinux system, drivers, and application
+	- Source/Vivado: Contains the source and Vivado project for the final version of the hardware.
 
 ##	Authors
-People
+Meysam Roodi
+
+David McTavish
+
+Arash Moghimi
+
+Leon Xiang Li
 
 ##	Acknowledgements
-More People
+Professor Paul Chow, for running the course and helping to guide us with HLS
+
+Sanket Pandit, for valuable guidance in getting us started with the Mini-ITX board and Petalinux
